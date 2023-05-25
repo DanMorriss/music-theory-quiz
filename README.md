@@ -1,108 +1,213 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Music Theory Quiz
 
-Welcome USER_NAME,
+### [Live Site](https://danmorriss.github.io/music-theory-quiz)
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+### [Project Repository](https://github.com/DanMorriss/music-theory-quiz)
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **September 1, 2021**
+![Responsive mockup](assets/images/)
 
-## Gitpod Reminders
+## Contents
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+* [**User Experience (UX)**](<#user-experience-ux>)
+    * [Initial Discussion](<#initial-discussion>)
+    * [User Stories](<#user-stories>)
+        * [Client Goals](#client-goals)
+        * [First Time Visitor Goals](<#first-time-visitor-goals>)
+        * [Returning Visitor Goals](<#returning-visitor-goals>)
+        * [Frequent Visitor Goals](<#frequent-visitor-goals>)
+    * [Site Structure](<#site-structure>)
+    * [Wireframes](<#wireframes>)
+        * [Home Page: Desktop View](<#home-page-desktop-view>)
+        * [House band Page: Desktop view](<#house-band-page-desktop-view>)
+        * [Contact Page: Desktop View](<#contact-page-desktop-view>)
+        * [Mobile View](<#mobile-view>)
+* [**Design**](<#design>)
+    * [Color Scheme](<#color-scheme>)
+    * [Typography](<#typography>)
+    * [Imagry](<#imagry>)
+* [**Features**](#features)
+    * [Existing Features](<#existing-features>)
+        * [Navigation Bar](<#navigation-bar>)
+        * [Landing Page - Hero Image](<#landing-page---hero-image>)
+        * [Join Us Section](<#join-us-section>)
+        * [The Next Night Section](<#the-next-night-section>)
+        * [Footer](<#footer>)
+        * [House Band](<#house-band>)
+        * [Contact Form](<#contact-form>)
+        * [Contact Form Sucess Page](<#contact-form-sucess-page>)
+    * [Accesibility](<#accesibility>)
+    * [Future Features](<#future-features>)
+* [**Technologies Used**](<#technologies-used>)
+    * [Languages](<#languages>)
+* [**Testing**](<#testing>)
+    * [Code Validation](<>)
+        * [W3C HTML Checker](<#w3c-html-checker>)
+        * [W3C CSS Checker](<#w3c-css-checker>)
+        * [Lighthouse](<#lighthouse>)
+    * [Responsiveness Test](<#responsiveness-test>)
+    * [Browser Compatibility](<#browser-compatibility>)
+    * [Peer Testing](<#peer-testing>)
+* [**Bugs**](<#bugs>)
+    * [Solved Bugs](<#solved-bugs>)
+    * [Unsolved Bugs](<#unsolved-bugs>)
+* [**Deployment**](<#deployment>)
+* [**Credits**](<#credits>)
+    * [Resources](<#resources>)
+    * [Content](<#content>)
+    * [Media](<#media>)
+* [**Acknowledgements**](<#acknowledgements>)
 
-`python3 -m http.server`
+## User Experience (UX)
 
-A blue button should appear to click: _Make Public_,
+### Initial Discussion
 
-Another blue button should appear to click: _Open Browser_.
+[Back to top](<#contents>)
+### User Stories
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+#### Client Goals
 
-A blue button should appear to click: _Make Public_,
+[Back to top](<#contents>)
+#### First Time Visitor Goals
 
-Another blue button should appear to click: _Open Browser_.
+[Back to top](<#contents>)
+#### Returning Visitor Goals
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+[Back to top](<#contents>)
+#### Frequent Visitor Goals
 
-To log into the Heroku toolbelt CLI:
+[Back to top](<#contents>)
+### Site Structure
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+[Back to top](<#contents>)
+### Wireframes
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+[Back to top](<#contents>)
+## Design
 
-------
+### Color Scheme
 
-## Release History
+![Color theme](assets/images/)
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+[Back to top](<#contents>)
+### Typography
 
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
+[Google Fonts](https://fonts.google.com) was used for the following fonts:
+- Font 1
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
+[Back to top](<#contents>)
+### Imagry
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
+- The images were all taken from stock image library in [Canva](https://www.canva.com)
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
+[Back to top](<#contents>)
+## Features
+### Existing Features
 
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
+#### Feature 1
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
+[Back to top](<#contents>)
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
+[Back to top](<#contents>)
+### Accesibility
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+[Back to top](<#contents>)
+### Future Features
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
+[Back to top](<#contents>)
+## Technologies Used
+### Languages
+- HTML - for
+- CSS - for
+- JavaSript - for
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
+[Back to top](<#contents>)
+## Testing
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+### Code Validation
+Testing using the Google Chrome Dev Tools was used throughout the build of the site. Below you can see the results of the W3C HTML and CSS checkers for the finished site.
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
+#### W3C HTML Checker
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
+![W3C HTML Checker, no faults found](assets/images/)
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
+#### W3C CSS Checker
 
-------
+![W3C CSS Checker, no faults found](assets/images/)
 
-## FAQ about the uptime script
+#### Lighthouse
 
-**Why have you added this script?**
+![Lighthouse test results](assets/images/)
 
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
+#### JavaScript
 
-**How will this affect me?**
+![JS test results](assets/images/)
 
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
+[Back to top](<#contents>)
+### Responsiveness Test
 
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
+[Back to top](<#contents>)
+### Browser Compatibility
 
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
+[Back to top](<#contents>)
+### Peer Testing
 
-**So….?**
+[Back to top](<#contents>)
+## Bugs
 
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
+### Solved Bugs
 
-**Can I opt out?**
+[Back to top](<#contents>)
+### Unsolved Bugs
 
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
+[Back to top](<#contents>)
+## Deployment
 
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
+### To Deploy the project
+GitHub pages was used to deploy the live site as follows:
+1. Login to GitHub
+2. Go to the repository [DanMorriss/jazz-platform](https://github.com/DanMorriss/jazz-platform)
+3. Click the `Settings` tab
+4. Click the `Pages` tab
+5. Under the 'Build and Deployment' section select the `Deploy from a branch` from the dropdown menu
+6. Select the `main` and `/root` dropdown menu options
+7. Click `save` and after a few minutes the site was live 
 
-**Anything more?**
+![Deployment walkthrough image](assets/images/)
 
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
+### To Fork the project
+To make a copy of the GitHub Repository you can fork a copy to edit it without changing the root file. This can then be used to update the original repository. To fork take the following steps:
+1. Login to GitHub
+2. Go to the repository [DanMorriss/jazz-platform](https://github.com/DanMorriss/jazz-platform)
+3. On the top right-hand side of the page click the `fork` button and save a copy of the original repository to your GitHub account.
 
----
+### To Clone the project
+To clone the project:
+1. Click the `code` button  
+2. Click the `local` tab
+3. Under HTTPS click the clipboard icon to copy the URL
+![clone walkthrough image](assets/images/)
+4. In your IDE of choice, open Git Bash
+5. Change the current working directory to the location where you want the cloned directory to be made
+6. Type `git clone` and then paste the URL copied from GitHub
+7. Press enter and the local clone will be created
 
-Happy coding!
+[Back to top](<#contents>)
+## Credits
+
+### Resources
+- Resource 1
+
+### Content
+
+[Back to top](<#contents>)
+### Media
+
+[Back to top](<#contents>)
+### Code Used
+
+[Back to top](<#contents>)
+## Acknowledgements
+
+- [Precious Ijege](https://github.com/precious-ijege), my Code Institute Mentor.
+
+[Back to top](<#contents>)
