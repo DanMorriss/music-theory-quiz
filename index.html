@@ -7,7 +7,8 @@
 
     <!--Stylesheet--> 
     <link rel="stylesheet" href="assets/style.css">
-
+    <!--font awesome script-->
+    <script src="https://kit.fontawesome.com/076967cb18.js" crossorigin="anonymous"></script>
     <!--JavaScript, defered to the end-->
     <script src="assets/script.js" defer></script>
 
@@ -18,31 +19,45 @@
     <!--Home container-->
     <div id="home-container" class="container">
         <h1>Music Theory Quiz</h1>
-        <button id="play-button" class="button">Play</button>
-        <button id="rules-button" class="button">Rules</button>
-        <button id="scores-button" class="button">High Scores</button>
+        <div id="" class="buttons-container home-screen-buttons">
+            <button id="play-button" class="button">Play</button>
+            <button id="rules-button" class="button">Rules</button>
+            <button id="scores-button" class="button">High Scores</button>
+        </div>
     </div>
 
     <!--Rules container-->
     <div id="rules-container" class="container hide">
-        <h2>Rules</h2>
-        <p>These are the rules</p>
-        <button id="back-button-rules" class="button">Back</button>
+        <div class="close-button-container">
+            <button id="back-button-rules" class="back-button"><i class="fa-solid fa-square-xmark"></i></button>
+        </div>
+        <div class="container-content">
+            <h2>Rules</h2>
+            <p>These are the rules</p>
+        </div>
     </div>
 
     <!--High scores container-->
     <div id="scores-container" class="container hide">
-        <h2>High Scores</h2>
-        <p>The scores will go here</p>
-        <button id="back-button-scores" class="button">Back</button>
+        <div class="close-button-container">
+            <button id="back-button-scores" class="back-button"><i class="fa-solid fa-square-xmark"></i></button>
+        </div>
+        <div class="container-content">
+            <h2>High Scores</h2>
+            <p>The scores will go here</p>
+        </div>
     </div>
 
     <!--Difficulty container-->
     <div id="difficulty-container" class="container hide">
-        <button id="beginner" class="button">Beginner</button>
-        <button id="intermediate" class="button">Intermediate</button>
-        <button id="advanced" class="button">Advanced</button>
-
+        <div class="close-button-container">
+            <button id="back-button-difficulty" class="back-button"><i class="fa-solid fa-square-xmark"></i></button>
+        </div>
+        <div id="difficulty-options" class="container-content">
+            <button id="beginner" class="button">Beginner</button>
+            <button id="intermediate" class="button">Intermediate</button>
+            <button id="advanced" class="button">Advanced</button>
+        </div>
     </div>
 
     <!--Game container-->

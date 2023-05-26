@@ -1,5 +1,6 @@
 //button variables
 const playButton = document.getElementById('play-button');
+const backButtonDifficulty = document.getElementById('back-button-difficulty');
 const rulesButton = document.getElementById('rules-button');
 const backButtonRules = document.getElementById('back-button-rules');
 const scoresButton = document.getElementById('scores-button');
@@ -41,4 +42,10 @@ backButtonScores.addEventListener('click', () => {
 playButton.addEventListener('click', () => {
     homeContainer.classList.add('hide');
     difficultyContainer.classList.remove('hide');
+})
+
+//Close difficulty container
+backButtonDifficulty.addEventListener('click', () => {
+    difficultyContainer.classList.add('hide');
+    homeContainer.classList.remove('hide');
 })
