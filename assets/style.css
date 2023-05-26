@@ -1,0 +1,55 @@
+/*google fonts - inspiration taken from https://www.fontpair.co/all 
+font-family: 'Lato', sans-serif;
+font-family: 'Playfair Display', serif;
+*/
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Playfair+Display&display=swap');
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(to right top, #385b4f, #436758, #4f7361, #5b7f6a, #688b73, #72957c, #7ca084, #87aa8d, #91b597, #9cc1a2, #a6ccac, #b1d8b7);
+    width: 100vw;
+    height: 100vh;
+    color: #223B33
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #F4F6F1;
+    border-radius: 1rem;
+    box-shadow: 0 0 1rem 1px #223B33;
+    width: auto;
+    height: 60vh;
+    margin: 2rem;
+    padding: 1rem;
+}
+
+h1 {
+    font-family: 'Playfair Display', serif;
+    padding: 0 1rem;
+    text-align: center;
+}
+
+.button {
+    font-family: 'Lato', sans-serif;
+    padding: 1rem;
+    border: solid 1px #223B33;
+    border-radius: 1rem;
+    width: 40%;
+    box-shadow: 1px 1px 5px 1px #223B33;
+    background-color: #F4F6F1;
+}
+
+.button:hover {
+    box-shadow: 1px 1px 10px 4px #223B33;
+}

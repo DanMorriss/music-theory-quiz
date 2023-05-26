@@ -87,12 +87,14 @@
 ### Color Scheme
 
 ![Color theme](assets/images/)
+[Adobe Color Theme](<https://color.adobe.com/Green-Blaze-color-theme-f43afa51-84f4-4c52-9114-15d25488e2dd/>)
 
 [Back to top](<#contents>)
 ### Typography
 
 [Google Fonts](https://fonts.google.com) was used for the following fonts:
-- Font 1
+- Playfair Display for the headings and questions.
+- Lato for the buttons and explenation text.
 
 [Back to top](<#contents>)
 ### Imagry
@@ -195,7 +197,8 @@ To clone the project:
 ## Credits
 
 ### Resources
-- Resource 1
+- [ColorSpace](<https://mycolor.space/>) for the body's background gradient.
+- [Font Pair](<https://www.fontpair.co/all>) for the font pairing.
 
 ### Content
 
