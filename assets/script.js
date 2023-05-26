@@ -10,6 +10,8 @@ const backButtonScores = document.getElementById('back-button-scores');
 const homeContainer = document.getElementById('home-container');
 const rulesContainer = document.getElementById('rules-container');
 const scoresContainer = document.getElementById('scores-container');
+const difficultyContainer = document.getElementById('difficulty-container');
+const gameContainer = document.getElementById('game-container');
 
 //Open the rules container from the home screen
 rulesButton.addEventListener('click', () => {
@@ -33,4 +35,10 @@ scoresButton.addEventListener('click', () => {
 backButtonScores.addEventListener('click', () => {
     scoresContainer.classList.add('hide');
     homeContainer.classList.remove('hide');
+})
+
+// Open difficulty container
+playButton.addEventListener('click', () => {
+    homeContainer.classList.add('hide');
+    difficultyContainer.classList.remove('hide');
 })
