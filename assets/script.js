@@ -1,11 +1,15 @@
 //button variables
 const playButton = document.getElementById('play-button');
 const rulesButton = document.getElementById('rules-button');
-const backButton = document.getElementById('back-button');
+const backButtonRules = document.getElementById('back-button-rules');
+const scoresButton = document.getElementById('scores-button');
+const backButtonScores = document.getElementById('back-button-scores');
+
 
 //containers
 const homeContainer = document.getElementById('home-container');
 const rulesContainer = document.getElementById('rules-container');
+const scoresContainer = document.getElementById('scores-container');
 
 //Open the rules container from the home screen
 rulesButton.addEventListener('click', () => {
@@ -14,7 +18,19 @@ rulesButton.addEventListener('click', () => {
 })
 
 //Close the rules container
-backButton.addEventListener('click', () => {
+backButtonRules.addEventListener('click', () => {
     rulesContainer.classList.add('hide');
+    homeContainer.classList.remove('hide');
+})
+
+//Open the high scores container from the home screen
+scoresButton.addEventListener('click', () => {
+    homeContainer.classList.add('hide');
+    scoresContainer.classList.remove('hide');
+})
+
+//Close the high scores container
+backButtonScores.addEventListener('click', () => {
+    scoresContainer.classList.add('hide');
     homeContainer.classList.remove('hide');
 })
