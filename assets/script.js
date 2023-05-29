@@ -5,6 +5,7 @@ const rulesButton = document.getElementById('rules-button');
 const backButtonRules = document.getElementById('back-button-rules');
 const scoresButton = document.getElementById('scores-button');
 const backButtonScores = document.getElementById('back-button-scores');
+const backButtonGame = document.getElementById('back-button-game');
 const beginnerButton = document.getElementById('beginner');
 
 
@@ -58,3 +59,8 @@ beginnerButton.addEventListener('click', () => {
     dispalyBeginnerQuestion();
 })
 
+//Close the game container
+backButtonGame.addEventListener('click', () => {
+    gameContainer.classList.add('hide');
+    homeContainer.classList.remove('hide');
+})
