@@ -64,3 +64,23 @@ backButtonGame.addEventListener('click', () => {
     gameContainer.classList.add('hide');
     homeContainer.classList.remove('hide');
 })
+
+// Display beginner questions
+function dispalyBeginnerQuestion() {
+    console.log(dispalyBeginnerQuestion);
+
+}
+
+// Beginner questions
+
+const beginnerQuestins = [
+    {
+        question: 'What is the relative minor key of C major?',
+        answers: [
+          { text: 'A minor', correct: true },
+          { text: 'C minor', correct: false },
+          { text: 'G minor', correct: false },
+          { text: 'E minor', correct: false }
+        ]
+      },
+]
