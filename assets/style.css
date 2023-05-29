@@ -43,7 +43,8 @@ p {
     box-shadow: 0 0 1rem 1px #223B33;
     width: 80vw;
     max-width: 800px;
-    height: 60vh;
+    height: auto;
+    min-height: 60vh;
     margin: 2rem;
     padding: 1rem;
 }
@@ -109,4 +110,23 @@ p {
 
 .hide {
     display: none;
+}
+
+/*game screen*/
+.answer-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.question-btn {
+    margin: 1rem;
+}
+
+.game-score {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    padding: 10px 30px;
 }
