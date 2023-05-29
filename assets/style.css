@@ -4,6 +4,7 @@ font-family: 'Playfair Display', serif;
 */
 @import url('https://fonts.googleapis.com/css2?family=Lato&family=Playfair+Display&display=swap');
 
+/*global styles*/
 * {
     box-sizing: border-box;
     padding: 0;
@@ -31,12 +32,7 @@ p {
     font-family: 'Lato', sans-serif;
 }
 
-.hide {
-    display: none;
-}
-
 /*containers*/
-
 .container {
     display: flex;
     flex-direction: column;
@@ -52,7 +48,6 @@ p {
     padding: 1rem;
 }
 
-/*contains button and text*/
 .container-content {
     display: flex;
     flex-direction: column;
@@ -62,8 +57,14 @@ p {
     width: 100%;
 }
 
-/*main buttons*/
+.home-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
 
+/*buttons*/
 .button {
     font-family: 'Lato', sans-serif;
     padding: 1rem;
@@ -78,27 +79,6 @@ p {
     box-shadow: 1px 1px 10px 4px #223B33;
 }
 
-/*close 'x' button*/
-.back-button {
-    border: none;
-    font-size: 160%;
-
-}
-.close-button-container {
-    width: 100%;
-    display: flex;
-    justify-content: flex-end;
-}
-
-/* home screen*/
-
-.home-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-}
-
 .home-screen-buttons {
     display: flex;
     flex-direction: column;
@@ -108,9 +88,25 @@ p {
     height: 40vh;
 }
 
+/*close 'x' button*/
+.back-button {
+    border: none;
+    font-size: 160%;
+}
+
+.close-button-container {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
 #difficulty-options {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     padding: 10vh 0;
+}
+
+.hide {
+    display: none;
 }
