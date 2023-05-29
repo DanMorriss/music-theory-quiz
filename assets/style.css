@@ -21,6 +21,22 @@ body {
     color: #223B33
 }
 
+h1, h2 {
+    font-family: 'Playfair Display', serif;
+    padding: 0 1rem;
+    text-align: center;
+}
+
+p {
+    font-family: 'Lato', sans-serif;
+}
+
+.hide {
+    display: none;
+}
+
+/*containers*/
+
 .container {
     display: flex;
     flex-direction: column;
@@ -36,6 +52,7 @@ body {
     padding: 1rem;
 }
 
+/*contains button and text*/
 .container-content {
     display: flex;
     flex-direction: column;
@@ -45,33 +62,7 @@ body {
     width: 100%;
 }
 
-.home-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-
-
-}
-
-.home-screen-buttons {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    width: 100%;
-    height: 40vh;
-}
-
-h1, h2 {
-    font-family: 'Playfair Display', serif;
-    padding: 0 1rem;
-    text-align: center;
-}
-
-p {
-    font-family: 'Lato', sans-serif;
-}
+/*main buttons*/
 
 .button {
     font-family: 'Lato', sans-serif;
@@ -83,6 +74,11 @@ p {
     background-color: #F4F6F1;
 }
 
+.button:hover {
+    box-shadow: 1px 1px 10px 4px #223B33;
+}
+
+/*close 'x' button*/
 .back-button {
     border: none;
     font-size: 160%;
@@ -94,12 +90,22 @@ p {
     justify-content: flex-end;
 }
 
-.button:hover {
-    box-shadow: 1px 1px 10px 4px #223B33;
+/* home screen*/
+
+.home-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
 }
 
-.hide {
-    display: none;
+.home-screen-buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 40vh;
 }
 
 #difficulty-options {

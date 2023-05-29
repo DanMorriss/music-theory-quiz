@@ -5,6 +5,7 @@ const rulesButton = document.getElementById('rules-button');
 const backButtonRules = document.getElementById('back-button-rules');
 const scoresButton = document.getElementById('scores-button');
 const backButtonScores = document.getElementById('back-button-scores');
+const beginnerButton = document.getElementById('beginner');
 
 
 //containers
@@ -49,3 +50,11 @@ backButtonDifficulty.addEventListener('click', () => {
     difficultyContainer.classList.add('hide');
     homeContainer.classList.remove('hide');
 })
+
+//open the game container and display beginner questions
+beginnerButton.addEventListener('click', () => {
+    difficultyContainer.classList.add('hide');
+    gameContainer.classList.remove('hide');
+    dispalyBeginnerQuestion();
+})
+
