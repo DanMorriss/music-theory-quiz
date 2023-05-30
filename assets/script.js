@@ -11,6 +11,7 @@ const answerButton1 = document.getElementById('answer1');
 const answerButton2 = document.getElementById('answer2');
 const answerButton3 = document.getElementById('answer3');
 const answerButton4 = document.getElementById('answer4');
+const answerButton = document.getElementsByClassName('question-btn');
 
 const question = document.getElementById('question');
 
@@ -66,14 +67,19 @@ function shuffleQuestions(array) {
     return array;
   }
 
+let shuffledQuestions, shuffledAnswers;
+
 // Display beginner questions
 function dispalyBeginnerQuestion() {
-    const shuffledQuestions = shuffleQuestions(beginnerQuestions);
+    shuffledQuestions = shuffleQuestions(beginnerQuestions);
     question.innerText = shuffledQuestions[0].question;
-
+    shuffledAnswers = shuffleQuestions(shuffledQuestions[0].answers);
+    for (let i = 0; i < 4; i++) {
+        answerButton[i].innerText = shuffledAnswers[i].text;
+    }
 }
 
-//Open the game container and display beginner questions
+//Open the game container and display a beginner question
 beginnerButton.addEventListener('click', () => {
     difficultyContainer.classList.add('hide');
     gameContainer.classList.remove('hide');
