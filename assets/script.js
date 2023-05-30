@@ -12,7 +12,7 @@ const answerButton2 = document.getElementById('answer2');
 const answerButton3 = document.getElementById('answer3');
 const answerButton4 = document.getElementById('answer4');
 const answerButton = document.getElementsByClassName('question-btn');
-
+const submitButton = document.getElementById('submit-btn');
 const question = document.getElementById('question');
 
 //containers
@@ -81,7 +81,6 @@ function dispalyBeginnerQuestion() {
     }
 }
 
-//Open the game container and display a beginner question
 beginnerButton.addEventListener('click', () => {
     difficultyContainer.classList.add('hide');
     gameContainer.classList.remove('hide');
@@ -148,6 +147,20 @@ answerButton4.addEventListener('click', () => {
         answerButton4.classList.add('selected');
     }
 });
+
+//Check the answer
+function checkAnswer() {
+    const selectedAnswer = document.querySelector('.selected');
+    const correctAnswer = shuffledAnswers.find(answer => answer.correct);
+    if (selectedAnswer.textContent === correctAnswer.text) {
+        console.log('well done');
+    } else {
+        console.log('try again');
+    }}
+
+submitButton.addEventListener('click', () => {
+    checkAnswer();
+})
 
 //Close the game container
 backButtonGame.addEventListener('click', () => {

@@ -160,6 +160,7 @@ Testing using the Google Chrome Dev Tools was used throughout the build of the s
 
 - All the different containers were displaying when I tidied up some of the CSS rules so I moved the .hide rul to the end to fix it.
 - False was typed flase in the question list so wasn't functing properly.
+- Checking if the selected answer matech the answer from the array wasn't working. I needed to convert both answers to text so they could be matched.
 
 [Back to top](<#contents>)
 ### Unsolved Bugs
