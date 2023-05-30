@@ -88,6 +88,67 @@ beginnerButton.addEventListener('click', () => {
     dispalyBeginnerQuestion();
 })
 
+//select an answer
+answerButton1.addEventListener('click', () => {
+    if (answerButton2.classList.contains('selected')) {
+        answerButton2.classList.remove('selected');
+        answerButton1.classList.add('selected');
+    } else if (answerButton3.classList.contains('selected')) {
+        answerButton3.classList.remove('selected');
+        answerButton1.classList.add('selected');
+    } else if (answerButton4.classList.contains('selected')) {
+        answerButton4.classList.remove('selected');
+        answerButton1.classList.add('selected');
+    } else {
+        answerButton1.classList.add('selected');
+    }
+});
+
+answerButton2.addEventListener('click', () => {
+    if (answerButton1.classList.contains('selected')) {
+        answerButton1.classList.remove('selected');
+        answerButton2.classList.add('selected');
+    } else if (answerButton3.classList.contains('selected')) {
+        answerButton3.classList.remove('selected');
+        answerButton2.classList.add('selected');
+    } else if (answerButton4.classList.contains('selected')) {
+        answerButton4.classList.remove('selected');
+        answerButton2.classList.add('selected');
+    } else {
+        answerButton2.classList.add('selected');
+    }
+});
+
+answerButton3.addEventListener('click', () => {
+    if (answerButton1.classList.contains('selected')) {
+        answerButton1.classList.remove('selected');
+        answerButton3.classList.add('selected');
+    } else if (answerButton2.classList.contains('selected')) {
+        answerButton2.classList.remove('selected');
+        answerButton3.classList.add('selected');
+    } else if (answerButton4.classList.contains('selected')) {
+        answerButton4.classList.remove('selected');
+        answerButton3.classList.add('selected');
+    } else {
+        answerButton3.classList.add('selected');
+    }
+});
+
+answerButton4.addEventListener('click', () => {
+    if (answerButton1.classList.contains('selected')) {
+        answerButton1.classList.remove('selected');
+        answerButton4.classList.add('selected');
+    } else if (answerButton2.classList.contains('selected')) {
+        answerButton2.classList.remove('selected');
+        answerButton4.classList.add('selected');
+    } else if (answerButton3.classList.contains('selected')) {
+        answerButton3.classList.remove('selected');
+        answerButton4.classList.add('selected');
+    } else {
+        answerButton4.classList.add('selected');
+    }
+});
+
 //Close the game container
 backButtonGame.addEventListener('click', () => {
     gameContainer.classList.add('hide');

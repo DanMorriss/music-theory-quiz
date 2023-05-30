@@ -109,6 +109,11 @@ p {
 
 }
 
+.selected {
+    background-color: #385B4F;
+    color: #F4F6F1;
+}
+
 #difficulty-options {
     display: flex;
     flex-direction: column;
