@@ -114,6 +114,15 @@ p {
     color: #F4F6F1;
 }
 
+.correct {
+    background-color: rgb(23, 178, 23);
+}
+
+.incorrect {
+    background-color: red;
+    color: #223B33;
+}
+
 #difficulty-options {
     display: flex;
     flex-direction: column;

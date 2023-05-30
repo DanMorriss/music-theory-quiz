@@ -164,6 +164,7 @@ Testing using the Google Chrome Dev Tools was used throughout the build of the s
 
 [Back to top](<#contents>)
 ### Unsolved Bugs
+- I cannot make the correct answer display when I select the wrong answer. 
 
 [Back to top](<#contents>)
 ## Deployment

@@ -148,14 +148,25 @@ answerButton4.addEventListener('click', () => {
     }
 });
 
+function addToCorrectScore() {
+    console.log('add to correct score');
+}
+
+function addToIncorrectScore() {
+    console.log('add to incorrect score');
+}
+
 //Check the answer
 function checkAnswer() {
     const selectedAnswer = document.querySelector('.selected');
     const correctAnswer = shuffledAnswers.find(answer => answer.correct);
     if (selectedAnswer.textContent === correctAnswer.text) {
-        console.log('well done');
+        selectedAnswer.classList.add('correct');
+        addToCorrectScore();
     } else {
-        console.log('try again');
+        selectedAnswer.classList.add('incorrect');
+        addToIncorrectScore();
+        correctAnswer.classList.add('correct'); //this doesn't work yet
     }}
 
 submitButton.addEventListener('click', () => {
@@ -245,8 +256,8 @@ const beginnerQuestions = [
     {
         question: 'How many flats are in the key of F major?',
         answers: [
-            { text: '0', correct: true },
-            { text: '1', correct: false},
+            { text: '1', correct: true },
+            { text: '0', correct: false},
             { text: '2', correct: false},
             { text: '3', correct: false}
         ]
@@ -254,8 +265,8 @@ const beginnerQuestions = [
     {
         question: 'How many sharps are in the key of G major?',
         answers: [
-            { text: '0', correct: true },
-            { text: '1', correct: false},
+            { text: '1', correct: true },
+            { text: '0', correct: false},
             { text: '2', correct: false},
             { text: '3', correct: false}
         ]
@@ -263,26 +274,26 @@ const beginnerQuestions = [
     {
         question: 'How many sharps are in the key of D major?',
         answers: [
-            { text: '0', correct: true },
+            { text: '2', correct: true },
             { text: '1', correct: false},
-            { text: '2', correct: false},
+            { text: '0', correct: false},
             { text: '3', correct: false}
         ]
     },
     {
         question: 'How many sharps are in the key of A minor?',
         answers: [
-            { text: '0', correct: true },
+            { text: '3', correct: true },
             { text: '1', correct: false},
             { text: '2', correct: false},
-            { text: '3', correct: false}
+            { text: '0', correct: false}
         ]
     },
     {
         question: 'How many flats are in the key of D minor?',
         answers: [
-            { text: '0', correct: true },
-            { text: '1', correct: false},
+            { text: '1', correct: true },
+            { text: '0', correct: false},
             { text: '2', correct: false},
             { text: '3', correct: false}
         ]
@@ -290,8 +301,8 @@ const beginnerQuestions = [
     {
         question: 'How many sharps are in the key of E minor?',
         answers: [
-            { text: '0', correct: true },
-            { text: '1', correct: false},
+            { text: '1', correct: true },
+            { text: '0', correct: false},
             { text: '2', correct: false},
             { text: '3', correct: false}
         ]
@@ -299,9 +310,9 @@ const beginnerQuestions = [
     {
         question: 'How many sharps are in the key of B minor?',
         answers: [
-            { text: '0', correct: true },
+            { text: '2', correct: true },
             { text: '1', correct: false},
-            { text: '2', correct: false},
+            { text: '0', correct: false},
             { text: '3', correct: false}
         ]
     },
