@@ -72,7 +72,9 @@ let shuffledQuestions, shuffledAnswers;
 // Display beginner questions
 function dispalyBeginnerQuestion() {
     shuffledQuestions = shuffleQuestions(beginnerQuestions);
+    //display a shuffled question
     question.innerText = shuffledQuestions[0].question;
+    //display the shuffled answers
     shuffledAnswers = shuffleQuestions(shuffledQuestions[0].answers);
     for (let i = 0; i < 4; i++) {
         answerButton[i].innerText = shuffledAnswers[i].text;

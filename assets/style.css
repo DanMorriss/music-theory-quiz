@@ -101,6 +101,14 @@ p {
     justify-content: flex-end;
 }
 
+#submit-btn {
+    width: 10rem;
+    font-family: 'Playfair Display', serif;
+    font-size: 150%;
+    background-color: #B1D8B7;
+
+}
+
 #difficulty-options {
     display: flex;
     flex-direction: column;
@@ -110,6 +118,7 @@ p {
 
 .hide {
     display: none;
+
 }
 
 /*game screen*/
