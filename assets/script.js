@@ -174,10 +174,25 @@ function checkAnswer() {
         addToIncorrectScore();
         submitButton.classList.add('hide');
         nextButton.classList.remove('hide');
+        //add correct answer
     }}
 
 submitButton.addEventListener('click', () => {
     checkAnswer();
+})
+
+function displayNextQuestion() {
+    console.log('display next question');
+    //clear correct & incorrect class
+    const previousAnswer = document.getElementById('selected');
+    if (previousAnswer) {
+    previousAnswer.classList.remove('.correct');
+    }
+    dispalyBeginnerQuestion();
+}
+
+nextButton.addEventListener('click', () => {
+    displayNextQuestion(); //not working
 })
 
 //Close the game container
@@ -526,7 +541,7 @@ const beginnerQuestions = [
         answers: [
             { text: 'C#', correct: true },
             { text: 'D', correct: false},
-            { text: 'Db', correct: false},
+            { text: 'Eb', correct: false},
             { text: 'B', correct: false}
         ]
     },
@@ -544,7 +559,7 @@ const beginnerQuestions = [
         answers: [
             { text: 'F', correct: true },
             { text: 'F#', correct: false},
-            { text: 'Gb', correct: false},
+            { text: 'Eb', correct: false},
             { text: 'G', correct: false}
         ]
     },
@@ -553,7 +568,7 @@ const beginnerQuestions = [
         answers: [
             { text: 'F#', correct: true },
             { text: 'G', correct: false},
-            { text: 'Gb', correct: false},
+            { text: 'Ab', correct: false},
             { text: 'G#', correct: false}
         ]
     },
@@ -563,7 +578,7 @@ const beginnerQuestions = [
             { text: 'Ab', correct: true },
             { text: 'G', correct: false},
             { text: 'A#', correct: false},
-            { text: 'G#', correct: false}
+            { text: 'Bb', correct: false}
         ]
     },
     {
@@ -581,7 +596,7 @@ const beginnerQuestions = [
             { text: 'C', correct: true },
             { text: 'Cb', correct: false},
             { text: 'Db', correct: false},
-            { text: 'B#', correct: false}
+            { text: 'C#', correct: false}
         ]
     },
     {
