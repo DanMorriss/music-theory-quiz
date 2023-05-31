@@ -161,12 +161,13 @@ Testing using the Google Chrome Dev Tools was used throughout the build of the s
 - All the different containers were displaying when I tidied up some of the CSS rules so I moved the .hide rul to the end to fix it.
 - False was typed flase in the question list so wasn't functing properly.
 - Checking if the selected answer matech the answer from the array wasn't working. I needed to convert both answers to text so they could be matched.
+- The submit button was still displaying after an answer has been submitted. After rewriting the else statement inside the checkAnswer fuction a type was fixed and the bug was fixed.
 
 [Back to top](<#contents>)
 ### Unsolved Bugs
 - I cannot make the correct answer display when I select the wrong answer. 
 - The answer boxes are sometimes displaying with 1 answer per line.
-- The submit button still displays after an answer has been submitted.
+- The previous answers still display after next button has been clicked.
 
 [Back to top](<#contents>)
 ## Deployment
