@@ -165,6 +165,8 @@ Testing using the Google Chrome Dev Tools was used throughout the build of the s
 [Back to top](<#contents>)
 ### Unsolved Bugs
 - I cannot make the correct answer display when I select the wrong answer. 
+- The answer boxes are sometimes displaying with 1 answer per line.
+- The submit button still displays after an answer has been submitted.
 
 [Back to top](<#contents>)
 ## Deployment

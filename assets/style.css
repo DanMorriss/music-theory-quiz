@@ -101,7 +101,7 @@ p {
     justify-content: flex-end;
 }
 
-#submit-btn {
+#submit-btn, #next-btn {
     width: 10rem;
     font-family: 'Playfair Display', serif;
     font-size: 150%;

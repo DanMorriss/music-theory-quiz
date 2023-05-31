@@ -13,6 +13,7 @@ const answerButton3 = document.getElementById('answer3');
 const answerButton4 = document.getElementById('answer4');
 const answerButton = document.getElementsByClassName('question-btn');
 const submitButton = document.getElementById('submit-btn');
+const nextButton = document.getElementById('next-btn');
 const question = document.getElementById('question');
 
 //containers
@@ -148,8 +149,11 @@ answerButton4.addEventListener('click', () => {
     }
 });
 
+//Add to the correct score
 function addToCorrectScore() {
     console.log('add to correct score');
+    let oldCorrectScore = parseInt(document.getElementById('correct-score').innerText);
+    document.getElementById('correct-score').innerText = ++oldCorrectScore;
 }
 
 function addToIncorrectScore() {
@@ -163,10 +167,16 @@ function checkAnswer() {
     if (selectedAnswer.textContent === correctAnswer.text) {
         selectedAnswer.classList.add('correct');
         addToCorrectScore();
+        submitButton.classList.add('hide');
+        nextButton.classList.remove('hide');
     } else {
         selectedAnswer.classList.add('incorrect');
         addToIncorrectScore();
         correctAnswer.classList.add('correct'); //this doesn't work yet
+        addToIncorrectScore();
+        submitButton.classList.add('hide'); //this doesn't work yet
+        nextButton.classList.remove('hide'); //this doesn't work yet
+        // the buttons are not properly defined, not sure why.
     }}
 
 submitButton.addEventListener('click', () => {
