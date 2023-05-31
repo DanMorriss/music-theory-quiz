@@ -7,6 +7,7 @@ const scoresButton = document.getElementById('scores-button');
 const backButtonScores = document.getElementById('back-button-scores');
 const backButtonGame = document.getElementById('back-button-game');
 const beginnerButton = document.getElementById('beginner');
+
 const answerButton1 = document.getElementById('answer1');
 const answerButton2 = document.getElementById('answer2');
 const answerButton3 = document.getElementById('answer3');
@@ -103,7 +104,6 @@ answerButton1.addEventListener('click', () => {
         answerButton1.classList.add('selected');
     }
 });
-
 answerButton2.addEventListener('click', () => {
     if (answerButton1.classList.contains('selected')) {
         answerButton1.classList.remove('selected');
@@ -118,7 +118,6 @@ answerButton2.addEventListener('click', () => {
         answerButton2.classList.add('selected');
     }
 });
-
 answerButton3.addEventListener('click', () => {
     if (answerButton1.classList.contains('selected')) {
         answerButton1.classList.remove('selected');
@@ -133,7 +132,6 @@ answerButton3.addEventListener('click', () => {
         answerButton3.classList.add('selected');
     }
 });
-
 answerButton4.addEventListener('click', () => {
     if (answerButton1.classList.contains('selected')) {
         answerButton1.classList.remove('selected');
@@ -155,6 +153,7 @@ function addToCorrectScore() {
     document.getElementById('correct-score').innerText = ++oldCorrectScore;
 }
 
+//Add to the incorrect score
 function addToIncorrectScore() {
     console.log('add to incorrect score');
     let oldIncorrectScore = parseInt(document.getElementById('incorrect-score').innerText);
@@ -173,11 +172,8 @@ function checkAnswer() {
     } else {
         selectedAnswer.classList.add('incorrect');
         addToIncorrectScore();
-        correctAnswer.classList.add('correct'); //this doesn't work yet
-        addToIncorrectScore();
-        submitButton.classList.add('hide'); //this doesn't work yet
-        nextButton.classList.remove('hide'); //this doesn't work yet
-        // the buttons are not properly defined, not sure why.
+        submitButton.classList.add('hide');
+        nextButton.classList.remove('hide');
     }}
 
 submitButton.addEventListener('click', () => {
