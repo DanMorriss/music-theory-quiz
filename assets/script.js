@@ -151,13 +151,14 @@ answerButton4.addEventListener('click', () => {
 
 //Add to the correct score
 function addToCorrectScore() {
-    console.log('add to correct score');
     let oldCorrectScore = parseInt(document.getElementById('correct-score').innerText);
     document.getElementById('correct-score').innerText = ++oldCorrectScore;
 }
 
 function addToIncorrectScore() {
     console.log('add to incorrect score');
+    let oldIncorrectScore = parseInt(document.getElementById('incorrect-score').innerText);
+    document.getElementById('incorrect-score').innerText = ++oldIncorrectScore;
 }
 
 //Check the answer
