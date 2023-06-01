@@ -24,6 +24,7 @@ const rulesContainer = document.getElementById('rules-container');
 const scoresContainer = document.getElementById('scores-container');
 const difficultyContainer = document.getElementById('difficulty-container');
 const gameContainer = document.getElementById('game-container');
+const gameOverContainer = document.getElementById('end-game-container');
 
 //Open the rules container from the home screen
 rulesButton.addEventListener('click', () => {
@@ -194,6 +195,19 @@ submitButton.addEventListener('click', () => {
     checkAnswer();
 })
 
+function endGame() {
+    //store score in variable
+    //close game div
+    gameContainer.classList.add('hide');
+    //open end game div
+    gameOverContainer.classList.remove('hide');
+    //display score and congratulations if over 6, or condolences if under 6
+    //display home, high scores and play again buttons
+    //add score and username to high scores board
+    console.log('end game');
+
+}
+
 function displayNextQuestion() {
     //enable clicking of buttons and remove previous button displays
     for (let i = 0; i < 4; i++) {
@@ -209,6 +223,7 @@ function displayNextQuestion() {
     //If 10 questions have been asked, end the game
     if (currentQuestionIndex === 10) {
         console.log('end game');
+        endGame();
     }else{
         //get the next question
         displayBeginnerQuestion();
