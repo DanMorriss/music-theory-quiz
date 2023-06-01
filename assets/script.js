@@ -203,7 +203,7 @@ function displayNextQuestion() {
     //try rewiting the html inside the answer-buttons div
     
     const previousAnswer = document.getElementsByClassName('selected')[0];
-    previousAnswer.classList.remove("correct");
+    previousAnswer.classList.remove("correct", "selected");
     
     //hide next button
     //display submit button
