@@ -194,17 +194,24 @@ function checkAnswer() {
 submitButton.addEventListener('click', () => {
     checkAnswer();
 })
+let finalScore;
 
 function endGame() {
     //store score in variable
+    const finalScore = parseInt(document.getElementById('correct-score').innerText);
     //close game div
     gameContainer.classList.add('hide');
     //open end game div
     gameOverContainer.classList.remove('hide');
-    //display score and congratulations if over 6, or condolences if under 6
-    //display home, high scores and play again buttons
+    //display score
+    document.getElementById('final-score').innerText = finalScore;
+    //congratulate of over 6
+    if (finalScore > 6) {
+        console.log('well done');
+    } else {
+        console.log('keep on trying, you can do better than that!');
+    }
     //add score and username to high scores board
-    console.log('end game');
 
 }
 
