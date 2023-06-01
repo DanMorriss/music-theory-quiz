@@ -170,6 +170,7 @@ Testing using the Google Chrome Dev Tools was used throughout the build of the s
 ### Unsolved Bugs
 - The answer boxes are sometimes displaying with 1 answer per line.
 - The previous answers still display after next button has been clicked. Need to clear the board and start again. Or clear incorrect, selected and correct class names. Loop for this. The answerButtons variable was not accessing the array properly. I had the index placed incorrectly.
+- The same question is showing on each new question.
 
 [Back to top](<#contents>)
 ## Deployment

@@ -71,6 +71,7 @@ function shuffleQuestions(array) {
   }
 
 let shuffledQuestions, shuffledAnswers;
+let currentQuestionIndex = 0;
 
 // Display beginner questions
 function displayBeginnerQuestion() {
@@ -200,7 +201,18 @@ function displayNextQuestion() {
         answerButton[i].classList.remove("correct", "selected", "incorrect");
     }
     //hide next button
+    nextButton.classList.add('hide');
     //display submit button
+    submitButton.classList.remove('hide');
+    //add to the question index
+    currentQuestionIndex++;
+    //If 10 questions have been asked, end the game
+    if (currentQuestionIndex === 10) {
+        console.log('end game');
+    }else{
+        //get the next question
+        displayBeginnerQuestion();
+    }
 }
 
 nextButton.addEventListener('click', () => {
