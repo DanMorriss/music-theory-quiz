@@ -7,7 +7,7 @@ const scoresButton = document.getElementById('scores-button');
 const backButtonScores = document.getElementById('back-button-scores');
 const backButtonGame = document.getElementById('back-button-game');
 const beginnerButton = document.getElementById('beginner');
-const answerButtons = document.getElementsByClassName('answer-buttons'[0]);
+const answerButtons = document.getElementsByClassName('answer-buttons')[0];
 
 const answerButton1 = document.getElementById('answer1');
 const answerButton2 = document.getElementById('answer2');
@@ -73,7 +73,7 @@ function shuffleQuestions(array) {
 let shuffledQuestions, shuffledAnswers;
 
 // Display beginner questions
-function dispalyBeginnerQuestion() {
+function displayBeginnerQuestion() {
     shuffledQuestions = shuffleQuestions(beginnerQuestions);
     //display a shuffled question
     question.innerText = shuffledQuestions[0].question;
@@ -87,7 +87,7 @@ function dispalyBeginnerQuestion() {
 beginnerButton.addEventListener('click', () => {
     difficultyContainer.classList.add('hide');
     gameContainer.classList.remove('hide');
-    dispalyBeginnerQuestion();
+    displayBeginnerQuestion();
 })
 
 //select an answer
@@ -195,14 +195,19 @@ submitButton.addEventListener('click', () => {
 
 function displayNextQuestion() {
     console.log('display next question');
+    //enable clicking of the buttons
+    answerButton1.disabled = false;
+    answerButton2.disabled = false;
+    answerButton3.disabled = false;
+    answerButton4.disabled = false;
     //try rewiting the html inside the answer-buttons div
-    const previousAnswer = document.getElementById('selected');
-    if (previousAnswer) {
-    previousAnswer.classList.remove('.correct');
-    }
+    
+    const previousAnswer = document.getElementsByClassName('selected')[0];
+    previousAnswer.classList.remove("correct");
+    
     //hide next button
     //display submit button
-    dispalyBeginnerQuestion();
+    displayBeginnerQuestion();
 }
 
 nextButton.addEventListener('click', () => {
@@ -319,10 +324,10 @@ const beginnerQuestions = [
     {
         question: 'How many sharps are in the key of A minor?',
         answers: [
-            { text: '3', correct: true },
+            { text: '0', correct: true },
             { text: '1', correct: false},
             { text: '2', correct: false},
-            { text: '0', correct: false}
+            { text: '3', correct: false}
         ]
     },
     {

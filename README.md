@@ -164,11 +164,12 @@ Testing using the Google Chrome Dev Tools was used throughout the build of the s
 - The submit button was still displaying after an answer has been submitted. After rewriting the else statement inside the checkAnswer fuction a type was fixed and the bug was fixed.
 - When the incorrect answer was selected the correct answer was not displaying. To fix this I looped through the possible answers and matched them to the correct answer. If they matched I added the correct class to it.
 - I needed to dissable clicking on an answer once one has been submitted. I used .button:active:hover:not([disabled]) to allow me to add disabled to the buttons after an answer has been selected.
+- There was a typo in the displayBeginnerQuestion function meaning it wasn't being called properly.
 
 [Back to top](<#contents>)
 ### Unsolved Bugs
 - The answer boxes are sometimes displaying with 1 answer per line.
-- The previous answers still display after next button has been clicked. Need to clear the board and start again. Or clear incorrect, selected and correct class names. Loop for this.
+- The previous answers still display after next button has been clicked. Need to clear the board and start again. Or clear incorrect, selected and correct class names. Loop for this. The answerButtons variable was not accessing the array properly. I had the index placed incorrectly.
 
 [Back to top](<#contents>)
 ## Deployment
