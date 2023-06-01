@@ -8,6 +8,9 @@ const backButtonScores = document.getElementById('back-button-scores');
 const backButtonGame = document.getElementById('back-button-game');
 const beginnerButton = document.getElementById('beginner');
 const answerButtons = document.getElementsByClassName('answer-buttons')[0];
+const homeButton = document.getElementById('home-btn');
+const playAgainButton = document.getElementById('play-again-btn');
+const highScoresButton = document.getElementById('high-scores-btn');
 
 const answerButton1 = document.getElementById('answer1');
 const answerButton2 = document.getElementById('answer2');
@@ -61,6 +64,24 @@ playButton.addEventListener('click', () => {
 backButtonDifficulty.addEventListener('click', () => {
     difficultyContainer.classList.add('hide');
     homeContainer.classList.remove('hide');
+})
+
+//Go home from game over screen
+homeButton.addEventListener('click', () => {
+    gameOverContainer.classList.add('hide');
+    homeContainer.classList.remove('hide');
+})
+
+//Play again from game over screen
+playAgainButton.addEventListener('click', () => {
+    gameOverContainer.classList.add('hide');
+    difficultyContainer.classList.remove('hide');
+})
+
+//Go to high scores from game over
+highScoresButton.addEventListener('click', () => {
+    gameOverContainer.classList.add('hide');
+    scoresContainer.classList.remove('hide');
 })
 
 // Shuffle questions: Fisher-Yates shuffle algorithm.
