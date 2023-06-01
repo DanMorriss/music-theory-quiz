@@ -167,7 +167,7 @@ Testing using the Google Chrome Dev Tools was used throughout the build of the s
 [Back to top](<#contents>)
 ### Unsolved Bugs
 - The answer boxes are sometimes displaying with 1 answer per line.
-- The previous answers still display after next button has been clicked.
+- The previous answers still display after next button has been clicked. Need to clear the board and start again. Or clear incorrect, selected and correct class names. Loop for this.
 - Dissable clicking on an answer once one has been submitted.
 
 [Back to top](<#contents>)
