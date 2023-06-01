@@ -176,13 +176,17 @@ function checkAnswer() {
         submitButton.classList.add('hide');
         nextButton.classList.remove('hide');
         //add correct answer
-        console.log(correctAnswer);
         for (let i = 0; i < 4; i++) {
             if (answerButton[i].innerText === correctAnswer.text) {
                 answerButton[i].classList.add('correct');
             }
         }
     }
+    //dissable selection of another answer
+    answerButton1.disabled = true;
+    answerButton2.disabled = true;
+    answerButton3.disabled = true;
+    answerButton4.disabled = true;
 }
 
 submitButton.addEventListener('click', () => {
