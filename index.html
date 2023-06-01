@@ -44,7 +44,7 @@
         </div>
         <div class="container-content">
             <h2>High Scores</h2>
-            <p>The scores will go here</p>
+            <div id="high-scores"></div>
         </div>
     </div>
 
@@ -53,6 +53,7 @@
         <div class="close-button-container">
             <button id="back-button-difficulty" class="back-button"><i class="fa-solid fa-square-xmark"></i></button>
         </div>
+        <h2>Select your difficulty</h2>
         <div id="difficulty-options" class="container-content">
             <button id="beginner" class="button">Beginner</button>
             <button id="intermediate" class="button">Intermediate</button>
@@ -88,8 +89,9 @@
             <button id="back-button-game" class="back-button"><i class="fa-solid fa-square-xmark"></i></button>
         </div>
         <div>
-            <h2>Game Over</h2>
-            <p><span id="congratulate">Well done</span>, you answered <span id="final-score">0</span> questions correctly!</p>
+            <h2 id="congratulate">Game Over</h2>
+            <p>You answered <span id="final-score">0</span> questions correctly.</p>
+            <p id="try-again"></p>
         </div>
         <div id="navigation-buttons">
             <button id="home-btn" class="button">Home</button>

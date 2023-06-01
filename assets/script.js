@@ -17,6 +17,7 @@ const answerButton = document.getElementsByClassName('question-btn');
 const submitButton = document.getElementById('submit-btn');
 const nextButton = document.getElementById('next-btn');
 const question = document.getElementById('question');
+const scoreBoard = document.getElementById('high-scores');
 
 //containers
 const homeContainer = document.getElementById('home-container');
@@ -207,12 +208,16 @@ function endGame() {
     document.getElementById('final-score').innerText = finalScore;
     //congratulate of over 6
     if (finalScore > 6) {
-        console.log('well done');
+        document.getElementById('congratulate').innerText = "Congratulations!";
+        document.getElementById('try-again').innerText = "Try a harder level!";
     } else {
         console.log('keep on trying, you can do better than that!');
+        document.getElementById('congratulate').innerText = "Game Over";
+        document.getElementById('try-again').innerText = "Give it another go, you can do better!";
     }
     //add score and username to high scores board
-
+    //create new element. Add name, level and socre to it 
+    //add it to scoreBoard
 }
 
 function displayNextQuestion() {
