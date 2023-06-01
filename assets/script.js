@@ -194,18 +194,11 @@ submitButton.addEventListener('click', () => {
 })
 
 function displayNextQuestion() {
-    //group this together inside a loop
-    //enable clicking of the buttons
-    answerButton1.disabled = false;
-    answerButton2.disabled = false;
-    answerButton3.disabled = false;
-    answerButton4.disabled = false;
-    //remove previous button displays
-    answerButton1.classList.remove("correct", "selected", "incorrect");
-    answerButton2.classList.remove("correct", "selected", "incorrect");
-    answerButton3.classList.remove("correct", "selected", "incorrect");
-    answerButton4.classList.remove("correct", "selected", "incorrect");
-
+    //enable clicking of buttons and remove previous button displays
+    for (let i = 0; i < 4; i++) {
+        answerButton[i].disabled = false;
+        answerButton[i].classList.remove("correct", "selected", "incorrect");
+    }
     //hide next button
     //display submit button
 }
