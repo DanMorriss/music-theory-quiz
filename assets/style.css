@@ -146,6 +146,7 @@ p {
 
 .question-btn {
     margin: 1rem;
+    min-width: 250px
 }
 
 .game-score {

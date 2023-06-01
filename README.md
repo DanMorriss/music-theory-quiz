@@ -115,6 +115,9 @@
 [Back to top](<#contents>)
 ### Future Features
 
+- Score 60% to unlock next level.
+- Remove submit button for better user experience.
+
 [Back to top](<#contents>)
 ## Technologies Used
 ### Languages
@@ -166,10 +169,11 @@ Testing using the Google Chrome Dev Tools was used throughout the build of the s
 - I needed to dissable clicking on an answer once one has been submitted. I used .button:active:hover:not([disabled]) to allow me to add disabled to the buttons after an answer has been selected.
 - There was a typo in the displayBeginnerQuestion function meaning it wasn't being called properly.
 - The same question was showing on each new question. This was because I forgot to re-run the displayBeginnerQuestion function.
+- The answer boxes are sometimes displaying with 1 answer per line. Added a min-width property to the css so they will always fit 2 per line unless on a small screen.
 
 [Back to top](<#contents>)
 ### Unsolved Bugs
-- The answer boxes are sometimes displaying with 1 answer per line.
+
 
 [Back to top](<#contents>)
 ## Deployment
