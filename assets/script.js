@@ -7,6 +7,7 @@ const scoresButton = document.getElementById('scores-button');
 const backButtonScores = document.getElementById('back-button-scores');
 const backButtonGame = document.getElementById('back-button-game');
 const beginnerButton = document.getElementById('beginner');
+const answerButtons = document.getElementsByClassName('answer-buttons'[0]);
 
 const answerButton1 = document.getElementById('answer1');
 const answerButton2 = document.getElementById('answer2');
@@ -175,7 +176,14 @@ function checkAnswer() {
         submitButton.classList.add('hide');
         nextButton.classList.remove('hide');
         //add correct answer
-    }}
+        console.log(correctAnswer);
+        for (let i = 0; i < 4; i++) {
+            if (answerButton[i].innerText === correctAnswer.text) {
+                answerButton[i].classList.add('correct');
+            }
+        }
+    }
+}
 
 submitButton.addEventListener('click', () => {
     checkAnswer();
@@ -183,11 +191,13 @@ submitButton.addEventListener('click', () => {
 
 function displayNextQuestion() {
     console.log('display next question');
-    //clear correct & incorrect class
+    //try rewiting the html inside the answer-buttons div
     const previousAnswer = document.getElementById('selected');
     if (previousAnswer) {
     previousAnswer.classList.remove('.correct');
     }
+    //hide next button
+    //display submit button
     dispalyBeginnerQuestion();
 }
 
