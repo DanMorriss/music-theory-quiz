@@ -239,6 +239,10 @@ function endGame() {
     //add score and username to high scores board
     //create new element. Add name, level and socre to it 
     //add it to scoreBoard
+    //clear score and question index for next game
+    currentQuestionIndex = 0;
+    document.getElementById('correct-score').innerText = "0";
+    document.getElementById('incorrect-score').innerText = "0";
 }
 
 function displayNextQuestion() {
