@@ -17,7 +17,6 @@ const answerButton2 = document.getElementById('answer2');
 const answerButton3 = document.getElementById('answer3');
 const answerButton4 = document.getElementById('answer4');
 const answerButton = document.getElementsByClassName('question-btn');
-const submitButton = document.getElementById('submit-btn');
 const nextButton = document.getElementById('next-btn');
 const question = document.getElementById('question');
 const scoreBoard = document.getElementById('high-scores');
@@ -114,67 +113,6 @@ beginnerButton.addEventListener('click', () => {
     displayBeginnerQuestion();
 })
 
-
-
-/*select an answer
-answerButton1.addEventListener('click', () => {
-    if (answerButton2.classList.contains('selected')) {
-        answerButton2.classList.remove('selected');
-        answerButton1.classList.add('selected');
-    } else if (answerButton3.classList.contains('selected')) {
-        answerButton3.classList.remove('selected');
-        answerButton1.classList.add('selected');
-    } else if (answerButton4.classList.contains('selected')) {
-        answerButton4.classList.remove('selected');
-        answerButton1.classList.add('selected');
-    } else {
-        answerButton1.classList.add('selected');
-    }
-});
-answerButton2.addEventListener('click', () => {
-    if (answerButton1.classList.contains('selected')) {
-        answerButton1.classList.remove('selected');
-        answerButton2.classList.add('selected');
-    } else if (answerButton3.classList.contains('selected')) {
-        answerButton3.classList.remove('selected');
-        answerButton2.classList.add('selected');
-    } else if (answerButton4.classList.contains('selected')) {
-        answerButton4.classList.remove('selected');
-        answerButton2.classList.add('selected');
-    } else {
-        answerButton2.classList.add('selected');
-    }
-});
-answerButton3.addEventListener('click', () => {
-    if (answerButton1.classList.contains('selected')) {
-        answerButton1.classList.remove('selected');
-        answerButton3.classList.add('selected');
-    } else if (answerButton2.classList.contains('selected')) {
-        answerButton2.classList.remove('selected');
-        answerButton3.classList.add('selected');
-    } else if (answerButton4.classList.contains('selected')) {
-        answerButton4.classList.remove('selected');
-        answerButton3.classList.add('selected');
-    } else {
-        answerButton3.classList.add('selected');
-    }
-});
-answerButton4.addEventListener('click', () => {
-    if (answerButton1.classList.contains('selected')) {
-        answerButton1.classList.remove('selected');
-        answerButton4.classList.add('selected');
-    } else if (answerButton2.classList.contains('selected')) {
-        answerButton2.classList.remove('selected');
-        answerButton4.classList.add('selected');
-    } else if (answerButton3.classList.contains('selected')) {
-        answerButton3.classList.remove('selected');
-        answerButton4.classList.add('selected');
-    } else {
-        answerButton4.classList.add('selected');
-    }
-});
-*/
-
 //Add to the correct score
 function addToCorrectScore() {
     let oldCorrectScore = parseInt(document.getElementById('correct-score').innerText);
@@ -195,12 +133,10 @@ function checkAnswer() {
     if (selectedAnswer.textContent === correctAnswer.text) {
         selectedAnswer.classList.add('correct');
         addToCorrectScore();
-        submitButton.classList.add('hide');
         nextButton.classList.remove('hide');
     } else {
         selectedAnswer.classList.add('incorrect');
         addToIncorrectScore();
-        submitButton.classList.add('hide');
         nextButton.classList.remove('hide');
         //add correct answer
         for (let i = 0; i < 4; i++) {
@@ -234,11 +170,6 @@ answerButton4.addEventListener('click', function(e) {
     checkAnswer();
 })
 
-
-//click on submit button
-submitButton.addEventListener('click', () => {
-    checkAnswer();
-})
 let finalScore;
 
 function endGame() {
@@ -276,8 +207,6 @@ function displayNextQuestion() {
     }
     //hide next button
     nextButton.classList.add('hide');
-    //display submit button
-    submitButton.classList.remove('hide');
     //add to the question index
     currentQuestionIndex++;
     //If 10 questions have been asked, end the game
