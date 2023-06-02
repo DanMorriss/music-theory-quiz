@@ -114,7 +114,9 @@ beginnerButton.addEventListener('click', () => {
     displayBeginnerQuestion();
 })
 
-//select an answer
+
+
+/*select an answer
 answerButton1.addEventListener('click', () => {
     if (answerButton2.classList.contains('selected')) {
         answerButton2.classList.remove('selected');
@@ -171,6 +173,7 @@ answerButton4.addEventListener('click', () => {
         answerButton4.classList.add('selected');
     }
 });
+*/
 
 //Add to the correct score
 function addToCorrectScore() {
@@ -213,6 +216,26 @@ function checkAnswer() {
     answerButton4.disabled = true;
 }
 
+//Listen to each button and run checkAnswer if clicked
+answerButton1.addEventListener('click', function(e) {
+    answerButton1.classList.add('selected');
+    checkAnswer();
+})
+answerButton2.addEventListener('click', function(e) {
+    answerButton2.classList.add('selected');
+    checkAnswer();
+})
+answerButton3.addEventListener('click', function(e) {
+    answerButton3.classList.add('selected');
+    checkAnswer();
+})
+answerButton4.addEventListener('click', function(e) {
+    answerButton4.classList.add('selected');
+    checkAnswer();
+})
+
+
+//click on submit button
 submitButton.addEventListener('click', () => {
     checkAnswer();
 })

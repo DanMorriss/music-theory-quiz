@@ -170,13 +170,14 @@ Testing using the Google Chrome Dev Tools was used throughout the build of the s
 - There was a typo in the displayBeginnerQuestion function meaning it wasn't being called properly.
 - The same question was showing on each new question. This was because I forgot to re-run the displayBeginnerQuestion function.
 - The answer boxes are sometimes displaying with 1 answer per line. Added a min-width property to the css so they will always fit 2 per line unless on a small screen.
+- Once you finished the game and played again you could play forever. I needed to reset the score index to 0 and clear the current score.
 
 [Back to top](<#contents>)
 ### Unsolved Bugs
 
 - add scores to scoreboard 
 - remover height scroll on a mobile
-- when you play again the score needs to be reset
+- Make return key act at submit/next
 
 [Back to top](<#contents>)
 ## Deployment
