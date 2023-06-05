@@ -11,6 +11,7 @@ const answerButtons = document.getElementsByClassName('answer-buttons')[0];
 const homeButton = document.getElementById('home-btn');
 const playAgainButton = document.getElementById('play-again-btn');
 const highScoresButton = document.getElementById('high-scores-btn');
+const spacer = document.getElementById('spacer');
 
 const answerButton1 = document.getElementById('answer1');
 const answerButton2 = document.getElementById('answer2');
@@ -34,7 +35,6 @@ rulesButton.addEventListener('click', () => {
     homeContainer.classList.add('hide');
     rulesContainer.classList.remove('hide');
 })
-
 //Close the rules container
 backButtonRules.addEventListener('click', () => {
     rulesContainer.classList.add('hide');
@@ -46,7 +46,6 @@ scoresButton.addEventListener('click', () => {
     homeContainer.classList.add('hide');
     scoresContainer.classList.remove('hide');
 })
-
 //Close the high scores container
 backButtonScores.addEventListener('click', () => {
     scoresContainer.classList.add('hide');
@@ -58,7 +57,6 @@ playButton.addEventListener('click', () => {
     homeContainer.classList.add('hide');
     difficultyContainer.classList.remove('hide');
 })
-
 //Close difficulty container
 backButtonDifficulty.addEventListener('click', () => {
     difficultyContainer.classList.add('hide');
@@ -70,13 +68,11 @@ homeButton.addEventListener('click', () => {
     gameOverContainer.classList.add('hide');
     homeContainer.classList.remove('hide');
 })
-
 //Play again from game over screen
 playAgainButton.addEventListener('click', () => {
     gameOverContainer.classList.add('hide');
     difficultyContainer.classList.remove('hide');
 })
-
 //Go to high scores from game over
 highScoresButton.addEventListener('click', () => {
     gameOverContainer.classList.add('hide');
@@ -134,10 +130,12 @@ function checkAnswer() {
         selectedAnswer.classList.add('correct');
         addToCorrectScore();
         nextButton.classList.remove('hide');
+        spacer.classList.add('hide');
     } else {
         selectedAnswer.classList.add('incorrect');
         addToIncorrectScore();
         nextButton.classList.remove('hide');
+        spacer.classList.add('hide');
         //add correct answer
         for (let i = 0; i < 4; i++) {
             if (answerButton[i].innerText === correctAnswer.text) {
@@ -207,6 +205,8 @@ function displayNextQuestion() {
     }
     //hide next button
     nextButton.classList.add('hide');
+    //display spacer where next button will be
+    spacer.classList.remove('hide');
     //add to the question index
     currentQuestionIndex++;
     //If 10 questions have been asked, end the game

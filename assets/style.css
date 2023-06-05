@@ -131,10 +131,7 @@ p {
     padding: 10vh 0;
 }
 
-.hide {
-    display: none;
 
-}
 
 /*game screen*/
 .answer-buttons {
@@ -154,6 +151,11 @@ p {
     justify-content: space-around;
     width: 100%;
     padding: 10px 30px;
+}
+
+#spacer {
+    height: 24px;
+    background: none;
 }
 
 /*End game container*/
@@ -202,4 +204,8 @@ p {
 
 .rules p {
     margin-bottom: 1rem;
+}
+
+.hide {
+    display: none;
 }
