@@ -116,7 +116,7 @@
 ### Future Features
 
 - Score 60% to unlock next level.
-- Remove submit button for better user experience.
+- Add name at end of gae to dispaly on the score board.
 
 [Back to top](<#contents>)
 ## Technologies Used
@@ -171,6 +171,7 @@ Testing using the Google Chrome Dev Tools was used throughout the build of the s
 - The same question was showing on each new question. This was because I forgot to re-run the displayBeginnerQuestion function.
 - The answer boxes are sometimes displaying with 1 answer per line. Added a min-width property to the css so they will always fit 2 per line unless on a small screen.
 - Once you finished the game and played again you could play forever. I needed to reset the score index to 0 and clear the current score.
+- The container shape changes when the next button is bisplayed. To fix this, I added a div that I sized to match the button that shows when the next button is hidden and hides when the next button shows. I also made the question height a set size to stop the buttons being pushed down then the question was on two lines.
 
 [Back to top](<#contents>)
 ### Unsolved Bugs
@@ -178,7 +179,7 @@ Testing using the Google Chrome Dev Tools was used throughout the build of the s
 - add scores to scoreboard 
 - remover height scroll on a mobile
 - Make return key act at submit/next
-- The container shape changes when the next button is bisplayed.
+
 
 [Back to top](<#contents>)
 ## Deployment
@@ -186,7 +187,7 @@ Testing using the Google Chrome Dev Tools was used throughout the build of the s
 ### To Deploy the project
 GitHub pages was used to deploy the live site as follows:
 1. Login to GitHub
-2. Go to the repository [DanMorriss/jazz-platform](https://github.com/DanMorriss/jazz-platform)
+2. Go to the repository [DanMorriss/jazz-platform](https://github.com/DanMorriss/music-theory-quiz)
 3. Click the `Settings` tab
 4. Click the `Pages` tab
 5. Under the 'Build and Deployment' section select the `Deploy from a branch` from the dropdown menu

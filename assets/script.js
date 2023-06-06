@@ -700,7 +700,7 @@ const beginnerQuestions = [
         ]
     },
     {
-        question: 'What are the intervals of a major chord??',
+        question: 'What are the intervals of a major chord?',
         answers: [
             { text: 'Root, 3rd, 5th', correct: true },
             { text: 'Root, flat 3rd, 5th', correct: false},
@@ -709,7 +709,7 @@ const beginnerQuestions = [
         ]
     },
     {
-        question: 'What are the intervals of a minor chord??',
+        question: 'What are the intervals of a minor chord?',
         answers: [
             { text: 'Root, flat 3rd, 5th', correct: true },
             { text: 'Root, 3rd, 5th', correct: false},
@@ -718,7 +718,7 @@ const beginnerQuestions = [
         ]
     },
     {
-        question: 'What are the intervals of a sus2 chord??',
+        question: 'What are the intervals of a sus2 chord?',
         answers: [
             { text: 'Root, 2nd, 5th', correct: true },
             { text: 'Root, 2nd, 4th', correct: false},
@@ -727,7 +727,7 @@ const beginnerQuestions = [
         ]
     },
     {
-        question: 'What are the intervals of a sus4 chord??',
+        question: 'What are the intervals of a sus4 chord?',
         answers: [
             { text: 'Root, 4th, 5th', correct: true },
             { text: 'Root, 2nd, 4th', correct: false},

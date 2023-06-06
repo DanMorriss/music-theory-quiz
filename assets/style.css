@@ -74,7 +74,7 @@ p {
     width: 40%;
     box-shadow: 1px 1px 5px 1px #223B33;
     background-color: #F4F6F1;
-    transition: all 0.3s;
+    transition: all 0.4s;
 }
 
 .button:hover:not([disabled]) {
@@ -131,7 +131,24 @@ p {
     padding: 10vh 0;
 }
 
+/*Enter name screen*/
+.name-question {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 90%;
+    width: 90%;
+}
 
+#name {
+    margin: 2rem 4rem 4rem 4rem;
+    width: 80%;
+    height: 3rem;
+    border-radius: 1rem;
+    border: solid 1px #223B33;
+    box-shadow: 1px 1px 5px 1px #223B33;
+}
 
 /*game screen*/
 .answer-buttons {
@@ -154,8 +171,39 @@ p {
 }
 
 #spacer {
-    height: 24px;
-    background: none;
+    height: 1.8rem;
+}
+
+#question {
+    height: 4rem;
+}
+
+@media only screen and (max-width: 745px)  {
+  /*Game screen*/
+    #spacer {
+        height: 4.1rem;
+    }
+
+    #question {
+        font-size: 1.2em;
+    }
+
+    #next-button {
+        font-size: 1.2em;
+    }
+
+    /*Game Over screen*/
+    #navigation-buttons button {
+        font-size: 1.2em;
+        margin: 1rem;
+    }
+
+    /*Select difficulty screen*/
+    #difficulty-options button {
+        font-size: 1.2em;
+        margin: 1rem;
+        width: 10rem;   
+    }
 }
 
 /*End game container*/
