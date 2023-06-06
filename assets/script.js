@@ -6,6 +6,7 @@ const backButtonRules = document.getElementById('back-button-rules');
 const scoresButton = document.getElementById('scores-button');
 const backButtonScores = document.getElementById('back-button-scores');
 const backButtonGame = document.getElementById('back-button-game');
+const backButtonName = document.getElementById('back-button-name');
 const beginnerButton = document.getElementById('beginner');
 const answerButtons = document.getElementsByClassName('answer-buttons')[0];
 const homeButton = document.getElementById('home-btn');
@@ -32,43 +33,47 @@ const gameContainer = document.getElementById('game-container');
 const gameOverContainer = document.getElementById('end-game-container');
 const nameContainer = document.getElementById('enter-name-container');
 
-//Open the rules container from the home screen
+//Open & close the rules container from the home screen
 rulesButton.addEventListener('click', () => {
     homeContainer.classList.add('hide');
     rulesContainer.classList.remove('hide');
 })
-//Close the rules container
 backButtonRules.addEventListener('click', () => {
     rulesContainer.classList.add('hide');
     homeContainer.classList.remove('hide');
 })
 
-//Open the high scores container from the home screen
+//Open & close the high scores container from the home screen
 scoresButton.addEventListener('click', () => {
     homeContainer.classList.add('hide');
     scoresContainer.classList.remove('hide');
 })
-//Close the high scores container
 backButtonScores.addEventListener('click', () => {
     scoresContainer.classList.add('hide');
     homeContainer.classList.remove('hide');
 })
 
-//Open name container
+//Open & close submit name container
 playButton.addEventListener('click', () => {
     homeContainer.classList.add('hide');
     nameContainer.classList.remove('hide');
+})
+backButtonName.addEventListener('click', () => {
+    nameContainer.classList.add('hide');
+    homeContainer.classList.remove('hide');
 })
 
 let username;
 
 //Submit name
-submitName.addEventListener('click', () => {
-    username = document.getElementById('name').innetText;
+submitName.addEventListener('submit', (e) => {
+    e.preventDefault();
+    username = document.getElementById('name').value;
+    console.log(username);
     nameContainer.classList.add('hide');
     difficultyContainer.classList.remove('hide');
-    console.log(username);
 })
+
 //Close difficulty container
 backButtonDifficulty.addEventListener('click', () => {
     difficultyContainer.classList.add('hide');
@@ -186,7 +191,7 @@ let finalScore;
 
 function endGame() {
     //store score in variable
-    const finalScore = parseInt(document.getElementById('correct-score').innerText);
+    finalScore = parseInt(document.getElementById('correct-score').innerText);
     //close game div
     gameContainer.classList.add('hide');
     //open end game div

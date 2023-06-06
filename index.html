@@ -17,7 +17,7 @@
 <body>
 
     <!--Home container-->
-    <div id="home-container" class="container hide">
+    <div id="home-container" class="container">
         <h1>Music Theory Quiz</h1>
         <div id="" class="buttons-container home-screen-buttons">
             <button id="play-button" class="button">Play</button>
@@ -57,14 +57,16 @@
     </div>
 
     <!--Enter name container-->
-    <div id="enter-name-container" class="container">
+    <div id="enter-name-container" class="container hide">
         <div class="close-button-container">
-            <button id="back-button-difficulty" class="back-button"><i class="fa-solid fa-square-xmark"></i></button>
+            <button id="back-button-name" class="back-button"><i class="fa-solid fa-square-xmark"></i></button>
         </div>
         <div class="name-question">
             <h2>What's your name?</h2>
-            <input id="name" type="text">
-            <button id="submit-name" class="button">Submit</button>
+            <form id="submit-name">
+                <input id="name" type="text">
+                <button type="submit" id="submit" class="button">Submit</button>
+            </form>
         </div>
     </div>
 

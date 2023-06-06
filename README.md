@@ -117,6 +117,7 @@
 
 - Score 60% to unlock next level.
 - Add name at end of gae to dispaly on the score board.
+- Add a progress bar: https://www.youtube.com/watch?v=4bctmtuZVcM&list=PLDlWc9AfQBfZIkdVaOQXi1tizJeNJipEx&index=7
 
 [Back to top](<#contents>)
 ## Technologies Used
@@ -172,6 +173,8 @@ Testing using the Google Chrome Dev Tools was used throughout the build of the s
 - The answer boxes are sometimes displaying with 1 answer per line. Added a min-width property to the css so they will always fit 2 per line unless on a small screen.
 - Once you finished the game and played again you could play forever. I needed to reset the score index to 0 and clear the current score.
 - The container shape changes when the next button is bisplayed. To fix this, I added a div that I sized to match the button that shows when the next button is hidden and hides when the next button shows. I also made the question height a set size to stop the buttons being pushed down then the question was on two lines.
+- A question was ocasionally being repeated so I used splice from the shuffledQuestions to remove a question once it has been displayed.
+- When submititng a name the browser refreshed the page so I had to preventDefault on the form so the rest of the function could run.
 
 [Back to top](<#contents>)
 ### Unsolved Bugs
