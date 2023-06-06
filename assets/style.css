@@ -162,6 +162,10 @@ form {
     align-items: center;
 }
 
+#submit {
+    color: #223B33;
+}
+
 /*game screen*/
 .answer-buttons {
     display: flex;
@@ -270,6 +274,7 @@ form {
     display: none;
 }
 
+/* Scoreboard */
 .high-score {
     list-style: none;
     padding: 1rem;

@@ -781,3 +781,830 @@ const beginnerQuestions = [
     },
 
 ]
+
+// Intermediate questions
+const intermediateQuestions = [
+    {
+        question: 'What is the relative minor key of A major?',
+        answers: [
+          { text: '', correct: true },
+          { text: '', correct: false},
+          { text: '', correct: false},
+          { text: '', correct: false}
+        ]
+      },
+      {
+        question: 'What is the relative minor key of E major?',
+        answers: [
+          { text: '', correct: true },
+          { text: '', correct: false},
+          { text: '', correct: false},
+          { text: '', correct: false}
+        ]
+      },
+      {
+        question: 'What is the relative minor key of Bb major?',
+        answers: [
+          { text: '', correct: true },
+          { text: '', correct: false},
+          { text: '', correct: false},
+          { text: '', correct: false}
+        ]
+      },
+      {
+        question: 'What is the relative minor key of Eb major?',
+        answers: [
+          { text: '', correct: true },
+          { text: '', correct: false},
+          { text: '', correct: false},
+          { text: '', correct: false}
+        ]
+      },
+      {
+        question: 'What is the relative major key of F# minor?',
+        answers: [
+          { text: '', correct: true },
+          { text: '', correct: false},
+          { text: '', correct: false},
+          { text: '', correct: false}
+        ]
+      },
+      {
+        question: 'What is the relative major key of C# minor?',
+        answers: [
+          { text: '', correct: true },
+          { text: '', correct: false},
+          { text: '', correct: false},
+          { text: '', correct: false}
+        ]
+      },
+      {
+        question: 'What is the relative major key of G minor?',
+        answers: [
+          { text: '', correct: true },
+          { text: '', correct: false},
+          { text: '', correct: false},
+          { text: '', correct: false}
+        ]
+      },
+      {
+        question: 'What is the relative major key of C minor?',
+        answers: [
+          { text: '', correct: true },
+          { text: '', correct: false},
+          { text: '', correct: false},
+          { text: '', correct: false}
+        ]
+      },
+      {
+        question: 'How many sharps are in the key of A major?',
+        answers: [
+          { text: '', correct: true },
+          { text: '', correct: false},
+          { text: '', correct: false},
+          { text: '', correct: false}
+        ]
+      },
+      {
+        question: 'How many sharps are in the key of E major?',
+        answers: [
+          { text: '', correct: true },
+          { text: '', correct: false},
+          { text: '', correct: false},
+          { text: '', correct: false}
+        ]
+      },
+      {
+        question: 'How many flats are there in the key of Bb major?',
+        answers: [
+          { text: '', correct: true },
+          { text: '', correct: false},
+          { text: '', correct: false},
+          { text: '', correct: false}
+        ]
+      },
+      {
+        question: 'How many flats are there in the key of Eb major?',
+        answers: [
+          { text: '', correct: true },
+          { text: '', correct: false},
+          { text: '', correct: false},
+          { text: '', correct: false}
+        ]
+      },
+      {
+        question: 'How many sharps are in the key of F# minor?',
+        answers: [
+          { text: '', correct: true },
+          { text: '', correct: false},
+          { text: '', correct: false},
+          { text: '', correct: false}
+        ]
+      },
+      {
+        question: 'How many sharps are in the key of C# minor?',
+        answers: [
+          { text: '', correct: true },
+          { text: '', correct: false},
+          { text: '', correct: false},
+          { text: '', correct: false}
+        ]
+      },
+      {
+        question: 'How many flats are there in the key of G minor?',
+        answers: [
+          { text: '', correct: true },
+          { text: '', correct: false},
+          { text: '', correct: false},
+          { text: '', correct: false}
+        ]
+      },
+      {
+        question: 'How many flats are there in the key of C minor?',
+        answers: [
+          { text: '', correct: true },
+          { text: '', correct: false},
+          { text: '', correct: false},
+          { text: '', correct: false}
+        ]
+      },
+      {
+        question: 'How many semi-quavers make up a quaver?',
+        answers: [
+          { text: '', correct: true },
+          { text: '', correct: false},
+          { text: '', correct: false},
+          { text: '', correct: false}
+        ]
+      },
+      {
+        question: 'How many semi-quavers make up a crotchet?',
+        answers: [
+          { text: '', correct: true },
+          { text: '', correct: false},
+          { text: '', correct: false},
+          { text: '', correct: false}
+        ]
+      },
+      {
+        question: 'How many semi-quavers make up a minim?',
+        answers: [
+          { text: '', correct: true },
+          { text: '', correct: false},
+          { text: '', correct: false},
+          { text: '', correct: false}
+        ]
+      },
+      {
+        question: 'How many semi-quavers make up a semi-breve?',
+        answers: [
+          { text: '', correct: true },
+          { text: '', correct: false},
+          { text: '', correct: false},
+          { text: '', correct: false}
+        ]
+      },
+      {
+        question: 'How many modes of the major scale are there?',
+        answers: [
+          { text: '', correct: true },
+          { text: '', correct: false},
+          { text: '', correct: false},
+          { text: '', correct: false}
+        ]
+      },
+      {
+        question: 'What is the 1st mode of the major scale called?',
+        answers: [
+          { text: '', correct: true },
+          { text: '', correct: false},
+          { text: '', correct: false},
+          { text: '', correct: false}
+        ]
+      },
+      {
+        question: 'What is the 2nd mode of the major scale called?',
+        answers: [
+          { text: '', correct: true },
+          { text: '', correct: false},
+          { text: '', correct: false},
+          { text: '', correct: false}
+        ]
+      },
+      {
+        question: 'What is the 5th mode of the major scale called?',
+        answers: [
+          { text: '', correct: true },
+          { text: '', correct: false},
+          { text: '', correct: false},
+          { text: '', correct: false}
+        ]
+      },
+      {
+        question: 'What is the 6th mode of the major scale called?',
+        answers: [
+          { text: '', correct: true },
+          { text: '', correct: false},
+          { text: '', correct: false},
+          { text: '', correct: false}
+        ]
+      },
+      {
+        question: 'What is a minor 3rd up from C?',
+        answers: [
+          { text: '', correct: true },
+          { text: '', correct: false},
+          { text: '', correct: false},
+          { text: '', correct: false}
+        ]
+      },
+      {
+        question: 'What is a minor 3rd up from F?',
+        answers: [
+          { text: '', correct: true },
+          { text: '', correct: false},
+          { text: '', correct: false},
+          { text: '', correct: false}
+        ]
+      },
+      {
+        question: 'What is a minor 3rd up from G?',
+        answers: [
+          { text: '', correct: true },
+          { text: '', correct: false},
+          { text: '', correct: false},
+          { text: '', correct: false}
+        ]
+      },
+      {
+        question: 'What is a minor 3rd up from D?',
+        answers: [
+          { text: '', correct: true },
+          { text: '', correct: false},
+          { text: '', correct: false},
+          { text: '', correct: false}
+        ]
+      },
+      {
+        question: 'What is a minor 3rd up from A?',
+        answers: [
+          { text: '', correct: true },
+          { text: '', correct: false},
+          { text: '', correct: false},
+          { text: '', correct: false}
+        ]
+      },
+      {
+        question: 'What is a minor 3rd up from E?',
+        answers: [
+          { text: '', correct: true },
+          { text: '', correct: false},
+          { text: '', correct: false},
+          { text: '', correct: false}
+        ]
+      },
+      {
+        question: 'What is a minor 3rd up from Bb?',
+        answers: [
+          { text: '', correct: true },
+          { text: '', correct: false},
+          { text: '', correct: false},
+          { text: '', correct: false}
+        ]
+      },
+      {
+        question: 'What is a minor 3rd up from Eb?',
+        answers: [
+          { text: '', correct: true },
+          { text: '', correct: false},
+          { text: '', correct: false},
+          { text: '', correct: false}
+        ]
+      },
+      {
+        question: 'What is a major 3rd up from C?',
+        answers: [
+          { text: '', correct: true },
+          { text: '', correct: false},
+          { text: '', correct: false},
+          { text: '', correct: false}
+        ]
+      },
+      {
+        question: 'What is a major 3rd up from F?',
+        answers: [
+          { text: '', correct: true },
+          { text: '', correct: false},
+          { text: '', correct: false},
+          { text: '', correct: false}
+        ]
+      },
+      {
+        question: 'What is a major 3rd up from G?',
+        answers: [
+          { text: '', correct: true },
+          { text: '', correct: false},
+          { text: '', correct: false},
+          { text: '', correct: false}
+        ]
+      },
+      {
+        question: 'What is a major 3rd up from D?',
+        answers: [
+          { text: '', correct: true },
+          { text: '', correct: false},
+          { text: '', correct: false},
+          { text: '', correct: false}
+        ]
+      },
+      {
+        question: 'What is a major 3rd up from A?',
+        answers: [
+          { text: '', correct: true },
+          { text: '', correct: false},
+          { text: '', correct: false},
+          { text: '', correct: false}
+        ]
+      },
+      {
+        question: 'What is a major 3rd up from E?',
+        answers: [
+          { text: '', correct: true },
+          { text: '', correct: false},
+          { text: '', correct: false},
+          { text: '', correct: false}
+        ]
+      },
+      {
+        question: 'What is a major 3rd up from Bb?',
+        answers: [
+          { text: '', correct: true },
+          { text: '', correct: false},
+          { text: '', correct: false},
+          { text: '', correct: false}
+        ]
+      },
+      {
+        question: 'What is a major 3rd up from Eb?',
+        answers: [
+          { text: '', correct: true },
+          { text: '', correct: false},
+          { text: '', correct: false},
+          { text: '', correct: false}
+        ]
+      },
+      {
+        question: 'What is the 4 chord in the key of A major?',
+        answers: [
+          { text: '', correct: true },
+          { text: '', correct: false},
+          { text: '', correct: false},
+          { text: '', correct: false}
+        ]
+      },
+      {
+        question: 'What is the 5 chord in the key of A major?',
+        answers: [
+          { text: '', correct: true },
+          { text: '', correct: false},
+          { text: '', correct: false},
+          { text: '', correct: false}
+        ]
+      },
+      {
+        question: 'What is the 4 chord in the key of E major?',
+        answers: [
+          { text: '', correct: true },
+          { text: '', correct: false},
+          { text: '', correct: false},
+          { text: '', correct: false}
+        ]
+      },
+      {
+        question: 'What is the 5 chord in the key of E major?',
+        answers: [
+          { text: '', correct: true },
+          { text: '', correct: false},
+          { text: '', correct: false},
+          { text: '', correct: false}
+        ]
+      },
+      {
+        question: 'What is the 4 chord in the key of Bb major?',
+        answers: [
+          { text: '', correct: true },
+          { text: '', correct: false},
+          { text: '', correct: false},
+          { text: '', correct: false}
+        ]
+      },
+      {
+        question: 'What is the 5 chord in the key of Bb major?',
+        answers: [
+          { text: '', correct: true },
+          { text: '', correct: false},
+          { text: '', correct: false},
+          { text: '', correct: false}
+        ]
+      },
+      {
+        question: 'What is the 4 chord in the key of Eb major?',
+        answers: [
+          { text: '', correct: true },
+          { text: '', correct: false},
+          { text: '', correct: false},
+          { text: '', correct: false}
+        ]
+      },
+      {
+        question: 'What is the 5 chord in the key of Eb major?',
+        answers: [
+          { text: '', correct: true },
+          { text: '', correct: false},
+          { text: '', correct: false},
+          { text: '', correct: false}
+        ]
+      },
+      {
+        question: 'What are the intervals of a major 7 chord?',
+        answers: [
+          { text: '', correct: true },
+          { text: '', correct: false},
+          { text: '', correct: false},
+          { text: '', correct: false}
+        ]
+      },
+      {
+        question: 'What are the intervals of a minor 7 chord?',
+        answers: [
+          { text: '', correct: true },
+          { text: '', correct: false},
+          { text: '', correct: false},
+          { text: '', correct: false}
+        ]
+      },
+      {
+        question: 'What are the intervals of a dominant 7 chord?',
+        answers: [
+          { text: '', correct: true },
+          { text: '', correct: false},
+          { text: '', correct: false},
+          { text: '', correct: false}
+        ]
+      },
+      {
+        question: 'What are the intervals of a major 6 chord?',
+        answers: [
+          { text: '', correct: true },
+          { text: '', correct: false},
+          { text: '', correct: false},
+          { text: '', correct: false}
+        ]
+      },
+      {
+        question: 'What are the intervals of a minor 6 chord?',
+        answers: [
+          { text: '', correct: true },
+          { text: '', correct: false},
+          { text: '', correct: false},
+          { text: '', correct: false}
+        ]
+      },
+      {
+        question: 'What are the intervals of a diminished 7th chord?',
+        answers: [
+          { text: '', correct: true },
+          { text: '', correct: false},
+          { text: '', correct: false},
+          { text: '', correct: false}
+        ]
+      },
+      {
+        question: 'What are the intervals of an augmented chord?',
+        answers: [
+          { text: '', correct: true },
+          { text: '', correct: false},
+          { text: '', correct: false},
+          { text: '', correct: false}
+        ]
+      }
+    ]
+
+    // Advanced questions
+const advancedQuestions = [
+    {
+        question: 'What is the relative minor key of B major?',
+        answers: [
+          { text: '', correct: true },
+          { text: '', correct: false},
+          { text: '', correct: false},
+          { text: '', correct: false}
+        ]
+      },
+      {
+        question: 'What is the relative minor key of F# major?',
+        answers: [
+          { text: '', correct: true },
+          { text: '', correct: false},
+          { text: '', correct: false},
+          { text: '', correct: false}
+        ]
+      },
+      {
+        question: 'What is the relative minor key of Ab major?',
+        answers: [
+          { text: '', correct: true },
+          { text: '', correct: false},
+          { text: '', correct: false},
+          { text: '', correct: false}
+        ]
+      },
+      {
+        question: 'What is the relative minor key of Db major?',
+        answers: [
+          { text: '', correct: true },
+          { text: '', correct: false},
+          { text: '', correct: false},
+          { text: '', correct: false}
+        ]
+      },
+      {
+        question: 'What is the relative major key of G# minor?',
+        answers: [
+          { text: '', correct: true },
+          { text: '', correct: false},
+          { text: '', correct: false},
+          { text: '', correct: false}
+        ]
+      },
+      {
+        question: 'What is the relative major key of D# minor?',
+        answers: [
+          { text: '', correct: true },
+          { text: '', correct: false},
+          { text: '', correct: false},
+          { text: '', correct: false}
+        ]
+      },
+      {
+        question: 'What is the relative major key of F minor?',
+        answers: [
+          { text: '', correct: true },
+          { text: '', correct: false},
+          { text: '', correct: false},
+          { text: '', correct: false}
+        ]
+      },
+      {
+        question: 'What is the relative major key of Bb minor?',
+        answers: [
+          { text: '', correct: true },
+          { text: '', correct: false},
+          { text: '', correct: false},
+          { text: '', correct: false}
+        ]
+      },
+      {
+        question: 'How many sharps are in the key of B major?',
+        answers: [
+          { text: '', correct: true },
+          { text: '', correct: false},
+          { text: '', correct: false},
+          { text: '', correct: false}
+        ]
+      },
+      {
+        question: 'How many sharps are in the key of F# major?',
+        answers: [
+          { text: '', correct: true },
+          { text: '', correct: false},
+          { text: '', correct: false},
+          { text: '', correct: false}
+        ]
+      },
+      {
+        question: 'How many flat are there in the key of Ab major?',
+        answers: [
+          { text: '', correct: true },
+          { text: '', correct: false},
+          { text: '', correct: false},
+          { text: '', correct: false}
+        ]
+      },
+      {
+        question: 'How many flat are there in the key of Db major?',
+        answers: [
+          { text: '', correct: true },
+          { text: '', correct: false},
+          { text: '', correct: false},
+          { text: '', correct: false}
+        ]
+      },
+      {
+        question: 'How many sharps are in the key of G# minor?',
+        answers: [
+          { text: '', correct: true },
+          { text: '', correct: false},
+          { text: '', correct: false},
+          { text: '', correct: false}
+        ]
+      },
+      {
+        question: 'How many sharps are in the key of D# minor?',
+        answers: [
+          { text: '', correct: true },
+          { text: '', correct: false},
+          { text: '', correct: false},
+          { text: '', correct: false}
+        ]
+      },
+      {
+        question: 'How many flats are there in the key of F minor?',
+        answers: [
+          { text: '', correct: true },
+          { text: '', correct: false},
+          { text: '', correct: false},
+          { text: '', correct: false}
+        ]
+      },
+      {
+        question: 'How many flats are there in the key of Bb minor?',
+        answers: [
+          { text: '', correct: true },
+          { text: '', correct: false},
+          { text: '', correct: false},
+          { text: '', correct: false}
+        ]
+      },
+      {
+        question: 'What is the 4 chord in the key of B major?',
+        answers: [
+          { text: '', correct: true },
+          { text: '', correct: false},
+          { text: '', correct: false},
+          { text: '', correct: false}
+        ]
+      },
+      {
+        question: 'What is the 5 chord in the key of F# major?',
+        answers: [
+          { text: '', correct: true },
+          { text: '', correct: false},
+          { text: '', correct: false},
+          { text: '', correct: false}
+        ]
+      },
+      {
+        question: 'What is the 4 chord in the key of Ab major?',
+        answers: [
+          { text: '', correct: true },
+          { text: '', correct: false},
+          { text: '', correct: false},
+          { text: '', correct: false}
+        ]
+      },
+      {
+        question: 'What is the 5 chord in the key of Db major?',
+        answers: [
+          { text: '', correct: true },
+          { text: '', correct: false},
+          { text: '', correct: false},
+          { text: '', correct: false}
+        ]
+      },
+      {
+        question: 'What is the 4 chord in the key of Bb major?',
+        answers: [
+          { text: '', correct: true },
+          { text: '', correct: false},
+          { text: '', correct: false},
+          { text: '', correct: false}
+        ]
+      },
+      {
+        question: 'What is the 5 chord in the key of Bb major?',
+        answers: [
+          { text: '', correct: true },
+          { text: '', correct: false},
+          { text: '', correct: false},
+          { text: '', correct: false}
+        ]
+      },
+      {
+        question: 'What is the 4 chord in the key of Eb major?',
+        answers: [
+          { text: '', correct: true },
+          { text: '', correct: false},
+          { text: '', correct: false},
+          { text: '', correct: false}
+        ]
+      },
+      {
+        question: 'What is the 5 chord in the key of Eb major?',
+        answers: [
+          { text: '', correct: true },
+          { text: '', correct: false},
+          { text: '', correct: false},
+          { text: '', correct: false}
+        ]
+      },
+      {
+        question: 'What is the 3rd mode of the major scale called?',
+        answers: [
+          { text: '', correct: true },
+          { text: '', correct: false},
+          { text: '', correct: false},
+          { text: '', correct: false}
+        ]
+      },
+      {
+        question: 'What is the 4th mode of the major scale called?',
+        answers: [
+          { text: '', correct: true },
+          { text: '', correct: false},
+          { text: '', correct: false},
+          { text: '', correct: false}
+        ]
+      },
+      {
+        question: 'What is the 7th mode of the major scale called?',
+        answers: [
+          { text: '', correct: true },
+          { text: '', correct: false},
+          { text: '', correct: false},
+          { text: '', correct: false}
+        ]
+      },
+      {
+        question: 'What is another name for the interval of a 9?',
+        answers: [
+          { text: '', correct: true },
+          { text: '', correct: false},
+          { text: '', correct: false},
+          { text: '', correct: false}
+        ]
+      },
+      {
+        question: 'What is another name for the interval of a 11?',
+        answers: [
+          { text: '', correct: true },
+          { text: '', correct: false},
+          { text: '', correct: false},
+          { text: '', correct: false}
+        ]
+      },
+      {
+        question: 'What is another name for the interval of a 13?',
+        answers: [
+          { text: '', correct: true },
+          { text: '', correct: false},
+          { text: '', correct: false},
+          { text: '', correct: false}
+        ]
+      },
+      {
+        question: 'What are the intervals of a major 9 chord?',
+        answers: [
+          { text: '', correct: true },
+          { text: '', correct: false},
+          { text: '', correct: false},
+          { text: '', correct: false}
+        ]
+      },
+      {
+        question: 'What are the intervals of a minor 9 chord?',
+        answers: [
+          { text: '', correct: true },
+          { text: '', correct: false},
+          { text: '', correct: false},
+          { text: '', correct: false}
+        ]
+      },
+      {
+        question: 'What are the intervals of a dominant 9 chord?',
+        answers: [
+          { text: '', correct: true },
+          { text: '', correct: false},
+          { text: '', correct: false},
+          { text: '', correct: false}
+        ]
+      },
+      {
+        question: 'What are the intervals of a dominant 11 chord?',
+        answers: [
+          { text: '', correct: true },
+          { text: '', correct: false},
+          { text: '', correct: false},
+          { text: '', correct: false}
+        ]
+      },
+      {
+        question: 'What are the intervals of a dominant 13 chord?',
+        answers: [
+          { text: '', correct: true },
+          { text: '', correct: false},
+          { text: '', correct: false},
+          { text: '', correct: false}
+        ]
+      }
+    ]

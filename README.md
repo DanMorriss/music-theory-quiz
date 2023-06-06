@@ -179,7 +179,6 @@ Testing using the Google Chrome Dev Tools was used throughout the build of the s
 [Back to top](<#contents>)
 ### Unsolved Bugs
 
-- add scores to scoreboard 
 - remover height scroll on a mobile
 - Make return key act at submit/next
 
