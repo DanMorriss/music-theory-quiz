@@ -187,7 +187,12 @@ answerButton4.addEventListener('click', function(e) {
     checkAnswer();
 })
 
-let finalScore;
+let finalScore, displayedScore;
+//these 4 lines are from James Q Quick tutorial used inside endGame to populate the scoreboard
+const mostRecentScore = localStorage.getItem('mostRecentScore');
+const highScores = JSON.parse(localStorage.getItem('highScores')) || [];
+const MAX_HIGH_SCORES = 10;
+const highScoresList = document.getElementById("highScoresList");
 
 function endGame() {
     //store score in variable
@@ -207,9 +212,29 @@ function endGame() {
         document.getElementById('congratulate').innerText = "Game Over";
         document.getElementById('try-again').innerText = "Give it another go, you can do better!";
     }
-    //add score and username to high scores board
-    //create new element. Add name, level and socre to it 
-    //add it to scoreBoard
+    
+    //Add name and score to highScores
+    const score = {
+        score: finalScore,
+        name: username
+    };
+
+    //Code from James Q Quick tutorial to sort scores https://www.youtube.com/watch?v=DFhmNLKwwGw&list=PLDlWc9AfQBfZIkdVaOQXi1tizJeNJipEx&index=9
+    //Add nes score to high scores
+    highScores.push(score);
+    //Sort the scores
+    highScores.sort( (a,b) =>  b.score - a.score)
+    //Remove any not in the top 10
+    highScores.splice(10);
+    //Send the highscores to local storage
+    localStorage.setItem('highscores', JSON.stringify(highScores));
+    //Turn the scores into a list and send to scoreboard
+    highScoresList.innerHTML = highScores
+    .map(score => {
+        return `<li class="high-score">${score.name} - ${score.score}</li>`;
+    })
+    .join("");
+
     //clear score and question index for next game
     currentQuestionIndex = 0;
     document.getElementById('correct-score').innerText = "0";
@@ -239,7 +264,7 @@ function displayNextQuestion() {
 }
 
 nextButton.addEventListener('click', () => {
-    displayNextQuestion(); //not working
+    displayNextQuestion();
 })
 
 //Close the game container

@@ -269,3 +269,10 @@ form {
 .hide {
     display: none;
 }
+
+.high-score {
+    list-style: none;
+    padding: 1rem;
+    font-family: 'Lato', sans-serif;
+    font-size: 1.3em;
+}
