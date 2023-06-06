@@ -79,6 +79,7 @@ p {
 
 .button:hover:not([disabled]) {
     box-shadow: 1px 1px 10px 4px #223B33;
+    cursor: pointer;
 }
 
 .home-screen-buttons {
@@ -143,6 +144,10 @@ p {
 
 #name {
     margin: 2rem 4rem 4rem 4rem;
+    padding: 1rem;
+    font-family: 'Lato', sans-serif;
+    font-size: 1.3em;
+    text-align: center;
     width: 80%;
     height: 3rem;
     border-radius: 1rem;

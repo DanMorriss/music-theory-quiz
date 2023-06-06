@@ -12,6 +12,7 @@ const homeButton = document.getElementById('home-btn');
 const playAgainButton = document.getElementById('play-again-btn');
 const highScoresButton = document.getElementById('high-scores-btn');
 const spacer = document.getElementById('spacer');
+const submitName = document.getElementById('submit-name');
 
 const answerButton1 = document.getElementById('answer1');
 const answerButton2 = document.getElementById('answer2');
@@ -29,6 +30,7 @@ const scoresContainer = document.getElementById('scores-container');
 const difficultyContainer = document.getElementById('difficulty-container');
 const gameContainer = document.getElementById('game-container');
 const gameOverContainer = document.getElementById('end-game-container');
+const nameContainer = document.getElementById('enter-name-container');
 
 //Open the rules container from the home screen
 rulesButton.addEventListener('click', () => {
@@ -52,10 +54,20 @@ backButtonScores.addEventListener('click', () => {
     homeContainer.classList.remove('hide');
 })
 
-// Open difficulty container
+//Open name container
 playButton.addEventListener('click', () => {
     homeContainer.classList.add('hide');
+    nameContainer.classList.remove('hide');
+})
+
+let username ;
+
+//Submit name
+submitName.addEventListener('click', () => {
+    username = document.getElementById('name').innetText;
+    nameContainer.classList.add('hide');
     difficultyContainer.classList.remove('hide');
+    console.log(username);
 })
 //Close difficulty container
 backButtonDifficulty.addEventListener('click', () => {
