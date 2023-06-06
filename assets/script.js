@@ -60,7 +60,7 @@ playButton.addEventListener('click', () => {
     nameContainer.classList.remove('hide');
 })
 
-let username ;
+let username;
 
 //Submit name
 submitName.addEventListener('click', () => {
@@ -113,6 +113,8 @@ function displayBeginnerQuestion() {
     for (let i = 0; i < 4; i++) {
         answerButton[i].innerText = shuffledAnswers[i].text;
     }
+    //remove the question from the question list
+    shuffledQuestions.splice(0, 1);
 }
 
 beginnerButton.addEventListener('click', () => {
