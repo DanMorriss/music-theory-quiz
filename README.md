@@ -181,6 +181,9 @@ Testing using the Google Chrome Dev Tools was used throughout the build of the s
 
 - remover height scroll on a mobile
 - Make return key act at submit/next
+- If you run the game for a second time, the original unanswered questions were still there. I needed to clear the...
+- The game counter doesnt end at 10 once the new difficulties were added. Midified the game to end at 5 wrong answers to mak eit more interesting for the user.
+- The selected buttons are displaying when starting a new game. To fix this I looped though the buttons and remover selected, correct and incorrect in the start game function. I also enabled the answer buttons to be clicked in the same loop.
 
 
 [Back to top](<#contents>)

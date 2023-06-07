@@ -8,6 +8,8 @@ const backButtonScores = document.getElementById('back-button-scores');
 const backButtonGame = document.getElementById('back-button-game');
 const backButtonName = document.getElementById('back-button-name');
 const beginnerButton = document.getElementById('beginner');
+const intermediateButton = document.getElementById('intermediate');
+const advancedButton = document.getElementById('advanced');
 const answerButtons = document.getElementsByClassName('answer-buttons')[0];
 const homeButton = document.getElementById('home-btn');
 const playAgainButton = document.getElementById('play-again-btn');
@@ -63,21 +65,16 @@ backButtonName.addEventListener('click', () => {
     homeContainer.classList.remove('hide');
 })
 
-let username;
-
-//Submit name
-submitName.addEventListener('submit', (e) => {
-    e.preventDefault();
-    username = document.getElementById('name').value;
-    console.log(username);
-    nameContainer.classList.add('hide');
-    difficultyContainer.classList.remove('hide');
-})
-
 //Close difficulty container
 backButtonDifficulty.addEventListener('click', () => {
     difficultyContainer.classList.add('hide');
     homeContainer.classList.remove('hide');
+})
+
+//Close the game container
+backButtonGame.addEventListener('click', () => {
+  gameContainer.classList.add('hide');
+  homeContainer.classList.remove('hide');
 })
 
 //Go home from game over screen
@@ -96,6 +93,17 @@ highScoresButton.addEventListener('click', () => {
     scoresContainer.classList.remove('hide');
 })
 
+let username;
+
+//Submit name
+submitName.addEventListener('submit', (e) => {
+    e.preventDefault();
+    username = document.getElementById('name').value;
+    console.log(username);
+    nameContainer.classList.add('hide');
+    difficultyContainer.classList.remove('hide');
+})
+
 // Shuffle questions: Fisher-Yates shuffle algorithm.
 function shuffleQuestions(array) {
     for (let i = array.length - 1; i > 0; i--) {
@@ -110,12 +118,22 @@ let currentQuestionIndex = 0;
 
 // Display beginner questions
 function displayBeginnerQuestion() {
+    //clear previous questions
+    shuffledQuestions = [];
+    shuffledAnswers = [];
+    currentQuestionIndex = 0;
+    //clear previous answer selection
+
     shuffledQuestions = shuffleQuestions(beginnerQuestions);
     //display a shuffled question
     question.innerText = shuffledQuestions[0].question;
     //display the shuffled answers
     shuffledAnswers = shuffleQuestions(shuffledQuestions[0].answers);
     for (let i = 0; i < 4; i++) {
+        answerButton[i].classList.remove('selected');
+        answerButton[i].classList.remove('correct');
+        answerButton[i].classList.remove('incorrect');
+        answerButton[i].disabled = false;
         answerButton[i].innerText = shuffledAnswers[i].text;
     }
     //remove the question from the question list
@@ -126,6 +144,60 @@ beginnerButton.addEventListener('click', () => {
     difficultyContainer.classList.add('hide');
     gameContainer.classList.remove('hide');
     displayBeginnerQuestion();
+})
+
+//Display Intermediate questions
+function displayIntermediateQuestion() {
+  shuffledQuestions = [];
+  shuffledAnswers = [];
+  currentQuestionIndex = 0;
+  shuffledQuestions = shuffleQuestions(intermediateQuestions);
+  //display a shuffled question
+  question.innerText = shuffledQuestions[0].question;
+  //display the shuffled answers
+  shuffledAnswers = shuffleQuestions(shuffledQuestions[0].answers);
+  for (let i = 0; i < 4; i++) {
+      answerButton[i].classList.remove('selected');
+      answerButton[i].classList.remove('correct');
+      answerButton[i].classList.remove('incorrect');
+      answerButton[i].disabled = false;
+      answerButton[i].innerText = shuffledAnswers[i].text;
+  }
+  //remove the question from the question list
+  shuffledQuestions.splice(0, 1);
+}
+
+intermediateButton.addEventListener('click', () => {
+  difficultyContainer.classList.add('hide');
+  gameContainer.classList.remove('hide');
+  displayIntermediateQuestion();
+})
+
+//Display Advanced questions
+function displayAdvancedQuestion() {
+  shuffledQuestions = [];
+  shuffledAnswers = [];
+  currentQuestionIndex = 0;
+  shuffledQuestions = shuffleQuestions(advancedQuestions);
+  //display a shuffled question
+  question.innerText = shuffledQuestions[0].question;
+  //display the shuffled answers
+  shuffledAnswers = shuffleQuestions(shuffledQuestions[0].answers);
+  for (let i = 0; i < 4; i++) {
+      answerButton[i].classList.remove('selected');
+      answerButton[i].classList.remove('correct');
+      answerButton[i].classList.remove('incorrect');
+      answerButton[i].disabled = false;
+      answerButton[i].innerText = shuffledAnswers[i].text;
+  }
+  //remove the question from the question list
+  shuffledQuestions.splice(0, 1);
+}
+
+advancedButton.addEventListener('click', () => {
+  difficultyContainer.classList.add('hide');
+  gameContainer.classList.remove('hide');
+  displayAdvancedQuestion();
 })
 
 //Add to the correct score
@@ -139,6 +211,10 @@ function addToIncorrectScore() {
     console.log('add to incorrect score');
     let oldIncorrectScore = parseInt(document.getElementById('incorrect-score').innerText);
     document.getElementById('incorrect-score').innerText = ++oldIncorrectScore;
+    //end game of you have 5 wrong answers
+    if (oldIncorrectScore > 4) {
+      endGame();
+    }
 }
 
 //Check the answer
@@ -251,27 +327,14 @@ function displayNextQuestion() {
     nextButton.classList.add('hide');
     //display spacer where next button will be
     spacer.classList.remove('hide');
-    //add to the question index
-    currentQuestionIndex++;
-    //If 10 questions have been asked, end the game
-    if (currentQuestionIndex === 10) {
-        console.log('end game');
-        endGame();
-    }else{
-        //get the next question
-        displayBeginnerQuestion();
-    }
+    //get the next question
+    displayBeginnerQuestion();
 }
 
 nextButton.addEventListener('click', () => {
     displayNextQuestion();
 })
 
-//Close the game container
-backButtonGame.addEventListener('click', () => {
-    gameContainer.classList.add('hide');
-    homeContainer.classList.remove('hide');
-})
 
 // Beginner questions
 const beginnerQuestions = [
