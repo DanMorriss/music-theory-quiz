@@ -99,7 +99,6 @@ let username;
 submitName.addEventListener('submit', (e) => {
     e.preventDefault();
     username = document.getElementById('name').value;
-    console.log(username);
     nameContainer.classList.add('hide');
     difficultyContainer.classList.remove('hide');
 })
@@ -136,9 +135,10 @@ function displayBeginnerQuestion() {
         answerButton[i].disabled = false;
         answerButton[i].innerText = shuffledAnswers[i].text;
     }
-    //remove the question from the question list
+    //remove the asked question from the question list
     shuffledQuestions.splice(0, 1);
-    if (shuffledQuestions < 1) {
+    //Run endGame if you run out of questions
+    if (shuffledQuestions.length < 1) {
       endGame();
     }
 }
@@ -169,7 +169,7 @@ function displayIntermediateQuestion() {
   //remove the question from the question list
   shuffledQuestions.splice(0, 1);
   //End the game if all questions have been asked
-  if (shuffledQuestions < 1) {
+  if (shuffledQuestions.length < 1) {
     endGame();
   }
 }
@@ -200,7 +200,7 @@ function displayAdvancedQuestion() {
   //remove the question from the question list
   shuffledQuestions.splice(0, 1);
   //End the game if all questions have been asked
-  if (shuffledQuestions < 1) {
+  if (shuffledQuestions.length < 1) {
     endGame();
   }
 }
@@ -219,7 +219,6 @@ function addToCorrectScore() {
 
 //Add to the incorrect score
 function addToIncorrectScore() {
-    console.log('add to incorrect score');
     let oldIncorrectScore = parseInt(document.getElementById('incorrect-score').innerText);
     document.getElementById('incorrect-score').innerText = ++oldIncorrectScore;
     //end game of you have 5 wrong answers
@@ -288,14 +287,13 @@ function endGame() {
     gameContainer.classList.add('hide');
     //open end game div
     gameOverContainer.classList.remove('hide');
-    //display score
+    //display score & name
     document.getElementById('final-score').innerText = finalScore;
     //congratulate of over 6
     if (finalScore > 6) {
         document.getElementById('congratulate').innerText = "Congratulations!";
         document.getElementById('try-again').innerText = "Try a harder level!";
     } else {
-        console.log('keep on trying, you can do better than that!');
         document.getElementById('congratulate').innerText = "Game Over";
         document.getElementById('try-again').innerText = "Give it another go, you can do better!";
     }
