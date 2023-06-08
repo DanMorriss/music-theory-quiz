@@ -138,6 +138,9 @@ function displayBeginnerQuestion() {
     }
     //remove the question from the question list
     shuffledQuestions.splice(0, 1);
+    if (shuffledQuestions < 1) {
+      endGame();
+    }
 }
 
 beginnerButton.addEventListener('click', () => {
@@ -165,6 +168,10 @@ function displayIntermediateQuestion() {
   }
   //remove the question from the question list
   shuffledQuestions.splice(0, 1);
+  //End the game if all questions have been asked
+  if (shuffledQuestions < 1) {
+    endGame();
+  }
 }
 
 intermediateButton.addEventListener('click', () => {
@@ -192,6 +199,10 @@ function displayAdvancedQuestion() {
   }
   //remove the question from the question list
   shuffledQuestions.splice(0, 1);
+  //End the game if all questions have been asked
+  if (shuffledQuestions < 1) {
+    endGame();
+  }
 }
 
 advancedButton.addEventListener('click', () => {
@@ -315,6 +326,15 @@ function endGame() {
     currentQuestionIndex = 0;
     document.getElementById('correct-score').innerText = "0";
     document.getElementById('incorrect-score').innerText = "0";
+    
+    //Clear shuffled questions and counter for the next game.
+    shuffledQuestions = [];
+    shuffledAnswers = [];
+
+    //hide next button
+    nextButton.classList.add('hide');
+    //display spacer where next button will be
+    spacer.classList.remove('hide');
 }
 
 function displayNextQuestion() {
@@ -329,6 +349,7 @@ function displayNextQuestion() {
     spacer.classList.remove('hide');
     //get the next question
     displayBeginnerQuestion();
+
 }
 
 nextButton.addEventListener('click', () => {

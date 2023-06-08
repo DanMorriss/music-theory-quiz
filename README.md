@@ -175,6 +175,8 @@ Testing using the Google Chrome Dev Tools was used throughout the build of the s
 - The container shape changes when the next button is bisplayed. To fix this, I added a div that I sized to match the button that shows when the next button is hidden and hides when the next button shows. I also made the question height a set size to stop the buttons being pushed down then the question was on two lines.
 - A question was ocasionally being repeated so I used splice from the shuffledQuestions to remove a question once it has been displayed.
 - When submititng a name the browser refreshed the page so I had to preventDefault on the form so the rest of the function could run.
+- Once you run out of questuons the game doesn't end. So I added ran the endGame function if the remaining questions counter gets below 1.
+- The selected buttons are displaying when starting a new game. To fix this I looped though the buttons and remover selected, correct and incorrect in the start game function. I also enabled the answer buttons to be clicked in the same loop.
 
 [Back to top](<#contents>)
 ### Unsolved Bugs
@@ -183,7 +185,9 @@ Testing using the Google Chrome Dev Tools was used throughout the build of the s
 - Make return key act at submit/next
 - If you run the game for a second time, the original unanswered questions were still there. I needed to clear the...
 - The game counter doesnt end at 10 once the new difficulties were added. Midified the game to end at 5 wrong answers to mak eit more interesting for the user.
-- The selected buttons are displaying when starting a new game. To fix this I looped though the buttons and remover selected, correct and incorrect in the start game function. I also enabled the answer buttons to be clicked in the same loop.
+
+- The next button was displaying when you start a second game. So I added the hide class in the end game function.
+
 
 
 [Back to top](<#contents>)
