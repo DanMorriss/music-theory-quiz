@@ -255,22 +255,12 @@ function checkAnswer() {
 }
 
 //Listen to each button and run checkAnswer if clicked
-answerButton1.addEventListener('click', function(e) {
-    answerButton1.classList.add('selected');
+for (let i = 0; i < 4; i++) {
+  answerButton[i].addEventListener('click', function(e) {
+    answerButton[i].classList.add('selected');
     checkAnswer();
 })
-answerButton2.addEventListener('click', function(e) {
-    answerButton2.classList.add('selected');
-    checkAnswer();
-})
-answerButton3.addEventListener('click', function(e) {
-    answerButton3.classList.add('selected');
-    checkAnswer();
-})
-answerButton4.addEventListener('click', function(e) {
-    answerButton4.classList.add('selected');
-    checkAnswer();
-})
+}
 
 let finalScore, displayedScore;
 //these 4 lines are from James Q Quick tutorial used inside endGame to populate the scoreboard
