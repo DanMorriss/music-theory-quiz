@@ -249,10 +249,9 @@ function checkAnswer() {
         }
     }
     //dissable selection of another answer
-    answerButton1.disabled = true;
-    answerButton2.disabled = true;
-    answerButton3.disabled = true;
-    answerButton4.disabled = true;
+    for (let i = 0; i < 4; i++) {
+      answerButton[i].disabled = true;
+    }
 }
 
 //Listen to each button and run checkAnswer if clicked
