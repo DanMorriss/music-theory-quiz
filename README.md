@@ -180,11 +180,12 @@ Testing using the Google Chrome Dev Tools was used throughout the build of the s
 - The game counter doesnt end at 10 once the new difficulties were added. Modified the game to end at 5 wrong answers to make it more interesting for the user.
 - The beginner questions were dislaying after the 1st question on the intermediate and advanced games. Inside the displayNextQuestion function it was running displayBeginnerQuestion so I added an if else statement to check the game type and ask another question from the same type.
 - The advanced questions were not changing from the first displayed question. This was due to a type inthe gameType variable.
+- On an iPhone, the body was scrollable due to the built in browser buttons along the bottom. I set overflow to hidden in the @mediaquery to fit this.
 
 [Back to top](<#contents>)
 ### Unsolved Bugs
 
-- remover height scroll on a mobile
+
 - Make return key act at submit/next
 - The next button was displaying when you start a second game. So I added the hide class in the end game function.
 - Add score multiplier for harder levels. *10 *15 *20.
@@ -192,6 +193,7 @@ Testing using the Google Chrome Dev Tools was used throughout the build of the s
 - Add congratulations, you answered all the questions.
 - Display "next level unlocked" when you get 10 questions right.
 - Reset answers counter if game ended by close  button.
+- Add game sounds.
 
 
 
