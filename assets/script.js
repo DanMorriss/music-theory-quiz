@@ -30,6 +30,13 @@ const backButtonDifficulty = document.getElementById('back-button-difficulty');
 const backButtonGame = document.getElementById('back-button-game');
 const backButtonGameOver = document.getElementById('back-button-game-over');
 
+//VARIABLES
+let username;
+let shuffledQuestions, shuffledAnswers;
+let currentQuestionIndex = 0;
+let finalScore, displayedScore;
+let gameType;
+
 //CONTAINERS
 const homeContainer = document.getElementById('home-container');
 const rulesContainer = document.getElementById('rules-container');
@@ -93,8 +100,6 @@ highScoresButton.addEventListener('click', () => {
     scoresContainer.classList.remove('hide');
 })
 
-let username;
-
 //SUBMIT NAME
 submitName.addEventListener('submit', (e) => {
     e.preventDefault();
@@ -111,9 +116,6 @@ function shuffleQuestions(array) {
     }
     return array;
   }
-
-let shuffledQuestions, shuffledAnswers;
-let currentQuestionIndex = 0;
 
 //START BEGINNER GAME
 function displayBeginnerQuestion() {
@@ -144,6 +146,7 @@ function displayBeginnerQuestion() {
 }
 
 beginnerButton.addEventListener('click', () => {
+    gameType = 'beginner';
     difficultyContainer.classList.add('hide');
     gameContainer.classList.remove('hide');
     displayBeginnerQuestion();
@@ -175,6 +178,7 @@ function displayIntermediateQuestion() {
 }
 
 intermediateButton.addEventListener('click', () => {
+  gameType = 'intermediate';
   difficultyContainer.classList.add('hide');
   gameContainer.classList.remove('hide');
   displayIntermediateQuestion();
@@ -206,9 +210,35 @@ function displayAdvancedQuestion() {
 }
 
 advancedButton.addEventListener('click', () => {
+  gameType = 'advanced';
   difficultyContainer.classList.add('hide');
   gameContainer.classList.remove('hide');
   displayAdvancedQuestion();
+})
+
+//DISPLAY NEXT QUESTION
+function displayNextQuestion() {
+  //enable clicking of buttons and remove previous button displays
+  for (let i = 0; i < 4; i++) {
+      answerButton[i].disabled = false;
+      answerButton[i].classList.remove("correct", "selected", "incorrect");
+  }
+  //hide next button & add spacer
+  nextButton.classList.add('hide');
+  spacer.classList.remove('hide');
+  //get the next question
+  //if previous question x, do another one the same
+  if (gameType === 'beginner') {
+  displayBeginnerQuestion();
+  } else if (gameType === 'intermediate') {
+    displayIntermediateQuestion();
+  } else if (gameType === 'advanced') {
+    displayAdvancedQuestion();
+  }
+  }
+
+nextButton.addEventListener('click', () => {
+  displayNextQuestion();
 })
 
 //ADD TO SCORE
@@ -262,7 +292,6 @@ for (let i = 0; i < 4; i++) {
 })
 }
 
-let finalScore, displayedScore;
 //these 4 lines are from James Q Quick tutorial used inside endGame to populate the scoreboard
 const mostRecentScore = localStorage.getItem('mostRecentScore');
 const highScores = JSON.parse(localStorage.getItem('highScores')) || [];
@@ -313,24 +342,6 @@ function endGame() {
     //display spacer where next button will be
     spacer.classList.remove('hide');
 }
-//DISPLAY NEXT QUESTION
-function displayNextQuestion() {
-    //enable clicking of buttons and remove previous button displays
-    for (let i = 0; i < 4; i++) {
-        answerButton[i].disabled = false;
-        answerButton[i].classList.remove("correct", "selected", "incorrect");
-    }
-    //hide next button
-    nextButton.classList.add('hide');
-    //display spacer where next button will be
-    spacer.classList.remove('hide');
-    //get the next question
-    displayBeginnerQuestion();
-}
-
-nextButton.addEventListener('click', () => {
-    displayNextQuestion();
-})
 
 //BEGINNER QUESTIONS
 const beginnerQuestions = [

@@ -178,14 +178,20 @@ Testing using the Google Chrome Dev Tools was used throughout the build of the s
 - Once you run out of questuons the game doesn't end. So I added ran the endGame function if the remaining questions counter gets below 1.
 - The selected buttons are displaying when starting a new game. To fix this I looped though the buttons and remover selected, correct and incorrect in the start game function. I also enabled the answer buttons to be clicked in the same loop.
 - The game counter doesnt end at 10 once the new difficulties were added. Modified the game to end at 5 wrong answers to make it more interesting for the user.
+- The beginner questions were dislaying after the 1st question on the intermediate and advanced games. Inside the displayNextQuestion function it was running displayBeginnerQuestion so I added an if else statement to check the game type and ask another question from the same type.
+- The advanced questions were not changing from the first displayed question. This was due to a type inthe gameType variable.
 
 [Back to top](<#contents>)
 ### Unsolved Bugs
 
 - remover height scroll on a mobile
 - Make return key act at submit/next
-- The beginner questions are dislaying after the 1st question on the intermediate and advanced games.
+
 - The next button was displaying when you start a second game. So I added the hide class in the end game function.
+- Make harder levels unlockable.
+- Add score multiplier for harder levels. *10 *15 *20.
+- The username is not displaying on the game over screen.
+- Add congratulations, you answered all the questions.
 
 
 
