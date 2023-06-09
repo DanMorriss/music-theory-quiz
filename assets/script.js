@@ -1,32 +1,37 @@
-//button variables
+//BUTTON VARIABLES
+//Home Screen Buttons
 const playButton = document.getElementById('play-button');
-const backButtonDifficulty = document.getElementById('back-button-difficulty');
 const rulesButton = document.getElementById('rules-button');
-const backButtonRules = document.getElementById('back-button-rules');
 const scoresButton = document.getElementById('scores-button');
-const backButtonScores = document.getElementById('back-button-scores');
-const backButtonGame = document.getElementById('back-button-game');
-const backButtonName = document.getElementById('back-button-name');
+//Enter Name Screen
+const submitName = document.getElementById('submit-name');
+//Difficulty Buttons
 const beginnerButton = document.getElementById('beginner');
 const intermediateButton = document.getElementById('intermediate');
 const advancedButton = document.getElementById('advanced');
-const answerButtons = document.getElementsByClassName('answer-buttons')[0];
-const homeButton = document.getElementById('home-btn');
-const playAgainButton = document.getElementById('play-again-btn');
-const highScoresButton = document.getElementById('high-scores-btn');
-const spacer = document.getElementById('spacer');
-const submitName = document.getElementById('submit-name');
-
+//Game Screen Buttons
+const question = document.getElementById('question');
+const answerButton = document.getElementsByClassName('question-btn');
 const answerButton1 = document.getElementById('answer1');
 const answerButton2 = document.getElementById('answer2');
 const answerButton3 = document.getElementById('answer3');
 const answerButton4 = document.getElementById('answer4');
-const answerButton = document.getElementsByClassName('question-btn');
 const nextButton = document.getElementById('next-btn');
-const question = document.getElementById('question');
-const scoreBoard = document.getElementById('high-scores');
+const spacer = document.getElementById('spacer');
+//Game Over Screen
+const homeButton = document.getElementById('home-btn');
+const playAgainButton = document.getElementById('play-again-btn');
+const highScoresButton = document.getElementById('high-scores-btn');
 
-//containers
+//Back Buttons
+const backButtonRules = document.getElementById('back-button-rules');
+const backButtonScores = document.getElementById('back-button-scores');
+const backButtonName = document.getElementById('back-button-name');
+const backButtonDifficulty = document.getElementById('back-button-difficulty');
+const backButtonGame = document.getElementById('back-button-game');
+const backButtonGameOver = document.getElementById('back-button-game-over');
+
+//CONTAINERS
 const homeContainer = document.getElementById('home-container');
 const rulesContainer = document.getElementById('rules-container');
 const scoresContainer = document.getElementById('scores-container');
@@ -35,7 +40,8 @@ const gameContainer = document.getElementById('game-container');
 const gameOverContainer = document.getElementById('end-game-container');
 const nameContainer = document.getElementById('enter-name-container');
 
-//Open & close the rules container from the home screen
+//OPEN AND CLOSE CONTAINERS
+//Rules Container
 rulesButton.addEventListener('click', () => {
     homeContainer.classList.add('hide');
     rulesContainer.classList.remove('hide');
@@ -44,8 +50,7 @@ backButtonRules.addEventListener('click', () => {
     rulesContainer.classList.add('hide');
     homeContainer.classList.remove('hide');
 })
-
-//Open & close the high scores container from the home screen
+//High Scores container
 scoresButton.addEventListener('click', () => {
     homeContainer.classList.add('hide');
     scoresContainer.classList.remove('hide');
@@ -54,8 +59,7 @@ backButtonScores.addEventListener('click', () => {
     scoresContainer.classList.add('hide');
     homeContainer.classList.remove('hide');
 })
-
-//Open & close submit name container
+//Submit Name Container
 playButton.addEventListener('click', () => {
     homeContainer.classList.add('hide');
     nameContainer.classList.remove('hide');
@@ -64,21 +68,18 @@ backButtonName.addEventListener('click', () => {
     nameContainer.classList.add('hide');
     homeContainer.classList.remove('hide');
 })
-
-//Close difficulty container
+//Difficulty Container
 backButtonDifficulty.addEventListener('click', () => {
     difficultyContainer.classList.add('hide');
     homeContainer.classList.remove('hide');
 })
-
-//Close the game container
+//Game Container
 backButtonGame.addEventListener('click', () => {
   gameContainer.classList.add('hide');
   homeContainer.classList.remove('hide');
 })
-
-//Go home from game over screen
-homeButton.addEventListener('click', () => {
+//Game Over Container
+backButtonGameOver.addEventListener('click', () => {
     gameOverContainer.classList.add('hide');
     homeContainer.classList.remove('hide');
 })
@@ -95,7 +96,7 @@ highScoresButton.addEventListener('click', () => {
 
 let username;
 
-//Submit name
+//SUBMIT NAME
 submitName.addEventListener('submit', (e) => {
     e.preventDefault();
     username = document.getElementById('name').value;
@@ -103,7 +104,7 @@ submitName.addEventListener('submit', (e) => {
     difficultyContainer.classList.remove('hide');
 })
 
-// Shuffle questions: Fisher-Yates shuffle algorithm.
+//SHUFFLE QUESTIONS: Fisher-Yates shuffle algorithm.
 function shuffleQuestions(array) {
     for (let i = array.length - 1; i > 0; i--) {
       const j = Math.floor(Math.random() * (i + 1));
@@ -115,7 +116,7 @@ function shuffleQuestions(array) {
 let shuffledQuestions, shuffledAnswers;
 let currentQuestionIndex = 0;
 
-// Display beginner questions
+//START BEGINNER GAME
 function displayBeginnerQuestion() {
     //clear previous questions
     shuffledQuestions = [];
@@ -149,7 +150,7 @@ beginnerButton.addEventListener('click', () => {
     displayBeginnerQuestion();
 })
 
-//Display Intermediate questions
+//START INTERMEDIATE GAME
 function displayIntermediateQuestion() {
   shuffledQuestions = [];
   shuffledAnswers = [];
@@ -180,7 +181,7 @@ intermediateButton.addEventListener('click', () => {
   displayIntermediateQuestion();
 })
 
-//Display Advanced questions
+//START ADVANCED GAME
 function displayAdvancedQuestion() {
   shuffledQuestions = [];
   shuffledAnswers = [];
@@ -211,12 +212,12 @@ advancedButton.addEventListener('click', () => {
   displayAdvancedQuestion();
 })
 
+//ADD TO SCORE
 //Add to the correct score
 function addToCorrectScore() {
     let oldCorrectScore = parseInt(document.getElementById('correct-score').innerText);
     document.getElementById('correct-score').innerText = ++oldCorrectScore;
 }
-
 //Add to the incorrect score
 function addToIncorrectScore() {
     let oldIncorrectScore = parseInt(document.getElementById('incorrect-score').innerText);
@@ -269,16 +270,14 @@ const highScores = JSON.parse(localStorage.getItem('highScores')) || [];
 const MAX_HIGH_SCORES = 10;
 const highScoresList = document.getElementById("highScoresList");
 
+//END GAME
 function endGame() {
-    //store score in variable
+    //Store Final Score and Display it
     finalScore = parseInt(document.getElementById('correct-score').innerText);
-    //close game div
     gameContainer.classList.add('hide');
-    //open end game div
     gameOverContainer.classList.remove('hide');
-    //display score & name
     document.getElementById('final-score').innerText = finalScore;
-    //congratulate of over 6
+    //Congratulate if over 6
     if (finalScore > 6) {
         document.getElementById('congratulate').innerText = "Congratulations!";
         document.getElementById('try-again').innerText = "Try a harder level!";
@@ -286,22 +285,17 @@ function endGame() {
         document.getElementById('congratulate').innerText = "Game Over";
         document.getElementById('try-again').innerText = "Give it another go, you can do better!";
     }
-    
-    //Add name and score to highScores
+    //Add Name & Score to HighScores
     const score = {
         score: finalScore,
         name: username
     };
 
     //Code from James Q Quick tutorial to sort scores https://www.youtube.com/watch?v=DFhmNLKwwGw&list=PLDlWc9AfQBfZIkdVaOQXi1tizJeNJipEx&index=9
-    //Add nes score to high scores
-    highScores.push(score);
-    //Sort the scores
-    highScores.sort( (a,b) =>  b.score - a.score)
-    //Remove any not in the top 10
-    highScores.splice(10);
-    //Send the highscores to local storage
-    localStorage.setItem('highscores', JSON.stringify(highScores));
+    highScores.push(score); //Add new score to high scores
+    highScores.sort( (a,b) =>  b.score - a.score) //Sort the scores
+    highScores.splice(10); //Remove any not in the top 10
+    localStorage.setItem('highscores', JSON.stringify(highScores)); //Send the highscores to local storage
     //Turn the scores into a list and send to scoreboard
     highScoresList.innerHTML = highScores
     .map(score => {
@@ -309,21 +303,18 @@ function endGame() {
     })
     .join("");
 
-    //clear score and question index for next game
+    //Clear Score, Question Index, Shuffled Questions & Counter for Next Game
     currentQuestionIndex = 0;
     document.getElementById('correct-score').innerText = "0";
     document.getElementById('incorrect-score').innerText = "0";
-    
-    //Clear shuffled questions and counter for the next game.
     shuffledQuestions = [];
     shuffledAnswers = [];
-
     //hide next button
     nextButton.classList.add('hide');
     //display spacer where next button will be
     spacer.classList.remove('hide');
 }
-
+//DISPLAY NEXT QUESTION
 function displayNextQuestion() {
     //enable clicking of buttons and remove previous button displays
     for (let i = 0; i < 4; i++) {
@@ -336,15 +327,13 @@ function displayNextQuestion() {
     spacer.classList.remove('hide');
     //get the next question
     displayBeginnerQuestion();
-
 }
 
 nextButton.addEventListener('click', () => {
     displayNextQuestion();
 })
 
-
-// Beginner questions
+//BEGINNER QUESTIONS
 const beginnerQuestions = [
     {
         question: 'What is the relative minor key of C major?',
@@ -853,7 +842,7 @@ const beginnerQuestions = [
 
 ]
 
-// Intermediate questions
+//INTERMEDIATE QUESTIONS
 const intermediateQuestions = [
     {
         question: 'What is the relative minor key of A major?',
@@ -1361,7 +1350,7 @@ const intermediateQuestions = [
       }
     ]
 
-    // Advanced questions
+//ADVANCED QUESTIONS
 const advancedQuestions = [
     {
         question: 'What is the relative minor key of B major?',
