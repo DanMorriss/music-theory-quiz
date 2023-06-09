@@ -22,7 +22,6 @@ const spacer = document.getElementById('spacer');
 const homeButton = document.getElementById('home-btn');
 const playAgainButton = document.getElementById('play-again-btn');
 const highScoresButton = document.getElementById('high-scores-btn');
-
 //Back Buttons
 const backButtonRules = document.getElementById('back-button-rules');
 const backButtonScores = document.getElementById('back-button-scores');
