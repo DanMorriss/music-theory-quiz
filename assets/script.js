@@ -9,6 +9,9 @@ const submitName = document.getElementById('submit-name');
 const beginnerButton = document.getElementById('beginner');
 const intermediateButton = document.getElementById('intermediate');
 const advancedButton = document.getElementById('advanced');
+//Dissable Intermediate & Advanced buttons at start of game
+intermediateButton.disabled = true;
+advancedButton.disabled = true;
 //Game Screen Buttons
 const question = document.getElementById('question');
 const answerButton = document.getElementsByClassName('question-btn');
@@ -30,12 +33,14 @@ const backButtonDifficulty = document.getElementById('back-button-difficulty');
 const backButtonGame = document.getElementById('back-button-game');
 const backButtonGameOver = document.getElementById('back-button-game-over');
 
+
 //VARIABLES
 let username;
 let shuffledQuestions, shuffledAnswers;
 let currentQuestionIndex = 0;
 let finalScore, displayedScore;
 let gameType;
+let correctScore = document.getElementById('correct-score');
 
 //CONTAINERS
 const homeContainer = document.getElementById('home-container');
@@ -139,6 +144,10 @@ function displayBeginnerQuestion() {
     }
     //remove the asked question from the question list
     shuffledQuestions.splice(0, 1);
+    //Unlock Intermediate Questions if 10 answered correctly
+    if (correctScore.innerText === "10") {
+      intermediateButton.disabled = false;
+    }
     //Run endGame if you run out of questions
     if (shuffledQuestions.length < 1) {
       endGame();
@@ -171,6 +180,10 @@ function displayIntermediateQuestion() {
   }
   //remove the question from the question list
   shuffledQuestions.splice(0, 1);
+   //Unlock Advanced Questions if 10 answered correctly
+   if (correctScore.innerText === "10") {
+    advancedButton.disabled = false;
+  }
   //End the game if all questions have been asked
   if (shuffledQuestions.length < 1) {
     endGame();
@@ -227,7 +240,6 @@ function displayNextQuestion() {
   nextButton.classList.add('hide');
   spacer.classList.remove('hide');
   //get the next question
-  //if previous question x, do another one the same
   if (gameType === 'beginner') {
   displayBeginnerQuestion();
   } else if (gameType === 'intermediate') {
@@ -242,17 +254,17 @@ nextButton.addEventListener('click', () => {
 })
 
 //ADD TO SCORE
-//Add to the correct score
+//Add to the Correct Score
 function addToCorrectScore() {
     let oldCorrectScore = parseInt(document.getElementById('correct-score').innerText);
     document.getElementById('correct-score').innerText = ++oldCorrectScore;
 }
-//Add to the incorrect score
+//Add to the Incorrect Score
 function addToIncorrectScore() {
     let oldIncorrectScore = parseInt(document.getElementById('incorrect-score').innerText);
     document.getElementById('incorrect-score').innerText = ++oldIncorrectScore;
-    //end game of you have 5 wrong answers
-    if (oldIncorrectScore > 4) {
+    //End game of you have 5 wrong answers
+    if (oldIncorrectScore >= 5) {
       endGame();
     }
 }

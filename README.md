@@ -186,12 +186,12 @@ Testing using the Google Chrome Dev Tools was used throughout the build of the s
 
 - remover height scroll on a mobile
 - Make return key act at submit/next
-
 - The next button was displaying when you start a second game. So I added the hide class in the end game function.
-- Make harder levels unlockable.
 - Add score multiplier for harder levels. *10 *15 *20.
 - The username is not displaying on the game over screen.
 - Add congratulations, you answered all the questions.
+- Display "next level unlocked" when you get 10 questions right.
+- Reset answers counter if game ended by close  button.
 
 
 
