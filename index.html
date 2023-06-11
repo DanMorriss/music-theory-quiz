@@ -35,9 +35,7 @@
             <h2>Rules</h2>
             <div class="rules">
                 <p>This quiz will test your music theory knowledge to help you improve as a musician.</p>
-                <p>Select your answer from the options below each question.</p>
-                <p>Then see how you did before moving on to the next question.</p>
-                <p>How many questions can you answer correctly?</p>
+                <p>Select your answer from the options below each question, then see how you did before moving on to the next question.</p>
                 <p>Get 5 wrong and it's game over.</p>
                 <p>Get 10 right to unlock the next difficulty level.</p>
                 <p>At the end of the quiz you’ll be able to see your final score and track your progress on the score board.</p>
@@ -97,12 +95,26 @@
             <button id="answer4" class="button question-btn">Answer 4</button>
         </div>
         <div>
-            <button id="next-btn" class="button hide">Next</button>
+            <button id="next-btn" class="button hide action-btn">Next</button>
         </div>
         <div id="spacer" class=""></div>
         <div class="game-score">
-            <p>Correct Answers: <span id="correct-score">0</span></p>
+            <p id="correct-score-display">Correct Answers: <span id="correct-score">0</span></p>
             <p>Incorrect Answers: <span id="incorrect-score">0</span></p>
+        </div>
+    </div>
+
+    <!--Congratulations Container-->
+    <div id="congratulations-container">
+        <div class="pop-up-content">
+            <div class="congratulations-text">
+                <p>Congratulations, <span>username</span> you got 10 questions correct!</p>
+                <p>Try the next level or continue to get a higher score.</p>
+            </div>
+            <div class="congratulations-buttons">
+                <button class="button action-btn">Next Level</button>
+                <button id="next-question-btn" class="button action-btn">Next Question</button>
+            </div>
         </div>
     </div>
 

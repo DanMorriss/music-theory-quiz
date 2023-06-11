@@ -181,6 +181,7 @@ Testing using the Google Chrome Dev Tools was used throughout the build of the s
 - The beginner questions were dislaying after the 1st question on the intermediate and advanced games. Inside the displayNextQuestion function it was running displayBeginnerQuestion so I added an if else statement to check the game type and ask another question from the same type.
 - The advanced questions were not changing from the first displayed question. This was due to a type inthe gameType variable.
 - On an iPhone, the body was scrollable due to the built in browser buttons along the bottom. I set overflow to hidden in the @mediaquery to fit this.
+- When you closed the game early, your previous question scores still displayed so I cleared them when the close container button is pressed.
 
 [Back to top](<#contents>)
 ### Unsolved Bugs
@@ -192,8 +193,9 @@ Testing using the Google Chrome Dev Tools was used throughout the build of the s
 - The username is not displaying on the game over screen.
 - Add congratulations, you answered all the questions.
 - Display "next level unlocked" when you get 10 questions right.
-- Reset answers counter if game ended by close  button.
+- fix display next level after level completed.
 - Add game sounds.
+
 
 
 

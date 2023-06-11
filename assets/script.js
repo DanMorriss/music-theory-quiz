@@ -40,6 +40,7 @@ let shuffledQuestions, shuffledAnswers;
 let currentQuestionIndex = 0;
 let finalScore, displayedScore;
 let gameType;
+let correctScoreDisplay = document.getElementById('correct-score-display');
 let correctScore = document.getElementById('correct-score');
 
 //CONTAINERS
@@ -50,6 +51,7 @@ const difficultyContainer = document.getElementById('difficulty-container');
 const gameContainer = document.getElementById('game-container');
 const gameOverContainer = document.getElementById('end-game-container');
 const nameContainer = document.getElementById('enter-name-container');
+const congratulationsContainer = document.getElementById('congratulations-container');
 
 //OPEN AND CLOSE CONTAINERS
 //Rules Container
@@ -87,6 +89,12 @@ backButtonDifficulty.addEventListener('click', () => {
 //Game Container
 backButtonGame.addEventListener('click', () => {
   gameContainer.classList.add('hide');
+  currentQuestionIndex = 0;
+  document.getElementById('correct-score').innerText = "0";
+  document.getElementById('incorrect-score').innerText = "0";
+  //correctScoreDisplay.classList.remove('level-complete');
+  shuffledQuestions = [];
+  shuffledAnswers = [];
   homeContainer.classList.remove('hide');
 })
 //Game Over Container
@@ -258,6 +266,11 @@ nextButton.addEventListener('click', () => {
 function addToCorrectScore() {
     let oldCorrectScore = parseInt(document.getElementById('correct-score').innerText);
     document.getElementById('correct-score').innerText = ++oldCorrectScore;
+    //Add celebration to correct score if new level is unlocked
+    if (correctScore.innerText === '10') {
+      //change display from none to flex on #congratulations-container
+      congratulationsContainer.classList.remove('hide');
+    }
 }
 //Add to the Incorrect Score
 function addToIncorrectScore() {
@@ -343,7 +356,7 @@ function endGame() {
     })
     .join("");
 
-    //Clear Score, Question Index, Shuffled Questions & Counter for Next Game
+    //Clear Score, Question Index, Shuffled Questions, Counter & Level Complete for Next Game
     currentQuestionIndex = 0;
     document.getElementById('correct-score').innerText = "0";
     document.getElementById('incorrect-score').innerText = "0";
@@ -353,6 +366,7 @@ function endGame() {
     nextButton.classList.add('hide');
     //display spacer where next button will be
     spacer.classList.remove('hide');
+    //correctScoreDisplay.classList.remove('level-complete');
 }
 
 //BEGINNER QUESTIONS
@@ -543,7 +557,7 @@ const beginnerQuestions = [
             { text: '6', correct: true },
             { text: '4', correct: false},
             { text: '8', correct: false},
-            { text: '12', correct: false}
+            { text: '3', correct: false}
         ]
     },
     {
