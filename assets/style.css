@@ -241,7 +241,7 @@ form {
     height: 100vh;
     position: fixed;
     background-color: rgba(0, 0, 0, 0.4);
-    display: none;
+    display: flex;
     justify-content: center;
     align-items: center;
 }
@@ -281,6 +281,16 @@ form {
     width: 15rem;
     background-color: #385B4F;
     color: #F4F6F1;
+}
+
+.congratulations-modal {
+    z-index: 9;
+    position: absolute;
+    top: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 /*End game container*/

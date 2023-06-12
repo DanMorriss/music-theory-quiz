@@ -51,7 +51,7 @@ const difficultyContainer = document.getElementById('difficulty-container');
 const gameContainer = document.getElementById('game-container');
 const gameOverContainer = document.getElementById('end-game-container');
 const nameContainer = document.getElementById('enter-name-container');
-const congratulationsContainer = document.getElementById('congratulations-container');
+const congratulationsContainer = document.getElementById('congratulations-modal');
 
 //OPEN AND CLOSE CONTAINERS
 //Rules Container
@@ -153,7 +153,7 @@ function displayBeginnerQuestion() {
     //remove the asked question from the question list
     shuffledQuestions.splice(0, 1);
     //Unlock Intermediate Questions if 10 answered correctly
-    if (correctScore.innerText === "10") {
+    if (correctScore.innerText === "1") {
       intermediateButton.disabled = false;
     }
     //Run endGame if you run out of questions
@@ -188,8 +188,8 @@ function displayIntermediateQuestion() {
   }
   //remove the question from the question list
   shuffledQuestions.splice(0, 1);
-   //Unlock Advanced Questions if 10 answered correctly
-   if (correctScore.innerText === "10") {
+   //Unlock Advanced Questions if 20 answered correctly
+   if (correctScore.innerText === '2') {
     advancedButton.disabled = false;
   }
   //End the game if all questions have been asked
@@ -261,14 +261,35 @@ nextButton.addEventListener('click', () => {
   displayNextQuestion();
 })
 
+//CONGRATULATIONS PAGES
+const nextLevelButton = document.getElementById('next-level-btn');
+const nextQuestionButton = document.getElementById('next-question-btn');
+nextLevelButton.addEventListener('click', () => {
+  congratulationsContainer.classList.add('hide');
+  gameContainer.classList.add('hide');
+  difficultyContainer.classList.remove('hide');
+  if (gameType === 'beginner') {
+    intermediateButton.disabled = false;
+  } else if (gameType === 'intermediate') {
+    advancedButton.disabled = false;
+  }
+})
+
+nextQuestionButton.addEventListener('click', () => {
+  congratulationsContainer.classList.add('hide');
+  displayNextQuestion();
+})
+
 //ADD TO SCORE
 //Add to the Correct Score
 function addToCorrectScore() {
     let oldCorrectScore = parseInt(document.getElementById('correct-score').innerText);
     document.getElementById('correct-score').innerText = ++oldCorrectScore;
     //Add celebration to correct score if new level is unlocked
-    if (correctScore.innerText === '10') {
-      //change display from none to flex on #congratulations-container
+    if (correctScore.innerText === '10' && gameType === 'beginner') {
+      //congratulations popup
+      congratulationsContainer.classList.remove('hide');
+    } else if (correctScore.innerText === '20' && gameType === 'intermediate') {
       congratulationsContainer.classList.remove('hide');
     }
 }

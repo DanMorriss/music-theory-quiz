@@ -195,6 +195,7 @@ Testing using the Google Chrome Dev Tools was used throughout the build of the s
 - Display "next level unlocked" when you get 10 questions right.
 - fix display next level after level completed.
 - Add game sounds.
+- Add id of congratulations-container to the container to display it once 10 questions has been answered cirrectly.
 
 
 
