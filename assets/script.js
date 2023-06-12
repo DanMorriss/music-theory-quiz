@@ -153,7 +153,7 @@ function displayBeginnerQuestion() {
     //remove the asked question from the question list
     shuffledQuestions.splice(0, 1);
     //Unlock Intermediate Questions if 10 answered correctly
-    if (correctScore.innerText === "1") {
+    if (correctScore.innerText === "10") {
       intermediateButton.disabled = false;
     }
     //Run endGame if you run out of questions
@@ -189,7 +189,7 @@ function displayIntermediateQuestion() {
   //remove the question from the question list
   shuffledQuestions.splice(0, 1);
    //Unlock Advanced Questions if 20 answered correctly
-   if (correctScore.innerText === '2') {
+   if (correctScore.innerText === '20') {
     advancedButton.disabled = false;
   }
   //End the game if all questions have been asked

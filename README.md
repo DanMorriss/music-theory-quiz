@@ -182,6 +182,7 @@ Testing using the Google Chrome Dev Tools was used throughout the build of the s
 - The advanced questions were not changing from the first displayed question. This was due to a type inthe gameType variable.
 - On an iPhone, the body was scrollable due to the built in browser buttons along the bottom. I set overflow to hidden in the @mediaquery to fit this.
 - When you closed the game early, your previous question scores still displayed so I cleared them when the close container button is pressed.
+- You could unlock the advanced game by completing 20 questions in total, so I included an extra clause to make sure that the intermeidate game is being played.
 
 [Back to top](<#contents>)
 ### Unsolved Bugs
@@ -189,13 +190,11 @@ Testing using the Google Chrome Dev Tools was used throughout the build of the s
 
 - Make return key act at submit/next
 - The next button was displaying when you start a second game. So I added the hide class in the end game function.
-- Add score multiplier for harder levels. *10 *15 *20.
 - The username is not displaying on the game over screen.
 - Add congratulations, you answered all the questions.
-- Display "next level unlocked" when you get 10 questions right.
-- fix display next level after level completed.
 - Add game sounds.
-- Add id of congratulations-container to the container to display it once 10 questions has been answered cirrectly.
+- Add in the username to various displays.
+- You need to answer 20 corect question in total to unlock the advanced game. This means that if you unlock the intermediate game but start it with 0, you need to answer 20 correct questions instead of 10.
 
 
 
