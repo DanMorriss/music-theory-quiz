@@ -193,50 +193,9 @@ form {
     height: 4rem;
 }
 
-@media only screen and (max-width: 745px)  {
-    body {
-        height: 100vh;
-        overflow: hidden;
-    }
-
-    #rules-container {
-        height: 75vh;
-    }
-    .rules {
-        padding-bottom: 1rem;
-        overflow: hidden;
-        height: 100%;
-    }
-  /*Game screen*/
-    #spacer {
-        height: 4.1rem;
-    }
-
-    #question {
-        font-size: 1.2em;
-    }
-
-    #next-button {
-        font-size: 1.2em;
-    }
-
-    /*Game Over screen*/
-    #navigation-buttons button {
-        font-size: 1.2em;
-        margin: 1rem;
-    }
-
-    /*Select difficulty screen*/
-    #difficulty-options button {
-        font-size: 1.2em;
-        margin: 1rem;
-        width: 10rem;   
-    }
-}
-
 /*Level Complete*/
 
-#congratulations-container {
+#congratulations-modal {
     width: 100vw;
     height: 100vh;
     position: fixed;
@@ -269,6 +228,9 @@ form {
     font-size: 1.3rem;
 }
 
+.congratulations-text p {
+    padding-bottom: 1rem;
+}
 
 .congratulations-buttons {
     display: flex;
@@ -351,4 +313,59 @@ form {
     padding: 1rem;
     font-family: 'Lato', sans-serif;
     font-size: 1.3em;
+}
+
+@media only screen and (max-width: 745px)  {
+    body {
+        height: 100vh;
+        overflow: hidden;
+    }
+
+    #rules-container {
+        height: 75vh;
+    }
+    .rules {
+        padding-bottom: 1rem;
+        overflow: hidden;
+        height: 100%;
+    }
+  /*Game screen*/
+    #spacer {
+        height: 4.1rem;
+    }
+
+    #question {
+        font-size: 1.2em;
+    }
+
+    #next-button {
+        font-size: 1.2em;
+    }
+
+    /*Game Over screen*/
+    #navigation-buttons button {
+        font-size: 1.2em;
+        margin: 1rem;
+    }
+
+    /*Select difficulty screen*/
+    #difficulty-options button {
+        font-size: 1.2em;
+        margin: 1rem;
+        width: 10rem;   
+    }
+
+    /*Congratulations pop up*/
+    .pop-up-content {
+        width: 75vw;
+        height: auto;
+    }
+    .congratulations-buttons > button {
+        font-size: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .congratulations-text {
+        text-align: center;
+    }
 }

@@ -195,6 +195,7 @@ Testing using the Google Chrome Dev Tools was used throughout the build of the s
 - Add game sounds.
 - Add in the username to various displays.
 - You need to answer 20 corect question in total to unlock the advanced game. This means that if you unlock the intermediate game but start it with 0, you need to answer 20 correct questions instead of 10.
+- Pop up window needs to be responsve.
 
 
 
