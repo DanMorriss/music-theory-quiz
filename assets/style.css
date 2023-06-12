@@ -195,16 +195,6 @@ form {
 
 /*Level Complete*/
 
-.congratulations-modal {
-    width: 100vw;
-    height: 100vh;
-    position: fixed;
-    background-color: rgba(0, 0, 0, 0.4);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
 .pop-up-content {
     display: flex;
     flex-direction: column;
@@ -249,10 +239,13 @@ form {
     z-index: 9;
     position: absolute;
     top: 0;
+    width: 100vw;
     height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.4);
 }
 
 /*End game container*/

@@ -92,7 +92,6 @@ backButtonGame.addEventListener('click', () => {
   currentQuestionIndex = 0;
   document.getElementById('correct-score').innerText = "0";
   document.getElementById('incorrect-score').innerText = "0";
-  //correctScoreDisplay.classList.remove('level-complete');
   shuffledQuestions = [];
   shuffledAnswers = [];
   homeContainer.classList.remove('hide');
@@ -387,7 +386,6 @@ function endGame() {
     nextButton.classList.add('hide');
     //display spacer where next button will be
     spacer.classList.remove('hide');
-    //correctScoreDisplay.classList.remove('level-complete');
 }
 
 //BEGINNER QUESTIONS
