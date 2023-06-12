@@ -195,7 +195,7 @@ form {
 
 /*Level Complete*/
 
-#congratulations-modal {
+.congratulations-modal {
     width: 100vw;
     height: 100vh;
     position: fixed;
@@ -303,10 +303,6 @@ form {
     margin-bottom: 1rem;
 }
 
-.hide {
-    display: none;
-}
-
 /* Scoreboard */
 .high-score {
     list-style: none;
@@ -368,4 +364,8 @@ form {
     .congratulations-text {
         text-align: center;
     }
+}
+
+.hide {
+    display: none;
 }
