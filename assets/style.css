@@ -193,9 +193,13 @@ form {
     height: 4rem;
 }
 
+/*Popup warning*/
+
+
+
 /*Level Complete*/
 
-.pop-up-content {
+.pop-up-content, .warning {
     display: flex;
     flex-direction: column;
     justify-content: space-between;

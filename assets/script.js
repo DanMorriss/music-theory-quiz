@@ -32,7 +32,9 @@ const backButtonName = document.getElementById('back-button-name');
 const backButtonDifficulty = document.getElementById('back-button-difficulty');
 const backButtonGame = document.getElementById('back-button-game');
 const backButtonGameOver = document.getElementById('back-button-game-over');
-
+//Close game buttons
+const closeGame = document.getElementById('close-game');
+const continueGame = document.getElementById('continue-game');
 
 //VARIABLES
 let username;
@@ -52,6 +54,7 @@ const gameContainer = document.getElementById('game-container');
 const gameOverContainer = document.getElementById('end-game-container');
 const nameContainer = document.getElementById('enter-name-container');
 const congratulationsContainer = document.getElementById('congratulations-modal');
+const closeGameWarning = document.getElementById('close-game-warning');
 
 //OPEN AND CLOSE CONTAINERS
 //Rules Container
@@ -87,14 +90,24 @@ backButtonDifficulty.addEventListener('click', () => {
     homeContainer.classList.remove('hide');
 })
 //Game Container
+//CLOSE GAME WARNING POPUP
 backButtonGame.addEventListener('click', () => {
+  closeGameWarning.classList.remove('hide');
+})
+//Confirm close game
+closeGame.addEventListener('click', () => {
   gameContainer.classList.add('hide');
+  closeGameWarning.classList.add('hide');
   currentQuestionIndex = 0;
   document.getElementById('correct-score').innerText = "0";
   document.getElementById('incorrect-score').innerText = "0";
   shuffledQuestions = [];
   shuffledAnswers = [];
   homeContainer.classList.remove('hide');
+})
+//Cancel close game
+continueGame.addEventListener('click', () => {
+  closeGameWarning.classList.add('hide');
 })
 //Game Over Container
 backButtonGameOver.addEventListener('click', () => {
