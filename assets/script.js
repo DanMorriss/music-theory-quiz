@@ -101,6 +101,11 @@ backButtonGameOver.addEventListener('click', () => {
     gameOverContainer.classList.add('hide');
     homeContainer.classList.remove('hide');
 })
+//Home button from game over
+homeButton.addEventListener('click', () => {
+  gameOverContainer.classList.add('hide');
+  homeContainer.classList.remove('hide');
+})
 //Play again from game over screen
 playAgainButton.addEventListener('click', () => {
     gameOverContainer.classList.add('hide');
