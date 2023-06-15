@@ -9,32 +9,21 @@
 ## Contents
 
 * [**User Experience (UX)**](<#user-experience-ux>)
-    * [Initial Discussion](<#initial-discussion>)
     * [User Stories](<#user-stories>)
-        * [Client Goals](#client-goals)
         * [First Time Visitor Goals](<#first-time-visitor-goals>)
         * [Returning Visitor Goals](<#returning-visitor-goals>)
         * [Frequent Visitor Goals](<#frequent-visitor-goals>)
-    * [Site Structure](<#site-structure>)
     * [Wireframes](<#wireframes>)
-        * [Home Page: Desktop View](<#home-page-desktop-view>)
-        * [House band Page: Desktop view](<#house-band-page-desktop-view>)
-        * [Contact Page: Desktop View](<#contact-page-desktop-view>)
-        * [Mobile View](<#mobile-view>)
+        * [Home](<#home>)
+        * [Game Screen](<#game-screen>)
+        * [Difficulty](<#difficulty>)
+        * [High Scores](<#high-scores>)
 * [**Design**](<#design>)
     * [Color Scheme](<#color-scheme>)
     * [Typography](<#typography>)
-    * [Imagry](<#imagry>)
 * [**Features**](#features)
     * [Existing Features](<#existing-features>)
-        * [Navigation Bar](<#navigation-bar>)
-        * [Landing Page - Hero Image](<#landing-page---hero-image>)
-        * [Join Us Section](<#join-us-section>)
-        * [The Next Night Section](<#the-next-night-section>)
-        * [Footer](<#footer>)
-        * [House Band](<#house-band>)
-        * [Contact Form](<#contact-form>)
-        * [Contact Form Sucess Page](<#contact-form-sucess-page>)
+        * [Feature 1](<#feature-1>)
     * [Accesibility](<#accesibility>)
     * [Future Features](<#future-features>)
 * [**Technologies Used**](<#technologies-used>)
@@ -59,14 +48,8 @@
 
 ## User Experience (UX)
 
-### Initial Discussion
-
-[Back to top](<#contents>)
 ### User Stories
 
-#### Client Goals
-
-[Back to top](<#contents>)
 #### First Time Visitor Goals
 
 [Back to top](<#contents>)
@@ -74,9 +57,6 @@
 
 [Back to top](<#contents>)
 #### Frequent Visitor Goals
-
-[Back to top](<#contents>)
-### Site Structure
 
 [Back to top](<#contents>)
 ### Wireframes
@@ -90,7 +70,7 @@
 #### Difficulty
 ![Difficulty Wireframe](assets/images/difficulty-wire.png)
 
-#### Highscores
+#### High Scores
 ![Highscores Wireframe](assets/images/highscores-wire.png)
 
 [Back to top](<#contents>)
@@ -107,11 +87,6 @@
 [Google Fonts](https://fonts.google.com) was used for the following fonts:
 - Playfair Display for the headings and questions.
 - Lato for the buttons and explenation text.
-
-[Back to top](<#contents>)
-### Imagry
-
-- The images were all taken from stock image library in [Canva](https://www.canva.com)
 
 [Back to top](<#contents>)
 ## Features
@@ -210,7 +185,7 @@ No known bugs.
 ### To Deploy the project
 GitHub pages was used to deploy the live site as follows:
 1. Login to GitHub
-2. Go to the repository [DanMorriss/jazz-platform](https://github.com/DanMorriss/music-theory-quiz)
+2. Go to the repository [DanMorriss/music-thoery-quiz](https://github.com/DanMorriss/music-theory-quiz)
 3. Click the `Settings` tab
 4. Click the `Pages` tab
 5. Under the 'Build and Deployment' section select the `Deploy from a branch` from the dropdown menu
