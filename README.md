@@ -244,6 +244,8 @@ To clone the project:
 
 - Form validation from Stack Overflow https://stackoverflow.com/questions/27543671/javascript-form-validation-not-empty-or-no-whitespaces 
 
+- GreatStack Slider switch tutorial used for CSS https://www.youtube.com/watch?v=uCjDIMADK0w 
+
 [Back to top](<#contents>)
 ## Acknowledgements
 
