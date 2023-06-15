@@ -40,17 +40,31 @@ const continueGame = document.getElementById('continue-game');
 const correctAnswerSound = new Audio('/assets/sounds/correct-answer.mp3');
 const incorectAnswerSound = new Audio('assets/sounds/wrong-answer.mp3');
 const selectSound = new Audio('assets/sounds/select.mp3');
+let soundSlider = document.getElementById('sound-slider');
+
 function playCorrectSound() {
-  correctAnswerSound.volume = 0.1;
-  correctAnswerSound.play();
+  if (!soundSlider.checked) {
+    return;
+  } else if (soundSlider.checked) {
+    correctAnswerSound.volume = 0.1;
+    correctAnswerSound.play();
+  }
 }
 function playIncorrectSound() {
-  incorectAnswerSound.volume = 0.1;
-  incorectAnswerSound.play();
+  if (!soundSlider.checked) {
+    return;
+  } else if (soundSlider.checked) {
+    incorectAnswerSound.volume = 0.1;
+    incorectAnswerSound.play();
+  }
 }
 function playSelectSound() {
-  selectSound.volume = 0.1;
-  selectSound.play();
+  if (!soundSlider.checked) {
+    return;
+  } else if (soundSlider.checked) {
+    selectSound.volume = 0.1;
+    selectSound.play();
+  }
 }
 
 //VARIABLES
