@@ -88,46 +88,46 @@ rulesButton.addEventListener('click', () => {
     homeContainer.classList.add('hide');
     rulesContainer.classList.remove('hide');
     playSelectSound();
-})
+});
 backButtonRules.addEventListener('click', () => {
     rulesContainer.classList.add('hide');
     homeContainer.classList.remove('hide');
     playSelectSound();
-})
+});
 //High Scores container
 scoresButton.addEventListener('click', () => {
     homeContainer.classList.add('hide');
     scoresContainer.classList.remove('hide');
     playSelectSound();
-})
+});
 backButtonScores.addEventListener('click', () => {
     scoresContainer.classList.add('hide');
     homeContainer.classList.remove('hide');
     playSelectSound();
-})
+});
 //Submit Name Container
 playButton.addEventListener('click', () => {
     homeContainer.classList.add('hide');
     nameContainer.classList.remove('hide');
     playSelectSound();
-})
+});
 backButtonName.addEventListener('click', () => {
     nameContainer.classList.add('hide');
     homeContainer.classList.remove('hide');
     playSelectSound();
-})
+});
 //Difficulty Container
 backButtonDifficulty.addEventListener('click', () => {
     difficultyContainer.classList.add('hide');
     homeContainer.classList.remove('hide');
     playSelectSound();
-})
+});
 //Game Container
 //CLOSE GAME WARNING POPUP
 backButtonGame.addEventListener('click', () => {
   closeGameWarning.classList.remove('hide');
   playSelectSound();
-})
+});
 //Confirm close game
 closeGame.addEventListener('click', () => {
   gameContainer.classList.add('hide');
@@ -139,36 +139,36 @@ closeGame.addEventListener('click', () => {
   shuffledAnswers = [];
   homeContainer.classList.remove('hide');
   playSelectSound();
-})
+});
 //Cancel close game
 continueGame.addEventListener('click', () => {
   closeGameWarning.classList.add('hide');
   playSelectSound();
-})
+});
 //Game Over Container
 backButtonGameOver.addEventListener('click', () => {
     gameOverContainer.classList.add('hide');
     homeContainer.classList.remove('hide');
     playSelectSound();
-})
+});
 //Home button from game over
 homeButton.addEventListener('click', () => {
   gameOverContainer.classList.add('hide');
   homeContainer.classList.remove('hide');
   playSelectSound();
-})
+});
 //Play again from game over screen
 playAgainButton.addEventListener('click', () => {
     gameOverContainer.classList.add('hide');
     difficultyContainer.classList.remove('hide');
     playSelectSound();
-})
+});
 //Go to high scores from game over
 highScoresButton.addEventListener('click', () => {
     gameOverContainer.classList.add('hide');
     scoresContainer.classList.remove('hide');
     playSelectSound();
-})
+});
 
 //SUBMIT NAME
 submitName.addEventListener('submit', (e) => {
@@ -178,10 +178,10 @@ submitName.addEventListener('submit', (e) => {
     nameContainer.classList.add('hide');
     difficultyContainer.classList.remove('hide');
     playSelectSound();
-})
+});
 
 function validateName() {
-  var x = document.forms["submit-name"]["name"].value;
+  let x = document.forms["submit-name"]["name"].value;
   if (x.trim()==null || x.trim()==""|| x===" ") {
       alert("Please enter your name");
       return false;
@@ -237,7 +237,7 @@ beginnerButton.addEventListener('click', () => {
     nextButton.classList.add('hide');
     spacer.classList.remove('hide');
     playSelectSound();  
-})
+});
 
 //START INTERMEDIATE GAME
 function displayIntermediateQuestion() {
@@ -276,7 +276,7 @@ intermediateButton.addEventListener('click', () => {
   nextButton.classList.add('hide');
   spacer.classList.remove('hide');
   playSelectSound();
-})
+});
 
 //START ADVANCED GAME
 function displayAdvancedQuestion() {
@@ -311,7 +311,7 @@ advancedButton.addEventListener('click', () => {
   nextButton.classList.add('hide');
   spacer.classList.remove('hide');
   playSelectSound();
-})
+});
 
 //DISPLAY NEXT QUESTION
 function displayNextQuestion() {
@@ -336,7 +336,7 @@ function displayNextQuestion() {
 nextButton.addEventListener('click', () => {
   displayNextQuestion();
   playSelectSound();
-})
+});
 
 //CONGRATULATIONS PAGES
 const nextLevelButton = document.getElementById('next-level-btn');
@@ -351,13 +351,13 @@ nextLevelButton.addEventListener('click', () => {
   } else if (gameType === 'intermediate') {
     advancedButton.disabled = false;
   }
-})
+});
 
 nextQuestionButton.addEventListener('click', () => {
   congratulationsContainer.classList.add('hide');
   displayNextQuestion();
   playSelectSound();
-})
+});
 
 //ADD TO SCORE
 //Add to the Correct Score
@@ -416,7 +416,7 @@ for (let i = 0; i < 4; i++) {
   answerButton[i].addEventListener('click', function(e) {
     answerButton[i].classList.add('selected');
     checkAnswer();
-})
+});
 }
 
 //these 2 lines are from James Q Quick tutorial used inside endGame to populate the scoreboard
@@ -448,7 +448,7 @@ function endGame() {
 
     //Code from James Q Quick tutorial to sort scores https://www.youtube.com/watch?v=DFhmNLKwwGw&list=PLDlWc9AfQBfZIkdVaOQXi1tizJeNJipEx&index=9
     highScores.push(score); //Add new score to high scores
-    highScores.sort( (a,b) =>  b.score - a.score) //Sort the scores
+    highScores.sort( (a,b) =>  b.score - a.score); //Sort the scores
     highScores.splice(10); //Remove any not in the top 10
     localStorage.setItem('highscores', JSON.stringify(highScores)); //Send the highscores to local storage
     //Turn the scores into a list and send to scoreboard

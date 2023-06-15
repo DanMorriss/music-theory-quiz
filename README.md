@@ -140,11 +140,11 @@ Testing using the Google Chrome Dev Tools was used throughout the build of the s
 
 #### Lighthouse
 
-![Lighthouse test results](assets/images/)
+![Lighthouse test results](assets/images/lighthouse-validation.png)
 
-#### JavaScript
+#### JShint JavaScript Validatior
 
-![JS test results](assets/images/)
+![JS test results](assets/images/jshint-validation.png)
 
 [Back to top](<#contents>)
 ### Responsiveness Test
