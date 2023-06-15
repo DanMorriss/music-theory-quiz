@@ -184,21 +184,15 @@ Testing using the Google Chrome Dev Tools was used throughout the build of the s
 - When you closed the game early, your previous question scores still displayed so I cleared them when the close container button is pressed.
 - You could unlock the advanced game by completing 20 questions in total, so I included an extra clause to make sure that the intermeidate game is being played.
 - The home button was not working from the game over screen, so I added an event listener with function to go home.
+- When you clicked the 'x' on the game screen the score was not saved to the highscores board. I added a warning popup message explaining this to the user.
+- You could enter a blank username so I added the validateName function to display an alert if you did not enter a valid username.
 
 [Back to top](<#contents>)
 ### Unsolved Bugs
 
 - The next button was displaying when you start a second game. So I added the hide class in the end game function.
-- The username is not displaying on the game over screen.
 - Add congratulations, you answered all the questions.
 - Add game sounds.
-- Add in the username to various displays.
-- You need to answer 20 corect question in total to unlock the advanced game. This means that if you unlock the intermediate game but start it with 0, you need to answer 20 correct questions instead of 10.
-- The highscores are not added when the close 'x' is clicked during a game. I need to implament a popup warning. STYLE IT
-- Unsername validation. Do not allow an empty username.
-
-
-
 
 [Back to top](<#contents>)
 ## Deployment
@@ -249,6 +243,7 @@ To clone the project:
 
 -  Code from James Q Quick tutorial to sort scores https://www.youtube.com/watch?v=DFhmNLKwwGw&list=PLDlWc9AfQBfZIkdVaOQXi1tizJeNJipEx&index=9
 
+- Form validation from Stack Overflow https://stackoverflow.com/questions/27543671/javascript-form-validation-not-empty-or-no-whitespaces 
 
 [Back to top](<#contents>)
 ## Acknowledgements

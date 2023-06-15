@@ -63,8 +63,8 @@
         </div>
         <div class="name-question">
             <h2>What's your name?</h2>
-            <form id="submit-name">
-                <input id="name" type="text">
+            <form id="submit-name" onsubmit="return validateName()" method="post">
+                <input id="name" type="text" required>
                 <button type="submit" id="submit" class="button">Submit</button>
             </form>
         </div>
@@ -123,7 +123,7 @@
     <div class="congratulations-modal hide" id="congratulations-modal">
         <div class="pop-up-content">
             <div class="congratulations-text">
-                <p>Congratulations, <span>username</span> you got 10 questions correct!</p>
+                <p>Congratulations, you got 10 questions correct!</p>
                 <p>Try the next level or continue to get a higher score.</p>
             </div>
             <div class="congratulations-buttons">
@@ -140,7 +140,7 @@
         </div>
         <div>
             <h2 id="congratulate">Game Over</h2>
-            <span id="username" >Username</span><p>You answered <span id="final-score">0</span> questions correctly.</p>
+            <p>You answered <span id="final-score">0</span> questions correctly.</p>
             <p id="try-again"></p>
         </div>
         <div id="navigation-buttons">
