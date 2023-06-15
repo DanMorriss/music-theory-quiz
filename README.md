@@ -132,19 +132,20 @@ A frequent visitor will want to:
 ### Future Features
 
 - Add congratulations, you answered all the questions.
+- Add a database to score all users highscores outside of local storage.
 
 [Back to top](<#contents>)
 ## Technologies Used
 ### Languages
-- HTML - for
-- CSS - for
-- JavaSript - for
+- HTML - for the page content.
+- CSS - for the styling.
+- JavaSript - for the functionality of the game and storing the game questions.
 
 [Back to top](<#contents>)
 ## Testing
 
 ### Code Validation
-Testing using the Google Chrome Dev Tools was used throughout the build of the site. Below you can see the results of the W3C HTML and CSS checkers for the finished site.
+Testing using the Google Chrome Dev Tools was used throughout the build of the game. Below you can see the results of the W3C HTML, CSS & JavaScript checkers for the finished site.
 
 #### W3C HTML Checker
 
@@ -166,11 +167,29 @@ Testing using the Google Chrome Dev Tools was used throughout the build of the s
 [Back to top](<#contents>)
 ### Responsiveness Test
 
+All the different pages have been tested across the following devices and screen sizes.
+
+-
+-
+-
+
 [Back to top](<#contents>)
 ### Browser Compatibility
 
+The following browsers have been used to test the game.
+
+-
+-
+-
+
 [Back to top](<#contents>)
 ### Peer Testing
+
+Thanks to the following people for testing the game.
+
+- Kent Yates
+- Selina Sheerin
+- 
 
 [Back to top](<#contents>)
 ## Bugs
@@ -202,11 +221,14 @@ Testing using the Google Chrome Dev Tools was used throughout the build of the s
 - When you clicked the 'x' on the game screen the score was not saved to the highscores board. I added a warning popup message explaining this to the user.
 - You could enter a blank username so I added the validateName function to display an alert if you did not enter a valid username.
 - The next button was displaying when you start a second game. So I added the hide class to the button once the game difficulty was selected.
+- The rules were not displaying properly on an iPhone so i changed the display to inline-block insde the smaller screen media-query.
 
 [Back to top](<#contents>)
 ### Unsolved Bugs
 
 No known bugs.
+
+- Rules don't fit on a moblie.
 
 [Back to top](<#contents>)
 ## Deployment

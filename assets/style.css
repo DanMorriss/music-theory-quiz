@@ -392,9 +392,10 @@ input:checked + .slider:before {
         height: 75vh;
     }
     .rules {
+        display: inline-block;
         padding-bottom: 1rem;
-        overflow: hidden;
-        height: 100%;
+        overflow: auto;
+        height: 90%;
     }
   /*Game screen*/
     #spacer {
