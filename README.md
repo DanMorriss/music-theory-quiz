@@ -189,7 +189,7 @@ Testing using the Google Chrome Dev Tools was used throughout the build of the s
 [Back to top](<#contents>)
 ### Unsolved Bugs
 
-- Add game sounds.
+No known bugs.
 
 [Back to top](<#contents>)
 ## Deployment
@@ -209,7 +209,7 @@ GitHub pages was used to deploy the live site as follows:
 ### To Fork the project
 To make a copy of the GitHub Repository you can fork a copy to edit it without changing the root file. This can then be used to update the original repository. To fork take the following steps:
 1. Login to GitHub
-2. Go to the repository [DanMorriss/jazz-platform](https://github.com/DanMorriss/jazz-platform)
+2. Go to the repository [DanMorriss/jazz-platform](https://github.com/DanMorriss/music-theory-quiz)
 3. On the top right-hand side of the page click the `fork` button and save a copy of the original repository to your GitHub account.
 
 ### To Clone the project
@@ -232,19 +232,21 @@ To clone the project:
 
 ### Content
 
-- https://uppbeat.io/ for the game sounds.
+- All the questions and content in the game was writen by Daniel Morriss.
 
 [Back to top](<#contents>)
 ### Media
 
+- All the game sounds came from [UppBeat](<https://uppbeat.io/>)
+
 [Back to top](<#contents>)
 ### Code Used
 
--  Code from James Q Quick tutorial to sort scores https://www.youtube.com/watch?v=DFhmNLKwwGw&list=PLDlWc9AfQBfZIkdVaOQXi1tizJeNJipEx&index=9
+-  Code from James Q Quick tutorial [Save High Scores in Local Storage](<https://www.youtube.com/watch?v=DFhmNLKwwGw&list=PLDlWc9AfQBfZIkdVaOQXi1tizJeNJipEx&index=9>) to help use local storage and sorting the scores.
 
-- Form validation from Stack Overflow https://stackoverflow.com/questions/27543671/javascript-form-validation-not-empty-or-no-whitespaces 
+- I used this [Form validation](<https://stackoverflow.com/questions/27543671/javascript-form-validation-not-empty-or-no-whitespaces >) article from Stack Overflow to help me deal with whitespace being entered as a name.
 
-- GreatStack Slider switch tutorial used for CSS https://www.youtube.com/watch?v=uCjDIMADK0w 
+- I used this [GreatStack Slider Switch Tutorial](<https://www.youtube.com/watch?v=uCjDIMADK0w>) for help with the CSS in building a slider switch.
 
 [Back to top](<#contents>)
 ## Acknowledgements
