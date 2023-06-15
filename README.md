@@ -132,11 +132,11 @@ Testing using the Google Chrome Dev Tools was used throughout the build of the s
 
 #### W3C HTML Checker
 
-![W3C HTML Checker, no faults found](assets/images/)
+![W3C HTML Checker, no faults found](assets/images/html-validation.png)
 
 #### W3C CSS Checker
 
-![W3C CSS Checker, no faults found](assets/images/)
+![W3C CSS Checker, no faults found](assets/images/css-validation.png)
 
 #### Lighthouse
 
