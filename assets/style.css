@@ -444,6 +444,17 @@ input:checked + .slider:before {
     .popup-buttons {
         flex-direction: column;
     }
+
+    /*Game sounds*/
+
+    .game-sounds-container {
+        display: flex;
+        align-items: center;
+    }
+
+    .game-sounds-container p {
+        margin-right: .5rem;
+    }
 }
 
 .hide {
