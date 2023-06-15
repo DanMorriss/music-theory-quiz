@@ -186,11 +186,12 @@ Testing using the Google Chrome Dev Tools was used throughout the build of the s
 - The home button was not working from the game over screen, so I added an event listener with function to go home.
 - When you clicked the 'x' on the game screen the score was not saved to the highscores board. I added a warning popup message explaining this to the user.
 - You could enter a blank username so I added the validateName function to display an alert if you did not enter a valid username.
+- The next button was displaying when you start a second game. So I added the hide class to the button once the game difficulty was selected.
 
 [Back to top](<#contents>)
 ### Unsolved Bugs
 
-- The next button was displaying when you start a second game. So I added the hide class in the end game function.
+
 - Add congratulations, you answered all the questions.
 - Add game sounds.
 

@@ -194,6 +194,8 @@ beginnerButton.addEventListener('click', () => {
     difficultyContainer.classList.add('hide');
     gameContainer.classList.remove('hide');
     displayBeginnerQuestion();
+    nextButton.classList.add('hide');
+    spacer.classList.remove('hide');
 })
 
 //START INTERMEDIATE GAME
@@ -230,6 +232,8 @@ intermediateButton.addEventListener('click', () => {
   difficultyContainer.classList.add('hide');
   gameContainer.classList.remove('hide');
   displayIntermediateQuestion();
+  nextButton.classList.add('hide');
+  spacer.classList.remove('hide');
 })
 
 //START ADVANCED GAME
@@ -262,6 +266,8 @@ advancedButton.addEventListener('click', () => {
   difficultyContainer.classList.add('hide');
   gameContainer.classList.remove('hide');
   displayAdvancedQuestion();
+  nextButton.classList.add('hide');
+  spacer.classList.remove('hide');
 })
 
 //DISPLAY NEXT QUESTION
@@ -373,6 +379,8 @@ const highScoresList = document.getElementById("highScoresList");
 
 //END GAME
 function endGame() {
+    //hide next button
+    nextButton.classList.add('hide');
     //Store Final Score and Display it
     finalScore = parseInt(document.getElementById('correct-score').innerText);
     gameContainer.classList.add('hide');
@@ -410,8 +418,4 @@ function endGame() {
     document.getElementById('incorrect-score').innerText = "0";
     shuffledQuestions = [];
     shuffledAnswers = [];
-    //hide next button
-    nextButton.classList.add('hide');
-    //display spacer where next button will be
-    spacer.classList.remove('hide');
 }
