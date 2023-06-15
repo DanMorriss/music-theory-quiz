@@ -15,10 +15,6 @@ advancedButton.disabled = true;
 //Game Screen Buttons
 const question = document.getElementById('question');
 const answerButton = document.getElementsByClassName('question-btn');
-const answerButton1 = document.getElementById('answer1');
-const answerButton2 = document.getElementById('answer2');
-const answerButton3 = document.getElementById('answer3');
-const answerButton4 = document.getElementById('answer4');
 const nextButton = document.getElementById('next-btn');
 const spacer = document.getElementById('spacer');
 //Game Over Screen
@@ -71,9 +67,8 @@ function playSelectSound() {
 let username;
 let shuffledQuestions, shuffledAnswers;
 let currentQuestionIndex = 0;
-let finalScore, displayedScore;
+let finalScore;
 let gameType;
-let correctScoreDisplay = document.getElementById('correct-score-display');
 let correctScore = document.getElementById('correct-score');
 
 //CONTAINERS
@@ -424,10 +419,8 @@ for (let i = 0; i < 4; i++) {
 })
 }
 
-//these 4 lines are from James Q Quick tutorial used inside endGame to populate the scoreboard
-const mostRecentScore = localStorage.getItem('mostRecentScore');
+//these 2 lines are from James Q Quick tutorial used inside endGame to populate the scoreboard
 const highScores = JSON.parse(localStorage.getItem('highScores')) || [];
-const MAX_HIGH_SCORES = 10;
 const highScoresList = document.getElementById("highScoresList");
 
 //END GAME
