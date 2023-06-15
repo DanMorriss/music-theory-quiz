@@ -188,16 +188,13 @@ Testing using the Google Chrome Dev Tools was used throughout the build of the s
 [Back to top](<#contents>)
 ### Unsolved Bugs
 
-
-- Make return key act at submit/next
 - The next button was displaying when you start a second game. So I added the hide class in the end game function.
 - The username is not displaying on the game over screen.
 - Add congratulations, you answered all the questions.
 - Add game sounds.
 - Add in the username to various displays.
 - You need to answer 20 corect question in total to unlock the advanced game. This means that if you unlock the intermediate game but start it with 0, you need to answer 20 correct questions instead of 10.
-- Pop up window needs to be responsve.
-- The highscores are not added when the close 'x' is clicked during a game. I need to implament a popup warning.
+- The highscores are not added when the close 'x' is clicked during a game. I need to implament a popup warning. STYLE IT
 - Unsername validation. Do not allow an empty username.
 
 

@@ -193,13 +193,9 @@ form {
     height: 4rem;
 }
 
-/*Popup warning*/
+/*Level Complete & Popup warning*/
 
-
-
-/*Level Complete*/
-
-.pop-up-content, .warning {
+.pop-up-content {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -211,6 +207,22 @@ form {
     height: 40vh;
     margin: 2rem;
     padding: 1rem;
+}
+
+.pop-up-content p {
+    font-size: 1.1rem;
+}
+
+.warning-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 1rem;
+
+}
+
+.popup-buttons {
+    display: flex;
 }
 
 .congratulations-text {
@@ -228,6 +240,7 @@ form {
 
 .congratulations-buttons {
     display: flex;
+    flex-direction: row;
     width: 100%;
     justify-content: center;
 }
@@ -239,10 +252,17 @@ form {
     color: #F4F6F1;
 }
 
-.congratulations-modal {
+.popup-buttons > button {
+    margin: 1.5rem;
+    width: 15rem;
+    background-color: #385B4F;
+    color: #F4F6F1;
+}
+
+.congratulations-modal, .warning {
     z-index: 9;
     position: absolute;
-    top: 0;
+    /* top: 0; */
     width: 100vw;
     height: 100vh;
     display: flex;
@@ -356,10 +376,19 @@ form {
     .congratulations-buttons > button {
         font-size: 1rem;
         margin-bottom: 1rem;
+        width: auto;
     }
 
     .congratulations-text {
         text-align: center;
+    }
+
+    .congratulations-buttons {
+        flex-direction: column;
+    }
+
+    .popup-buttons {
+        flex-direction: column;
     }
 }
 
