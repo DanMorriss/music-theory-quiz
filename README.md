@@ -86,7 +86,7 @@
 
 ### Color Scheme
 
-![Color theme](assets/images/)
+![Color theme](assets/images/color-theme.png)
 [Adobe Color Theme](<https://color.adobe.com/Green-Blaze-color-theme-f43afa51-84f4-4c52-9114-15d25488e2dd/>)
 
 [Back to top](<#contents>)
@@ -142,8 +142,9 @@ Testing using the Google Chrome Dev Tools was used throughout the build of the s
 
 ![Lighthouse test results](assets/images/lighthouse-validation.png)
 
-#### JShint JavaScript Validatior
+#### JSHint JavaScript Validatior
 
+![JSHint JavaScript validator](<https://jshint.com/>)
 ![JS test results](assets/images/jshint-validation.png)
 
 [Back to top](<#contents>)
