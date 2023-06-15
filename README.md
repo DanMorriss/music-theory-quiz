@@ -115,9 +115,7 @@
 [Back to top](<#contents>)
 ### Future Features
 
-- Score 60% to unlock next level.
-- Add name at end of gae to dispaly on the score board.
-- Add a progress bar: https://www.youtube.com/watch?v=4bctmtuZVcM&list=PLDlWc9AfQBfZIkdVaOQXi1tizJeNJipEx&index=7
+- Add congratulations, you answered all the questions.
 
 [Back to top](<#contents>)
 ## Technologies Used
@@ -191,8 +189,6 @@ Testing using the Google Chrome Dev Tools was used throughout the build of the s
 [Back to top](<#contents>)
 ### Unsolved Bugs
 
-
-- Add congratulations, you answered all the questions.
 - Add game sounds.
 
 [Back to top](<#contents>)
@@ -235,6 +231,8 @@ To clone the project:
 - [Font Pair](<https://www.fontpair.co/all>) for the font pairing.
 
 ### Content
+
+- https://uppbeat.io/ for the game sounds.
 
 [Back to top](<#contents>)
 ### Media

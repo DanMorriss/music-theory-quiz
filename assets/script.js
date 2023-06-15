@@ -36,6 +36,23 @@ const backButtonGameOver = document.getElementById('back-button-game-over');
 const closeGame = document.getElementById('close-game');
 const continueGame = document.getElementById('continue-game');
 
+//GAME SOUNDS
+const correctAnswerSound = new Audio('/assets/sounds/correct-answer.mp3');
+const incorectAnswerSound = new Audio('assets/sounds/wrong-answer.mp3');
+const selectSound = new Audio('assets/sounds/select.mp3');
+function playCorrectSound() {
+  correctAnswerSound.volume = 0.1;
+  correctAnswerSound.play();
+}
+function playIncorrectSound() {
+  incorectAnswerSound.volume = 0.1;
+  incorectAnswerSound.play();
+}
+function playSelectSound() {
+  selectSound.volume = 0.1;
+  selectSound.play();
+}
+
 //VARIABLES
 let username;
 let shuffledQuestions, shuffledAnswers;
@@ -61,38 +78,46 @@ const closeGameWarning = document.getElementById('close-game-warning');
 rulesButton.addEventListener('click', () => {
     homeContainer.classList.add('hide');
     rulesContainer.classList.remove('hide');
+    playSelectSound();
 })
 backButtonRules.addEventListener('click', () => {
     rulesContainer.classList.add('hide');
     homeContainer.classList.remove('hide');
+    playSelectSound();
 })
 //High Scores container
 scoresButton.addEventListener('click', () => {
     homeContainer.classList.add('hide');
     scoresContainer.classList.remove('hide');
+    playSelectSound();
 })
 backButtonScores.addEventListener('click', () => {
     scoresContainer.classList.add('hide');
     homeContainer.classList.remove('hide');
+    playSelectSound();
 })
 //Submit Name Container
 playButton.addEventListener('click', () => {
     homeContainer.classList.add('hide');
     nameContainer.classList.remove('hide');
+    playSelectSound();
 })
 backButtonName.addEventListener('click', () => {
     nameContainer.classList.add('hide');
     homeContainer.classList.remove('hide');
+    playSelectSound();
 })
 //Difficulty Container
 backButtonDifficulty.addEventListener('click', () => {
     difficultyContainer.classList.add('hide');
     homeContainer.classList.remove('hide');
+    playSelectSound();
 })
 //Game Container
 //CLOSE GAME WARNING POPUP
 backButtonGame.addEventListener('click', () => {
   closeGameWarning.classList.remove('hide');
+  playSelectSound();
 })
 //Confirm close game
 closeGame.addEventListener('click', () => {
@@ -104,40 +129,46 @@ closeGame.addEventListener('click', () => {
   shuffledQuestions = [];
   shuffledAnswers = [];
   homeContainer.classList.remove('hide');
+  playSelectSound();
 })
 //Cancel close game
 continueGame.addEventListener('click', () => {
   closeGameWarning.classList.add('hide');
+  playSelectSound();
 })
 //Game Over Container
 backButtonGameOver.addEventListener('click', () => {
     gameOverContainer.classList.add('hide');
     homeContainer.classList.remove('hide');
+    playSelectSound();
 })
 //Home button from game over
 homeButton.addEventListener('click', () => {
   gameOverContainer.classList.add('hide');
   homeContainer.classList.remove('hide');
+  playSelectSound();
 })
 //Play again from game over screen
 playAgainButton.addEventListener('click', () => {
     gameOverContainer.classList.add('hide');
     difficultyContainer.classList.remove('hide');
+    playSelectSound();
 })
 //Go to high scores from game over
 highScoresButton.addEventListener('click', () => {
     gameOverContainer.classList.add('hide');
     scoresContainer.classList.remove('hide');
+    playSelectSound();
 })
 
 //SUBMIT NAME
 submitName.addEventListener('submit', (e) => {
     e.preventDefault();
     username = document.getElementById('name').value;
-    //localStorage.setItem('username', JSON.stringify(username));
     localStorage.setItem('username', username);
     nameContainer.classList.add('hide');
     difficultyContainer.classList.remove('hide');
+    playSelectSound();
 })
 
 function validateName() {
@@ -158,7 +189,7 @@ function shuffleQuestions(array) {
   }
 
 //START BEGINNER GAME
-function displayBeginnerQuestion() {
+function displayBeginnerQuestion() {  
     //clear previous questions
     shuffledQuestions = [];
     shuffledAnswers = [];
@@ -196,6 +227,7 @@ beginnerButton.addEventListener('click', () => {
     displayBeginnerQuestion();
     nextButton.classList.add('hide');
     spacer.classList.remove('hide');
+    playSelectSound();  
 })
 
 //START INTERMEDIATE GAME
@@ -234,6 +266,7 @@ intermediateButton.addEventListener('click', () => {
   displayIntermediateQuestion();
   nextButton.classList.add('hide');
   spacer.classList.remove('hide');
+  playSelectSound();
 })
 
 //START ADVANCED GAME
@@ -268,6 +301,7 @@ advancedButton.addEventListener('click', () => {
   displayAdvancedQuestion();
   nextButton.classList.add('hide');
   spacer.classList.remove('hide');
+  playSelectSound();
 })
 
 //DISPLAY NEXT QUESTION
@@ -292,6 +326,7 @@ function displayNextQuestion() {
 
 nextButton.addEventListener('click', () => {
   displayNextQuestion();
+  playSelectSound();
 })
 
 //CONGRATULATIONS PAGES
@@ -301,6 +336,7 @@ nextLevelButton.addEventListener('click', () => {
   congratulationsContainer.classList.add('hide');
   gameContainer.classList.add('hide');
   difficultyContainer.classList.remove('hide');
+  playSelectSound();
   if (gameType === 'beginner') {
     intermediateButton.disabled = false;
   } else if (gameType === 'intermediate') {
@@ -311,11 +347,13 @@ nextLevelButton.addEventListener('click', () => {
 nextQuestionButton.addEventListener('click', () => {
   congratulationsContainer.classList.add('hide');
   displayNextQuestion();
+  playSelectSound();
 })
 
 //ADD TO SCORE
 //Add to the Correct Score
 function addToCorrectScore() {
+    playCorrectSound();
     let oldCorrectScore = parseInt(document.getElementById('correct-score').innerText);
     document.getElementById('correct-score').innerText = ++oldCorrectScore;
     //Add celebration to correct score if new level is unlocked
@@ -328,6 +366,7 @@ function addToCorrectScore() {
 }
 //Add to the Incorrect Score
 function addToIncorrectScore() {
+    playIncorrectSound();
     let oldIncorrectScore = parseInt(document.getElementById('incorrect-score').innerText);
     document.getElementById('incorrect-score').innerText = ++oldIncorrectScore;
     //End game of you have 5 wrong answers
