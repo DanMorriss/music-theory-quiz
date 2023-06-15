@@ -52,11 +52,26 @@
 
 #### First Time Visitor Goals
 
+A fist time visitor will want to:
+- test their music theory knowledge.
+- be able to easily navigate the game.
+- understand how to play the game.
+- turn the sound on and off.
+have the game beresponsive across different devices.
+- be enticed back to play again.
+
 [Back to top](<#contents>)
 #### Returning Visitor Goals
 
+A returning visitor will want to:
+- porgress throught the difficulty levels.
+
 [Back to top](<#contents>)
 #### Frequent Visitor Goals
+
+A frequent visitor will want to:
+- compare their scores from previous attempts.
+- try to beat their high score.
 
 [Back to top](<#contents>)
 ### Wireframes
@@ -131,7 +146,7 @@ Testing using the Google Chrome Dev Tools was used throughout the build of the s
 
 #### JSHint JavaScript Validatior
 
-![JSHint JavaScript validator](<https://jshint.com/>)
+[JSHint JavaScript validator](<https://jshint.com/>)
 ![JS test results](assets/images/jshint-validation.png)
 
 [Back to top](<#contents>)
