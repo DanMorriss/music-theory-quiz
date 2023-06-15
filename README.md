@@ -107,9 +107,23 @@ A frequent visitor will want to:
 ## Features
 ### Existing Features
 
-#### Feature 1
+#### The Rules
 
 [Back to top](<#contents>)
+#### Enter a Username
+
+[Back to top](<#contents>)
+#### Choose a Difficlty
+
+[Back to top](<#contents>)
+#### Answer the Questions
+
+[Back to top](<#contents>)
+#### High Scores
+
+[Back to top](<#contents>)
+
+#### Sound
 
 [Back to top](<#contents>)
 ### Accesibility
