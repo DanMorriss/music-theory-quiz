@@ -4,7 +4,7 @@
 
 ### [Project Repository](https://github.com/DanMorriss/music-theory-quiz)
 
-![Responsive mockup](assets/images/)
+![Responsive mockup](assets/images/responsive-mockup.png)
 
 ## Contents
 
@@ -80,6 +80,18 @@
 
 [Back to top](<#contents>)
 ### Wireframes
+
+#### Home
+![Home Wireframe](assets/images/home-wire.png)
+
+#### Game Screen
+![Game Screen Wireframe](assets/images/game-wire.png)
+
+#### Difficulty
+![Difficulty Wireframe](assets/images/difficulty-wire.png)
+
+#### Highscores
+![Highscores Wireframe](assets/images/highscores-wire.png)
 
 [Back to top](<#contents>)
 ## Design
