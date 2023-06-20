@@ -370,6 +370,18 @@ To clone the project:
 ### Resources
 - [ColorSpace](<https://mycolor.space/>) for the body's background gradient.
 - [Font Pair](<https://www.fontpair.co/all>) for the font pairing.
+- [Balsamiq](<https://balsamiq.com/>) for the wireframes.
+- [Github](<https://github.com/>) to store the code.
+- [VS Code](<https://code.visualstudio.com/>) to write the code.
+- [Google Fonts](<https://fonts.google.com/>) for the fonts.
+- [Font Awesome](<https://fontawesome.com/>) for the close icon.
+- [Google Developer Tools](<https://developer.chrome.com/docs/devtools/>) for debugging and testing.
+- [Am I Responsive?](<https://ui.dev/amiresponsive>) for the dislay image across devices.
+- [W3C HTML Validator](<https://validator.w3.org/>) to validate the HTML.
+- [W3C Jigsaw CSS Validator](<https://jigsaw.w3.org/css-validator/>) to validate the CSS.
+- [Stack Overflow](<https://stackoverflow.com/>) for general troubleshooting.
+- [W3 Schools](<https://www.w3schools.com/>) for general troubleshooting.
+- [MDN Web Docs](<https://developer.mozilla.org/en-US/>) for general troubleshooting.
 
 ### Content
 
@@ -393,5 +405,10 @@ To clone the project:
 ## Acknowledgements
 
 - [Precious Ijege](https://github.com/precious-ijege), my Code Institute Mentor.
+- Kent Yates, for taking the time to play the game and give feeback.
+- Selina Sheerin, for taking the time to play the game and give feeback.
+- Claire Burford, for taking the time to play the game and give feeback.
+- Georgina, for respondong to my peer-code-review on Slack.
+- Jennie, for respondong to my peer-code-review on Slack.
 
 [Back to top](<#contents>)
