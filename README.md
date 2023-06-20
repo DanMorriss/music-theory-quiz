@@ -100,6 +100,7 @@ A frequent visitor will want to:
 ### Typography
 
 [Google Fonts](https://fonts.google.com) was used for the following fonts:
+![Typography](assets/images/typography.png)
 - Playfair Display for the headings and questions.
 - Lato for the buttons and explenation text.
 
@@ -107,23 +108,52 @@ A frequent visitor will want to:
 ## Features
 ### Existing Features
 
+#### Homepage
+From the homepage you have three main options
+
+![Homepage](assets/images/game-pages/home.png)
+
+[Back to top](<#contents>)
 #### The Rules
+
+![Rules](assets/images/game-pages/rules.png)
 
 [Back to top](<#contents>)
 #### Enter a Username
 
+![Enter a username](assets/images/game-pages/username.png)
+
 [Back to top](<#contents>)
 #### Choose a Difficlty
+
+![Choose a difficulty, beginner](assets/images/game-pages/difficulty-beginner.png)
+![Choose a difficulty, intermediate](assets/images/game-pages/difficulty-intermediate.png)
+![Choose a difficulty, advanced](assets/images/game-pages/difficulty-advanced.png)
 
 [Back to top](<#contents>)
 #### Answer the Questions
 
+![Displaying a question](assets/images/game-pages/game.png)
+![Answered correctly!](assets/images/game-pages/game-correct.png)
+![Answer incorrectly.](assets/images/game-pages/game-incorrect.png)
+![Congratulations page](assets/images/game-pages/congratulations.png)
+![Game over page](assets/images/game-pages/game-over-fail.png)
+
 [Back to top](<#contents>)
 #### High Scores
 
-[Back to top](<#contents>)
+![Highscores page](assets/images/game-pages/highscores.png)
 
+[Back to top](<#contents>)
 #### Sound
+
+![Sound on](assets/images/game-pages/sound-on.png)
+![Sound off](assets/images/game-pages/sound-off.png)
+
+[Back to top](<#contents>)
+#### Close the Game
+
+![Close the game warning](assets/images/game-pages/close-game.png)
 
 [Back to top](<#contents>)
 ### Accesibility
@@ -227,8 +257,6 @@ Thanks to the following people for testing the game.
 ### Unsolved Bugs
 
 No known bugs.
-
-- Rules don't fit on a moblie.
 
 [Back to top](<#contents>)
 ## Deployment
