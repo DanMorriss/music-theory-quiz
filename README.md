@@ -399,13 +399,13 @@ To clone the project:
 
 - I used this [Form validation](<https://stackoverflow.com/questions/27543671/javascript-form-validation-not-empty-or-no-whitespaces >) article from Stack Overflow to help me deal with whitespace being entered as a name.
 
-- I used this [GreatStack Slider Switch Tutorial](<https://www.youtube.com/watch?v=uCjDIMADK0w>) for help with the CSS in building a slider switch.
+- I used this [Stack Slider Switch Tutorial](<https://www.youtube.com/watch?v=uCjDIMADK0w>) for help with the CSS in building a slider switch.
 
 [Back to top](<#contents>)
 ## Acknowledgements
 
-- [Precious Ijege](https://github.com/precious-ijege), my Code Institute Mentor.
-- Kent Yates, for taking the time to play the game and give feeback.
+- [Precious Ijege](<https://github.com/precious-ijege>), my Code Institute Mentor.
+- [Kent Yates](<https://github.com/Jelly-man>), for taking the time to play the game and give feeback.
 - Selina Sheerin, for taking the time to play the game and give feeback.
 - Claire Burford, for taking the time to play the game and give feeback.
 - Georgina, for respondong to my peer-code-review on Slack.
