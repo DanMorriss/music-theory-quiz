@@ -23,7 +23,14 @@
     * [Typography](<#typography>)
 * [**Features**](#features)
     * [Existing Features](<#existing-features>)
-        * [Feature 1](<#feature-1>)
+        * [Homepage](<#homepage>)
+        * [The Rules](<#the-rules>)
+        * [Enter a Username](<#enter-a-username>)
+        * [Choose a Difficulty](<#choose-a-difficlty>)
+        * [Answer the Questions](<#answer-the-questions>)
+        * [High Scores](<#high-scores>)
+        * [Sound](<#sound>)
+        * [Close the game](<#close-the-game>)
     * [Accesibility](<#accesibility>)
     * [Future Features](<#future-features>)
 * [**Technologies Used**](<#technologies-used>)
@@ -128,7 +135,7 @@ From the homepage you have three main options, each acessible via a button on th
 #### Enter a Username
 
 - If you click the 'Play' button from the homescreen you are asked to enter your username.
-- You cannot enter a blank username or whitespace.
+- You cannot enter a blank username or whitespace. A warning popup with display "Please enter your name" if you try to click submit without entering your a name.
 - To close this page there is an 'x' in the top right that takes you back to the home screen.
 
 ![Enter a username](assets/images/game-pages/username.png)
@@ -145,7 +152,7 @@ Each one must be unlocked by answeing 10 questions corretly from the previous di
 
 ![Choose a difficulty, beginner](assets/images/game-pages/difficulty-beginner.png)
 ![Choose a difficulty, intermediate](assets/images/game-pages/difficulty-intermediate.png)
-![Choose a difficulty, advanced](assets/images/game-pages/difficulty-advanced.png)
+![Choose a difficulty, advanced](assets/images/game-pages/difficulty-all.png)
 
 [Back to top](<#contents>)
 #### Answer the Questions
@@ -196,6 +203,7 @@ The game has sounds for:
 - incorrect answer selected
 
 As not all user will want the game sounds to be on, there is a slider toggle button on the top right of the screen that will turn the sounds off and back on.
+- The green indicated the sound is on.
 
 ![Sound on/off toggle](assets/images/game-pages/sound.png)
 
@@ -209,13 +217,18 @@ If the close 'x' button is clicked during a game, a warning will pop up asking i
 [Back to top](<#contents>)
 ### Accesibility
 
-
+While designing and coding the game accesublity and ease of use was paramount in the desicion making of both the aestetic design and userbility.
+- The foreground and background colors have a suitable contrast to make everything easy to read.
+- Semantic HTMl is used
+- The buttons all have hover effects so a user will know when they can click something
+- Button selections display differently and make a sound
 
 [Back to top](<#contents>)
 ### Future Features
 
 - Add congratulations, you answered all the questions.
 - Add a database to score all users highscores outside of local storage.
+- Share your score on social media option with congratulations page.
 
 [Back to top](<#contents>)
 ## Technologies Used
@@ -250,31 +263,40 @@ Testing using the Google Chrome Dev Tools was used throughout the build of the g
 [Back to top](<#contents>)
 ### Responsiveness Test
 
-All the different pages have been tested across the following devices and screen sizes.
+[Google Chrome Developer Tools](https://developer.chrome.com/docs/devtools/) was used to test the game cross the following device screen sizes.
+- iPhone SE
+- iPhone XR
+- iPhone 12 Pro
+- Pixel 5
+- Samsung Galaxy S8+
+- Samsung Galaxy S20 Ultra
+- iPad Air
+- iPad Mini
+- Surface Pro 7
+- Surfave Duo
 
--
--
--
+The following realworld devices were used to test the game
+- iPhone 13
+- MacBook Pro 16-inch
 
 [Back to top](<#contents>)
 ### Browser Compatibility
 
-The following browsers have been used to test the game.
-
--
--
--
+ The following webbrowsers were used to test the game
+- Google Chrome
+- Safari
+- Firefox
 
 [Back to top](<#contents>)
 ### Peer Testing
 
-Thanks to the following people for testing the game.
+As well as testing myself the site was tested by the following external users across a range of devices including smart-phones, tablets, and laptop computers.
 
 - Kent Yates
 - Selina Sheerin
 - Claire Burford
-- Georgina from Slack
-- Jennie from Slack
+- Georgina from peer-code-review via the Code Institute Slack Channel
+- Jennie from peer-code-review via the Code Institute Slack Channel
 
 [Back to top](<#contents>)
 ## Bugs
@@ -282,24 +304,24 @@ Thanks to the following people for testing the game.
 ### Solved Bugs
 
 - All the different containers were displaying when I tidied up some of the CSS rules so I moved the .hide rul to the end to fix it.
-- False was typed flase in the question list so wasn't functing properly.
-- Checking if the selected answer matech the answer from the array wasn't working. I needed to convert both answers to text so they could be matched.
-- The submit button was still displaying after an answer has been submitted. After rewriting the else statement inside the checkAnswer fuction a type was fixed and the bug was fixed.
+- False was typed 'flase' in the question list so wasn't functing properly.
+- Checking if the selected answer match the answer from the array wasn't working. I needed to convert both answers to text so they could be matched.
+- The submit button was still displaying after an answer has been submitted. After rewriting the else statement inside the checkAnswer fuction a typo was corrected and the bug was fixed.
 - When the incorrect answer was selected the correct answer was not displaying. To fix this I looped through the possible answers and matched them to the correct answer. If they matched I added the correct class to it.
 - I needed to dissable clicking on an answer once one has been submitted. I used .button:active:hover:not([disabled]) to allow me to add disabled to the buttons after an answer has been selected.
 - There was a typo in the displayBeginnerQuestion function meaning it wasn't being called properly.
 - The same question was showing on each new question. This was because I forgot to re-run the displayBeginnerQuestion function.
-- The answer boxes are sometimes displaying with 1 answer per line. Added a min-width property to the css so they will always fit 2 per line unless on a small screen.
+- The answer boxes were sometimes displaying with 1 answer per line. I added a min-width property to the CSS so they will always fit 2 per line unless on a small screen.
 - Once you finished the game and played again you could play forever. I needed to reset the score index to 0 and clear the current score.
-- The container shape changes when the next button is bisplayed. To fix this, I added a div that I sized to match the button that shows when the next button is hidden and hides when the next button shows. I also made the question height a set size to stop the buttons being pushed down then the question was on two lines.
+- The container shape changes when the next button is bisplayed. To fix this, I added an empty div that I sized to match the button that shows when the next button is hidden and hides when the next button shows. I also made the question height a set size to stop the buttons being pushed down then the question was on two lines.
 - A question was ocasionally being repeated so I used splice from the shuffledQuestions to remove a question once it has been displayed.
 - When submititng a name the browser refreshed the page so I had to preventDefault on the form so the rest of the function could run.
-- Once you run out of questuons the game doesn't end. So I added ran the endGame function if the remaining questions counter gets below 1.
-- The selected buttons are displaying when starting a new game. To fix this I looped though the buttons and remover selected, correct and incorrect in the start game function. I also enabled the answer buttons to be clicked in the same loop.
+- Once you run out of questuons the game doesn't end. So I added the endGame function to run if the remaining questions counter gets below 1.
+- The selected buttons were displaying when starting a new game. To fix this I looped though the buttons and remover selected, correct and incorrect in the start game function. I also enabled the answer buttons to be clicked in the same loop.
 - The game counter doesnt end at 10 once the new difficulties were added. Modified the game to end at 5 wrong answers to make it more interesting for the user.
 - The beginner questions were dislaying after the 1st question on the intermediate and advanced games. Inside the displayNextQuestion function it was running displayBeginnerQuestion so I added an if else statement to check the game type and ask another question from the same type.
-- The advanced questions were not changing from the first displayed question. This was due to a type inthe gameType variable.
-- On an iPhone, the body was scrollable due to the built in browser buttons along the bottom. I set overflow to hidden in the @mediaquery to fit this.
+- The advanced questions were not changing from the first displayed question. This was due to a typo in the gameType variable.
+- On an iPhone, the body was scrollable due to the built in browser buttons along the bottom. I set overflow to hidden in the @mediaquery to fix this.
 - When you closed the game early, your previous question scores still displayed so I cleared them when the close container button is pressed.
 - You could unlock the advanced game by completing 20 questions in total, so I included an extra clause to make sure that the intermeidate game is being played.
 - The home button was not working from the game over screen, so I added an event listener with function to go home.
@@ -326,8 +348,6 @@ GitHub pages was used to deploy the live site as follows:
 6. Select the `main` and `/root` dropdown menu options
 7. Click `save` and after a few minutes the site was live 
 
-![Deployment walkthrough image](assets/images/)
-
 ### To Fork the project
 To make a copy of the GitHub Repository you can fork a copy to edit it without changing the root file. This can then be used to update the original repository. To fork take the following steps:
 1. Login to GitHub
@@ -339,7 +359,6 @@ To clone the project:
 1. Click the `code` button  
 2. Click the `local` tab
 3. Under HTTPS click the clipboard icon to copy the URL
-![clone walkthrough image](assets/images/)
 4. In your IDE of choice, open Git Bash
 5. Change the current working directory to the location where you want the cloned directory to be made
 6. Type `git clone` and then paste the URL copied from GitHub
