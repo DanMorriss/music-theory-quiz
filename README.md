@@ -109,22 +109,39 @@ A frequent visitor will want to:
 ### Existing Features
 
 #### Homepage
-From the homepage you have three main options
+From the homepage you have three main options, each acessible via a button on the middle of the screen:
+- Play the Game
+- Lean the rules
+- See the highscores
 
 ![Homepage](assets/images/game-pages/home.png)
 
 [Back to top](<#contents>)
 #### The Rules
 
+- If you click the rules button you are taken to a page explaining the rules.
+- To close this page there is an 'x' in the top right that takes you back to the home screen.
+
 ![Rules](assets/images/game-pages/rules.png)
 
 [Back to top](<#contents>)
 #### Enter a Username
 
+- If you click the 'Play' button from the homescreen you are asked to enter your username.
+- You cannot enter a blank username or whitespace.
+- To close this page there is an 'x' in the top right that takes you back to the home screen.
+
 ![Enter a username](assets/images/game-pages/username.png)
 
 [Back to top](<#contents>)
 #### Choose a Difficlty
+
+After entering your username there are three difficulty levels to choose from.
+- Beginner
+- Intermediate
+- Advanced
+
+Each one must be unlocked by answeing 10 questions corretly from the previous difficulty.
 
 ![Choose a difficulty, beginner](assets/images/game-pages/difficulty-beginner.png)
 ![Choose a difficulty, intermediate](assets/images/game-pages/difficulty-intermediate.png)
@@ -133,30 +150,66 @@ From the homepage you have three main options
 [Back to top](<#contents>)
 #### Answer the Questions
 
+- There are about 60 questions inside each difficulty that are randomly displayed.
+- The answers are also shuffled so the correct answer is not always displayed in the same position.
+
 ![Displaying a question](assets/images/game-pages/game.png)
+
+If you select an answer that is correct the button goes green and a 'next' button display underneath the answers that takes you to another shuffled question.
+
 ![Answered correctly!](assets/images/game-pages/game-correct.png)
+
+If you select an incorrect answer the button you selected turns red, the correct answer goes green and the 'next button is displayed.
+
 ![Answer incorrectly.](assets/images/game-pages/game-incorrect.png)
+
+If you answer 10 questions correctly a congraatulations pop-up appears giving you the options to: 
+- Go to the next level 
+- Continue on with the next question on this level.
+
 ![Congratulations page](assets/images/game-pages/congratulations.png)
+
+If you answer 5 question incorrectly:
+- Your score is added to the highscores page 
+- A game over page is displayed with the options to:
+    - Go home 
+    - Play again 
+    - View the high scores
+
 ![Game over page](assets/images/game-pages/game-over-fail.png)
 
 [Back to top](<#contents>)
 #### High Scores
+
+The high scores page displays all the completed game scores in ranked order with the:
+- username
+- score
 
 ![Highscores page](assets/images/game-pages/highscores.png)
 
 [Back to top](<#contents>)
 #### Sound
 
-![Sound on](assets/images/game-pages/sound-on.png)
-![Sound off](assets/images/game-pages/sound-off.png)
+The game has sounds for:
+- buttons clicked
+- correct answer selected
+- incorrect answer selected
+
+As not all user will want the game sounds to be on, there is a slider toggle button on the top right of the screen that will turn the sounds off and back on.
+
+![Sound on/off toggle](assets/images/game-pages/sound.png)
 
 [Back to top](<#contents>)
 #### Close the Game
+
+If the close 'x' button is clicked during a game, a warning will pop up asking if you want to exit the game as your score will not be saved.
 
 ![Close the game warning](assets/images/game-pages/close-game.png)
 
 [Back to top](<#contents>)
 ### Accesibility
+
+
 
 [Back to top](<#contents>)
 ### Future Features
@@ -219,7 +272,9 @@ Thanks to the following people for testing the game.
 
 - Kent Yates
 - Selina Sheerin
-- 
+- Claire Burford
+- Georgina from Slack
+- Jennie from Slack
 
 [Back to top](<#contents>)
 ## Bugs
