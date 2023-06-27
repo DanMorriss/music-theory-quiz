@@ -267,7 +267,7 @@ Testing using the Google Chrome Dev Tools was used throughout the build of the g
 [Back to top](<#contents>)
 ### Responsiveness Test
 
-[Google Chrome Developer Tools](https://developer.chrome.com/docs/devtools/) was used to test the game cross the following device screen sizes.
+[Google Chrome Developer Tools](https://developer.chrome.com/docs/devtools/) was used to test how rhe game plays and looks across the following device screen sizes. This process wa carried out throught the production of the game and improvements via media querys and general CSS are documented in the [Bugs](<#bugs>) section.
 - iPhone SE
 - iPhone XR
 - iPhone 12 Pro
@@ -279,14 +279,14 @@ Testing using the Google Chrome Dev Tools was used throughout the build of the g
 - Surface Pro 7
 - Surfave Duo
 
-The following realworld devices were used to test the game
+The following realworld devices were used to test the game for functnality and responsiveness througout development of the game.
 - iPhone 13
 - MacBook Pro 16-inch
 
 [Back to top](<#contents>)
 ### Browser Compatibility
 
- The following webbrowsers were used to test the game
+ The following webbrowsers were used to test the game for functunality. Any bugs found have been fixed and documented in the [Bugs](<#bugs>) section.
 - Google Chrome
 - Safari
 - Firefox
