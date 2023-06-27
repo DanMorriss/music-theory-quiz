@@ -352,6 +352,7 @@ GitHub pages was used to deploy the live site as follows:
 5. Under the 'Build and Deployment' section select the `Deploy from a branch` from the dropdown menu
 6. Select the `main` and `/root` dropdown menu options
 7. Click `save` and after a few minutes the site was live 
+![Deployment walkthrough image](assets/images/deployment.png)
 
 ### To Fork the project
 To make a copy of the GitHub Repository you can fork a copy to edit it without changing the root file. This can then be used to update the original repository. To fork take the following steps:
@@ -368,6 +369,7 @@ To clone the project:
 5. Change the current working directory to the location where you want the cloned directory to be made
 6. Type `git clone` and then paste the URL copied from GitHub
 7. Press enter and the local clone will be created
+![Clone walkthrough image](assets/images/clone.png)
 
 [Back to top](<#contents>)
 ## Credits
