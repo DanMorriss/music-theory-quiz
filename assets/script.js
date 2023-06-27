@@ -173,20 +173,18 @@ highScoresButton.addEventListener('click', () => {
 //SUBMIT NAME
 submitName.addEventListener('submit', (e) => {
     e.preventDefault();
+    let x = document.forms["submit-name"]["name"].value;
+    //Validate name
+  if (x.trim()==null || x.trim()==""|| x===" ") {
+      alert("Please enter your name");
+      return false;
+  } else {
     username = document.getElementById('name').value;
     localStorage.setItem('username', username);
     nameContainer.classList.add('hide');
     difficultyContainer.classList.remove('hide');
-    playSelectSound();
+    playSelectSound();}
 });
-
-function validateName() {
-  let x = document.forms["submit-name"]["name"].value;
-  if (x.trim()==null || x.trim()==""|| x===" ") {
-      alert("Please enter your name");
-      return false;
-  }
-}
 
 //SHUFFLE QUESTIONS: Fisher-Yates shuffle algorithm.
 function shuffleQuestions(array) {
@@ -203,7 +201,6 @@ function displayBeginnerQuestion() {
     shuffledQuestions = [];
     shuffledAnswers = [];
     currentQuestionIndex = 0;
-    //clear previous answer selection
 
     shuffledQuestions = shuffleQuestions(beginnerQuestions);
     //display a shuffled question

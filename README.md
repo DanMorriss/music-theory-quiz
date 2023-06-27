@@ -329,6 +329,7 @@ As well as testing myself the site was tested by the following external users ac
 - You could enter a blank username so I added the validateName function to display an alert if you did not enter a valid username.
 - The next button was displaying when you start a second game. So I added the hide class to the button once the game difficulty was selected.
 - The rules were not displaying properly on an iPhone so i changed the display to inline-block insde the smaller screen media-query.
+- The Validate name function was supplying a popup correctly, but then progressing onto the next page anyway. To fit this I nested the validation iside an if else statemnt with the submit name function.
 
 [Back to top](<#contents>)
 ### Unsolved Bugs

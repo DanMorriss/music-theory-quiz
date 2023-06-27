@@ -262,7 +262,6 @@ form {
 .congratulations-modal, .warning {
     z-index: 9;
     position: absolute;
-    /* top: 0; */
     width: 100vw;
     height: 100vh;
     display: flex;
@@ -343,7 +342,6 @@ form {
     display: inline-block;
     width: 2rem;
     height: 1rem;
-    /* margin: 0 .2rem; */
 }
 
 .slider {
