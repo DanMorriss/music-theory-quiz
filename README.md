@@ -1,8 +1,12 @@
 # Music Theory Quiz
 
-### [Live Site](https://danmorriss.github.io/music-theory-quiz)
+Test and enhance your music theory knowledge with this engaging three-level quiz. Whether you're a beginner or an experienced musician, this quiz is designed to challenge and improve your understanding of music theory.
 
-### [Project Repository](https://github.com/DanMorriss/music-theory-quiz)
+Unlock a total of 150 questions spread across three difficulty levels, allowing you to gradually progress and expand your musical expertise.
+
+Keep track of your scores on the built-in scoreboard, compare your performance with previous attempts, and strive to improve your results over time. This feature serves as a valuable tool for monitoring your progress and motivating you to achieve higher scores.
+
+### [Live Site](https://danmorriss.github.io/music-theory-quiz)
 
 ![Responsive mockup](assets/images/responsive-mockup.png)
 

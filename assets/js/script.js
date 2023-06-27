@@ -33,7 +33,7 @@ const closeGame = document.getElementById('close-game');
 const continueGame = document.getElementById('continue-game');
 
 //GAME SOUNDS
-const correctAnswerSound = new Audio('/assets/sounds/correct-answer.mp3');
+const correctAnswerSound = new Audio('assets/sounds/correct-answer.mp3');
 const incorectAnswerSound = new Audio('assets/sounds/wrong-answer.mp3');
 const selectSound = new Audio('assets/sounds/select.mp3');
 let soundSlider = document.getElementById('sound-slider');
