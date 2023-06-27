@@ -37,7 +37,7 @@ const correctAnswerSound = new Audio('/assets/sounds/correct-answer.mp3');
 const incorectAnswerSound = new Audio('assets/sounds/wrong-answer.mp3');
 const selectSound = new Audio('assets/sounds/select.mp3');
 let soundSlider = document.getElementById('sound-slider');
-
+//Play the correct sound function for when correct answer selected
 function playCorrectSound() {
   if (!soundSlider.checked) {
     return;
@@ -46,6 +46,7 @@ function playCorrectSound() {
     correctAnswerSound.play();
   }
 }
+//Play wrong sound function for when wrong answer selected
 function playIncorrectSound() {
   if (!soundSlider.checked) {
     return;
@@ -54,6 +55,7 @@ function playIncorrectSound() {
     incorectAnswerSound.play();
   }
 }
+//Play selection sound function for when a button is clicked
 function playSelectSound() {
   if (!soundSlider.checked) {
     return;
@@ -83,47 +85,49 @@ const congratulationsContainer = document.getElementById('congratulations-modal'
 const closeGameWarning = document.getElementById('close-game-warning');
 
 //OPEN AND CLOSE CONTAINERS
-//Rules Container
+//Rules Container - Open
 rulesButton.addEventListener('click', () => {
     homeContainer.classList.add('hide');
     rulesContainer.classList.remove('hide');
     playSelectSound();
 });
+//Rules Container - Close
 backButtonRules.addEventListener('click', () => {
     rulesContainer.classList.add('hide');
     homeContainer.classList.remove('hide');
     playSelectSound();
 });
-//High Scores container
+//High Scores container - Open
 scoresButton.addEventListener('click', () => {
     homeContainer.classList.add('hide');
     scoresContainer.classList.remove('hide');
     playSelectSound();
 });
+//High Scores container - Close
 backButtonScores.addEventListener('click', () => {
     scoresContainer.classList.add('hide');
     homeContainer.classList.remove('hide');
     playSelectSound();
 });
-//Submit Name Container
+//Submit Name Container - Open
 playButton.addEventListener('click', () => {
     homeContainer.classList.add('hide');
     nameContainer.classList.remove('hide');
     playSelectSound();
 });
+//Submit Name Container - Close
 backButtonName.addEventListener('click', () => {
     nameContainer.classList.add('hide');
     homeContainer.classList.remove('hide');
     playSelectSound();
 });
-//Difficulty Container
+//Difficulty Container - Close
 backButtonDifficulty.addEventListener('click', () => {
     difficultyContainer.classList.add('hide');
     homeContainer.classList.remove('hide');
     playSelectSound();
 });
-//Game Container
-//CLOSE GAME WARNING POPUP
+//Game Container - Close game warning popup
 backButtonGame.addEventListener('click', () => {
   closeGameWarning.classList.remove('hide');
   playSelectSound();
@@ -145,7 +149,7 @@ continueGame.addEventListener('click', () => {
   closeGameWarning.classList.add('hide');
   playSelectSound();
 });
-//Game Over Container
+//Close Game Over Container
 backButtonGameOver.addEventListener('click', () => {
     gameOverContainer.classList.add('hide');
     homeContainer.classList.remove('hide');
@@ -179,6 +183,7 @@ submitName.addEventListener('submit', (e) => {
       alert("Please enter your name");
       return false;
   } else {
+    //Store name in local storage
     username = document.getElementById('name').value;
     localStorage.setItem('username', username);
     nameContainer.classList.add('hide');
@@ -201,7 +206,7 @@ function displayBeginnerQuestion() {
     shuffledQuestions = [];
     shuffledAnswers = [];
     currentQuestionIndex = 0;
-
+    //Shuffle questions
     shuffledQuestions = shuffleQuestions(beginnerQuestions);
     //display a shuffled question
     question.innerText = shuffledQuestions[0].question;
@@ -225,7 +230,7 @@ function displayBeginnerQuestion() {
       endGame();
     }
 }
-
+//Event listener for beginner button to run beginner game
 beginnerButton.addEventListener('click', () => {
     gameType = 'beginner';
     difficultyContainer.classList.add('hide');
@@ -238,6 +243,7 @@ beginnerButton.addEventListener('click', () => {
 
 //START INTERMEDIATE GAME
 function displayIntermediateQuestion() {
+  //Clear previous questions
   shuffledQuestions = [];
   shuffledAnswers = [];
   currentQuestionIndex = 0;
@@ -264,7 +270,7 @@ function displayIntermediateQuestion() {
     endGame();
   }
 }
-
+//Event listener for intermediate button to run intermediate game
 intermediateButton.addEventListener('click', () => {
   gameType = 'intermediate';
   difficultyContainer.classList.add('hide');
@@ -277,6 +283,7 @@ intermediateButton.addEventListener('click', () => {
 
 //START ADVANCED GAME
 function displayAdvancedQuestion() {
+  //Clear previous questions
   shuffledQuestions = [];
   shuffledAnswers = [];
   currentQuestionIndex = 0;
@@ -299,7 +306,7 @@ function displayAdvancedQuestion() {
     endGame();
   }
 }
-
+//Event listener for advanced game button to start advanced game
 advancedButton.addEventListener('click', () => {
   gameType = 'advanced';
   difficultyContainer.classList.add('hide');
@@ -329,7 +336,7 @@ function displayNextQuestion() {
     displayAdvancedQuestion();
   }
   }
-
+//Event listener for next question
 nextButton.addEventListener('click', () => {
   displayNextQuestion();
   playSelectSound();
@@ -338,7 +345,9 @@ nextButton.addEventListener('click', () => {
 //CONGRATULATIONS PAGES
 const nextLevelButton = document.getElementById('next-level-btn');
 const nextQuestionButton = document.getElementById('next-question-btn');
+//Event listener for next level button
 nextLevelButton.addEventListener('click', () => {
+  //Open game difficulty
   congratulationsContainer.classList.add('hide');
   gameContainer.classList.add('hide');
   difficultyContainer.classList.remove('hide');
@@ -349,7 +358,7 @@ nextLevelButton.addEventListener('click', () => {
     advancedButton.disabled = false;
   }
 });
-
+//Event listener for next question
 nextQuestionButton.addEventListener('click', () => {
   congratulationsContainer.classList.add('hide');
   displayNextQuestion();
@@ -381,21 +390,23 @@ function addToIncorrectScore() {
     }
 }
 
-//Check the answer
+//Check the answer, add to the score
 function checkAnswer() {
     const selectedAnswer = document.querySelector('.selected');
     const correctAnswer = shuffledAnswers.find(answer => answer.correct);
+    //If correct add to correct score and display next button
     if (selectedAnswer.textContent === correctAnswer.text) {
         selectedAnswer.classList.add('correct');
         addToCorrectScore();
         nextButton.classList.remove('hide');
         spacer.classList.add('hide');
     } else {
+        //If incorrect add to incorrect score and display next button
         selectedAnswer.classList.add('incorrect');
         addToIncorrectScore();
         nextButton.classList.remove('hide');
         spacer.classList.add('hide');
-        //add correct answer
+        //Display what the correct answer was
         for (let i = 0; i < 4; i++) {
             if (answerButton[i].innerText === correctAnswer.text) {
                 answerButton[i].classList.add('correct');
@@ -434,6 +445,7 @@ function endGame() {
         document.getElementById('congratulate').innerText = "Congratulations!";
         document.getElementById('try-again').innerText = "Try a harder level!";
     } else {
+      //Encourage if below 6 correct answers answered
         document.getElementById('congratulate').innerText = "Game Over";
         document.getElementById('try-again').innerText = "Give it another go, you can do better!";
     }
